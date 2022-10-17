@@ -586,11 +586,11 @@ body {
 }
 
 .mod-root > .nav-folder-children > .nav-folder:nth-child(8n+4) > .nav-folder-title {
-    background-color: var(--color-yellow-dark);
+    background-color: var(--color-yellow-light);
 }
 .mod-root > .nav-folder-children > .nav-folder:nth-child(8n+4) .nav-folder-title,
 .mod-root > .nav-folder-children > .nav-folder:nth-child(8n+4) .nav-file-title {
-    border-left: 3px solid var(--color-yellow-dark);
+    border-left: 3px solid var(--color-yellow-light);
 }
 
 .mod-root > .nav-folder-children > .nav-folder:nth-child(8n+5) > .nav-folder-title {

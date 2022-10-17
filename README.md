@@ -3,4 +3,5 @@
 
 This is a personal theme I started creating for 0.16.
 
-![Screenshot](PLN.png)
+![Light Screenshot](PLN_Light.png)
+![Dark Screenshot](PLN_Dark.png)
