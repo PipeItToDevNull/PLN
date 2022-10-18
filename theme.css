@@ -568,6 +568,14 @@ body {
 /*
 /* https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066 */
 /* thanks to Evelf */
+.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title,
+.mod-root > .nav-folder-children > .is-collapsed .collapse-icon svg.svg-icon,
+.mod-root .nav-folder .collapse-icon svg.svg-icon {
+    color: var(--b0);
+}
+.mod-root .nav-folder .nav-folder-children .collapse-icon svg.svg-icon {
+    color: var(--nav-collapse-icon-color);
+}
 
 .mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) > .nav-folder-title {
     background-color: var(--color-red);
