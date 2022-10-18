@@ -31,6 +31,7 @@ This is a personal theme I started creating for 0.16.
 - Styling is removed like embeds so they flow like written text
 
 ### Custom checkboxes
+- Completed tasks are not crossed out
 - I added various checkboxes that can be seen in the images. 
 ```
 - [ ] open
