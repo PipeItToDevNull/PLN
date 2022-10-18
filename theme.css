@@ -17,6 +17,11 @@ body {
     letter-spacing: 1px;
 }
 
+/* macos fixes for hidden title */
+.mod-macos .mod-left-split .mod-top .workspace-tab-header-container-inner {
+    padding: 0 0 0 35px;
+}
+
 /* shrinking headers */
 .mod-left-split .workspace-tab-header-container-inner,
 .mod-right-split .workspace-tab-header-container-inner {
