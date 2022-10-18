@@ -33,6 +33,16 @@ This is a personal theme I started creating for 0.16.
 ### Custom checkboxes
 - Completed tasks are not crossed out
 - I added various checkboxes that can be seen in the images. 
+- Chustom checkboxes can be queried for in DV:
+
+Find all Important tasks
+```js
+task from "PATH\PATH"
+WHERE !completed
+WHERE status = "!"
+GROUP by file.link
+```
+
 ```
 - [ ] open
 - [x] complete
