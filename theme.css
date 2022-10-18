@@ -104,6 +104,12 @@ body {
     visibility: initial;
 }
 
+/* more italic */
+em, .cm-em {
+    display: inline-block;
+    transform: skew(-10deg);
+}
+
 /* this helps spacing with embeds, I dont see neg effects */
 .markdown-rendered h1, 
 .markdown-rendered h2, 
