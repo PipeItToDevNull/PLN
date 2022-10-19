@@ -18,8 +18,8 @@ body {
 }
 
 /* macos fixes for hidden title */
-.mod-macos .mod-left-split .mod-top .workspace-tab-header-container-inner {
-    padding: 0 0 0 35px;
+.mod-macos {
+    --frame-left-space: 65px;
 }
 
 /* shrinking headers */
