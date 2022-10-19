@@ -2,6 +2,133 @@
  * Pipe Likes Nord
 */
 
+.theme-light,
+.theme-dark {
+    --color-red: #bf616a;
+    --color-orange: #d08770;
+    --color-yellow-light: #ebcb8b;
+    --color-yellow-dark: #e4b860;
+    --color-green: #a3be8c;
+    --color-purple: #b48ead;
+    --color-sea-green: #8fbcbb;
+    --color-cyan: #88c0d0;
+    --color-frost: #81a1c1;
+    --color-blue: #5e81ac;
+    --color-salmon: #FC6E68;
+
+    --b0: #2E3440;
+    --b1: #3B4252;
+    --b2: #434C5E;
+    --b3: #4C566A; 
+
+    --w0: #D8DEE9;
+    --w1: #E5E9F0;
+    --w2: #ECEFF4;
+    --w3: #f5f7f9;
+
+    --text-highlight-bg: rgba(180, 142, 173, 0.4);
+    --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
+
+    --bold-weight: var(--font-bold);
+}
+
+.theme-light {
+    --color-yellow: var(--color-yellow-dark);
+    --color-accent: var(--color-blue);
+    --color-accent-1: var(--color-blue);
+    --color-accent-2: var(--color-frost);
+    /* this is the HSL value of --color-accent */
+    --accent-h: 213;
+    --accent-s: 32%;
+    --accent-l: 53%;
+
+    --color-active-line: var(--w2);
+
+    /* the note background */
+    --background-primary: var(--w3) ;
+    /* used for code blocks */
+    --background-primary-alt: var(--w2) ;
+    /* outside ui background */
+    /* background titlebar unfocused */
+    --background-secondary: var(--w2);
+    /* titlebar focused */
+    --background-secondary-alt: var(--w1);
+    /* lines between objects */
+    /* slider background */
+    --background-modifier-border: var(--w0);
+
+    /* main font */
+    --color-base-100: var(--b0);
+    --color-base-70: var(--b0);
+    --color-base-60: var(--b0);
+    /* bullets */
+    --color-base-50: var(--b1);
+    /* window outline (like settings) */
+    --color-base-40: var(--w2);
+    /* toggle background */
+    /* small line in tabs */
+    --color-base-35: var(--w0);
+    /* the lines in the ui */
+    --color-base-30: var(--w0);
+    --color-base-25: var(--b3);
+    --color-base-20: var(--w0);
+    --color-base-10: var(--w1);
+    --color-base-05: var(--w2);
+    --color-base-00: var(--w2); 
+}
+
+.theme-dark {
+    --color-yellow: var(--color-yellow-light);
+    --color-accent: var(--color-frost);
+    --color-accent-1: var(--color-frost);
+    --color-accent-2: var(--color-blue);
+    /* this is the HSL value of --color-accent */
+    --accent-h: 210;
+    --accent-s: 34%;
+    --accent-l: 63%;
+
+    --color-active-line: var(--b2);
+
+    /* the note background */
+    --background-primary: var(--b1) ;
+    /* used for code blocks */
+    --background-primary-alt: var(--b0) ;
+    /* outside ui background */
+    /* background titlebar unfocused */
+    --background-secondary: var(--b0);
+    /* titlebar focused */
+    --background-secondary-alt: var(--b0);
+    /* lines between objects */
+    /* slider background */
+    --background-modifier-border: var(--b3);
+
+    --color-base-00: var(--b0);
+    --color-base-10: var(--b0);
+    --color-base-20: var(--b0);
+    --color-base-25: var(--b0);
+    /* lines in the ui */
+    --color-base-30: var(--b1);
+    /* toggle backgroundse */
+    /* small line in tabs */
+    --color-base-35: var(--b3);
+    /* window outlines */
+    --color-base-40: var(--b0);
+    /* bullets */
+    --color-base-50: var(--w3);
+    --color-base-60: var(--w0);
+    --color-base-70: var(--w1);
+    /* main font */
+    --color-base-100: var(--w0);
+}
+
+/* pdf fixes */
+@media print {
+  .theme-dark {
+    --highlight-mix-blend-mode: darken;
+    --list-marker-color: var(--b0);
+  }
+}
+
 /*
  * Main
 */
@@ -124,125 +251,6 @@ em, .cm-em {
 .markdown-rendered h5, 
 .markdown-rendered h6 {
     margin: 0 0 0 0;
-}
-
-.theme-light,
-.theme-dark {
-    --color-red: #bf616a;
-    --color-orange: #d08770;
-    --color-yellow-light: #ebcb8b;
-    --color-yellow-dark: #e4b860;
-    --color-green: #a3be8c;
-    --color-purple: #b48ead;
-    --color-sea-green: #8fbcbb;
-    --color-cyan: #88c0d0;
-    --color-frost: #81a1c1;
-    --color-blue: #5e81ac;
-    --color-salmon: #FC6E68;
-
-    --b0: #2E3440;
-    --b1: #3B4252;
-    --b2: #434C5E;
-    --b3: #4C566A; 
-
-    --w0: #D8DEE9;
-    --w1: #E5E9F0;
-    --w2: #ECEFF4;
-    --w3: #f5f7f9;
-
-    --text-highlight-bg: rgba(180, 142, 173, 0.4);
-    --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
-
-    --bold-weight: var(--font-bold);
-}
-
-.theme-light {
-    --color-yellow: var(--color-yellow-dark);
-    --color-accent: var(--color-blue);
-    --color-accent-1: var(--color-blue);
-    --color-accent-2: var(--color-frost);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 213;
-    --accent-s: 32%;
-    --accent-l: 53%;
-
-    --color-active-line: var(--w2);
-
-    /* the note background */
-    --background-primary: var(--w3) ;
-    /* used for code blocks */
-    --background-primary-alt: var(--w2) ;
-    /* outside ui background */
-    /* background titlebar unfocused */
-    --background-secondary: var(--w2);
-    /* titlebar focused */
-    --background-secondary-alt: var(--w1);
-    /* lines between objects */
-    /* slider background */
-    --background-modifier-border: var(--w0);
-
-    /* main font */
-    --color-base-100: var(--b0);
-    --color-base-70: var(--b0);
-    --color-base-60: var(--b0);
-    /* bullets */
-    --color-base-50: var(--b1);
-    /* window outline (like settings) */
-    --color-base-40: var(--w2);
-    /* toggle background */
-    /* small line in tabs */
-    --color-base-35: var(--w0);
-    /* the lines in the ui */
-    --color-base-30: var(--w0);
-    --color-base-25: var(--b3);
-    --color-base-20: var(--w0);
-    --color-base-10: var(--w1);
-    --color-base-05: var(--w2);
-    --color-base-00: var(--w2); 
-}
-
-.theme-dark {
-    --color-yellow: var(--color-yellow-light);
-    --color-accent: var(--color-frost);
-    --color-accent-1: var(--color-frost);
-    --color-accent-2: var(--color-blue);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 210;
-    --accent-s: 34%;
-    --accent-l: 63%;
-
-    --color-active-line: var(--b2);
-
-    /* the note background */
-    --background-primary: var(--b1) ;
-    /* used for code blocks */
-    --background-primary-alt: var(--b0) ;
-    /* outside ui background */
-    /* background titlebar unfocused */
-    --background-secondary: var(--b0);
-    /* titlebar focused */
-    --background-secondary-alt: var(--b0);
-    /* lines between objects */
-    /* slider background */
-    --background-modifier-border: var(--b3);
-
-    --color-base-00: var(--b0);
-    --color-base-10: var(--b0);
-    --color-base-20: var(--b0);
-    --color-base-25: var(--b0);
-    /* lines in the ui */
-    --color-base-30: var(--b1);
-    /* toggle backgroundse */
-    /* small line in tabs */
-    --color-base-35: var(--b3);
-    /* window outlines */
-    --color-base-40: var(--b0);
-    /* bullets */
-    --color-base-50: var(--w3);
-    --color-base-60: var(--w0);
-    --color-base-70: var(--w1);
-    /* main font */
-    --color-base-100: var(--w0);
 }
 
 /*
