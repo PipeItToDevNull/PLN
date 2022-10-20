@@ -138,6 +138,7 @@ body {
     --font-ui-medium: 12px;
     --font-ui-large: 14px;
     --header-height: 30px;
+	--file-margins: 10px;
 }
 
 .workspace-tab-header-inner-title {
