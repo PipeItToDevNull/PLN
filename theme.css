@@ -456,13 +456,7 @@ ul > li.task-list-item[data-task="/"] > .task-list-item-checkbox:checked:after {
     color: var(--color-green);
     padding: 3px 5px;
     border-radius: 5px;
-}                                                                                                                                                                                                                                               /* it sucks but light code blocks are horrible
- * make them all dark instead.... */
-body {
-    --code-background: var(--b0);
-    --code-normal: var(--w0);
-    --code-comment: var(--w3);
-}
+} 
 
 /*
  * Callouts
