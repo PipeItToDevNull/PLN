@@ -308,6 +308,12 @@ body {
     --link-unresolved-opacity: 100;
 }
 
+/* remove the icon from external links */
+body .external-link {
+    background-image: none;
+    padding-right: 0px;
+}
+
 /* 
  * Dataview
 */
