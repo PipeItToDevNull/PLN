@@ -299,44 +299,7 @@ ul > li::marker,
 
 /* 
  * Links
- *
- * underline external not internal links
- * 16 added some new underline class...
- * messing with it is not likely a good idea
- * also, don't mess with webkit lol...
 */
- 
- /* external links */
-.cm-s-obsidian span.cm-link,
-a.external-link {
-    text-decoration: underline !important;
-}
-
-/* internal links */
-.cm-s-obsidian span.cm-hmd-internal-link,
-a.interal-link,
-a:-webkit-any-link,
-.markdown-source-view.mod-cm6 .cm-underline,
-.markdown-rendered .internal-link {
-    text-decoration: none;
-}
-
-/* remove the icon from external links */
-body .external-link {
-    background-image: none;
-    padding-right: 0px;
-}
-
-/* make unresolved links solid */
-.markdown-source-view.mod-cm6 .is-unresolved .cm-underline,
-.markdown-source-view.mod-cm6 .is-unresolved,
-.markdown-rendered .internal-link.is-unresolved {
-    opacity: 100;
-    text-decoration-line: none;
-    color: var(--link-color);
-}
-
-/* this should eventually work 
 body {
     --link-decoration: none;
     --link-decoration-hover: none;
@@ -344,7 +307,6 @@ body {
     --link-external-decoration-hover: underline !important;
     --link-unresolved-opacity: 100;
 }
-*/
 
 /* 
  * Dataview
