@@ -42,8 +42,6 @@
     --accent-s: 32%;
     --accent-l: 53%;
 
-    --color-active-line: var(--w2);
-
     /* the note background */
     --background-primary: var(--w3) ;
     /* used for code blocks */
@@ -86,8 +84,6 @@
     --accent-h: 210;
     --accent-s: 34%;
     --accent-l: 63%;
-
-    --color-active-line: var(--b2);
 
     /* the note background */
     --background-primary: var(--b1) ;
@@ -138,7 +134,8 @@ body {
     --font-ui-medium: 12px;
     --font-ui-large: 14px;
     --header-height: 30px;
-	--file-margins: 10px;
+    --file-margins: 10px;
+    --file-folding-offset: 10px;
 }
 
 .workspace-tab-header-inner-title {
@@ -176,7 +173,13 @@ body {
 
 /* highlight active line */
 .cm-active.cm-line {
-    background: var(--color-active-line);
+    background-color: var(--background-modifier-active-hover);
+}
+.cm-lineNumbers .cm-gutterElement.cm-active {    
+    color:  var(--interactive-accent);
+    font-weight: bold;
+    border-right: 3px solid var(--interactive-accent);
+    background-color: var(--background-modifier-active-hover);
 }
 
 /* REMOVE THINGS */
