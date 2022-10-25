@@ -110,11 +110,11 @@
     /* window outlines */
     --color-base-40: var(--b0);
     /* bullets */
-    --color-base-50: var(--w3);
-    --color-base-60: var(--w0);
-    --color-base-70: var(--w1);
+    --color-base-50: var(--w0);
+    --color-base-60: var(--w1);
+    --color-base-70: var(--w2);
     /* main font */
-    --color-base-100: var(--w0);
+    --color-base-100: var(--w3);
 }
 
 /* pdf fixes */
@@ -181,7 +181,8 @@ body {
     background-color: var(--background-modifier-active-hover);
 }
 .cm-lineNumbers {
-    border-right: 2px solid var(--interactive-accent);
+    border-right: 2px solid var(--background-modifier-border);
+    color: var(--text-faint);
 }
 
 /* REMOVE THINGS */
