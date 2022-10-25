@@ -175,11 +175,13 @@ body {
 .cm-active.cm-line {
     background-color: var(--background-modifier-active-hover);
 }
-.cm-lineNumbers .cm-gutterElement.cm-active {    
+.cm-gutterElement.cm-active {    
     color:  var(--interactive-accent);
     font-weight: bold;
-    border-right: 3px solid var(--interactive-accent);
     background-color: var(--background-modifier-active-hover);
+}
+.cm-lineNumbers {
+    border-right: 2px solid var(--interactive-accent);
 }
 
 /* REMOVE THINGS */
