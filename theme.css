@@ -176,7 +176,7 @@ body {
     background-color: var(--background-modifier-active-hover);
 }
 .cm-gutterElement.cm-active {    
-    color:  var(--interactive-accent);
+    color:  var(--color-yellow);
     font-weight: bold;
     background-color: var(--background-modifier-active-hover);
 }
