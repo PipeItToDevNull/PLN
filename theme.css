@@ -173,12 +173,12 @@ body {
 
 /* highlight active line */
 .cm-active.cm-line {
-    background-color: var(--background-modifier-active-hover);
+    background-color: var(--background-modifier-border);
 }
 .cm-gutterElement.cm-active {    
     color:  var(--color-yellow);
     font-weight: bold;
-    background-color: var(--background-modifier-active-hover);
+    background-color: var(--background-modifier-border);
 }
 .cm-lineNumbers {
     border-right: 2px solid var(--background-modifier-border);
