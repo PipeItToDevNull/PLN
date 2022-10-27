@@ -137,9 +137,9 @@ body {
     --file-margins: 10px;
     --file-folding-offset: 10px;
 }
-
-.workspace-tab-header-inner-title {
-    letter-spacing: 1px;
+/* set a larger margin on pop-outs */
+.is-popout-window .cm-scroller {
+    --file-margins: 20px;
 }
 
 /* macos fixes for hidden title */
@@ -169,6 +169,9 @@ body {
     --tab-stacked-text-transform: rotate(180deg);
     --tab-stacked-text-align: right;
     --tab-stacked-header-width: 20px;
+}
+.workspace-tab-header-inner-title {
+    letter-spacing: 1px;
 }
 
 /* highlight active line */
