@@ -38,14 +38,6 @@ This is a personal theme I started creating for 0.16.
 - I added various checkboxes that can be seen in the images. 
 - Custom checkboxes can be queried for in DV:
 
-Find all Important tasks
-```js
-task from "PATH\PATH"
-WHERE !completed
-WHERE status = "!"
-GROUP by file.link
-```
-
 ```
 - [ ] open
 - [x] complete
@@ -55,6 +47,13 @@ GROUP by file.link
 - [i] info
 - [-] canceled 
 - [/] partial
+```
+Find all Important tasks
+```js
+task from "PATH\PATH"
+WHERE !completed
+WHERE status = "!"
+GROUP by file.link
 ```
 
 ### Callouts
