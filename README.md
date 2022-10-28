@@ -36,25 +36,24 @@ This is a personal theme I started creating for 0.16.
 ### Custom checkboxes
 - Completed tasks are not crossed out
 - I added various checkboxes that can be seen in the images. 
+	```
+	- [ ] open
+	- [x] complete
+	- [!] important
+	- [>] deferred
+	- [?] question
+	- [i] info
+	- [-] canceled 
+	- [/] partial
+	```
 - Custom checkboxes can be queried for in DV:
-
-```
-- [ ] open
-- [x] complete
-- [!] important
-- [>] deferred
-- [?] question
-- [i] info
-- [-] canceled 
-- [/] partial
-```
-Find all Important tasks
-```js
-task from "PATH\PATH"
-WHERE !completed
-WHERE status = "!"
-GROUP by file.link
-```
+	- Find all Important tasks
+	```js
+	task from "PATH\PATH"
+	WHERE !completed
+	WHERE status = "!"
+	GROUP by file.link
+	```
 
 ### Callouts
 - Callouts are changed to be closer to pre 0.16 style
