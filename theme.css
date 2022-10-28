@@ -134,13 +134,16 @@ body {
     --font-ui-medium: 12px;
     --font-ui-large: 14px;
     --header-height: 30px;
-    --file-margins: 10px;
     --file-folding-offset: 10px;
 }
-/* set a larger margin on pop-outs */
-.is-popout-window .cm-scroller {
+/* change margins, default is 32 */
+body {
     --file-margins: 20px;
 }
+.mod-stacked {
+    --file-margins: 10px;
+}
+
 
 /* macos fixes for hidden title */
 .mod-macos {
@@ -162,6 +165,10 @@ body {
 /* red pin icon */
 .mod-root .mod-pinned {
     color: var(--color-salmon);
+}
+/* note icon for tabs */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+    display: none;
 }
 
 /* flip and thin stacked titles */
