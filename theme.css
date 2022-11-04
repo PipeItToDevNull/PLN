@@ -345,6 +345,10 @@ body .external-link {
 .cm-preview-code-block.cm-embed-block.markdown-rendered {
     padding-left: 0;
 }
+/* hides the item count on a list */
+.dataview.small-text {
+    display: none;
+}
 
 /* 
  * Checkboxes
