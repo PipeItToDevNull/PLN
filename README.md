@@ -32,6 +32,7 @@ This is a personal theme I started creating for 0.16.
 
 ### Dataview
 - Styling is removed like embeds so they flow like written text
+- Hide the item count on task lists
 
 ### Custom checkboxes
 - Completed tasks are not crossed out
