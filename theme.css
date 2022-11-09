@@ -536,6 +536,58 @@ body {
 }
 
 /*
+ * Highlighters
+ * Original by soggymuse, modified by Pipe
+*/
+/* removes the default css */
+mark,
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+    color: inherit;
+    background: none;
+    border-radius: 4px;
+    border-bottom: 3px solid;
+    border-bottom-color: var(--color-yellow);
+}
+
+/*Add highlighter's label before highlighted text*/
+mark::before,
+.cm-s-obsidian span.cm-highlight::before {
+    padding: 0 5px;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: Palatino;
+}
+
+/*Red highlighter (edit)*/
+mark.edit { border-bottom-color: var(--color-red); }
+mark.edit::before {
+    color: var(--color-red);
+    content: "Edit:"; 
+}
+
+/*Orange highlighter (unfinished)*/
+mark.unfinished { border-bottom-color: var(--color-orange); }
+mark.unfinished::before {
+    color: var(--color-orange);
+    content: "Unfinished:";
+}
+
+/*Pink highlighter (verify)*/
+mark.verify { border-bottom-color: var(--color-purple); }
+mark.verify::before {
+    color: var(--color-purple);
+    content: "Verify:";
+}
+
+/* Green highlighter (important)*/
+mark.important { border-bottom-color: var(--color-green); }
+mark.important::before {
+    color: var(--color-green);
+    content: "Important:"; 
+}
+
+/*
  * Calendar plugin
  *
  * obsidian-calendar-plugin
