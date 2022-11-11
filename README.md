@@ -67,3 +67,18 @@ This is a personal theme I started creating for 0.16.
 
 ### Folders
 - Folder colours are applied automatically, I may change the order or remove some colours that are too close in shade to eachother though.
+
+### Highlights and text colours
+<img width="228" alt="image" src="https://user-images.githubusercontent.com/25917750/201436404-97596d8f-98e7-4a6d-babe-6cd4064cb3d0.png">
+```markdown
+==Yellow==
+<mark class='edit'>dfddrtrtrt</mark>
+<mark class='unfinished'>I will be going to</mark>
+<mark class='verify'>turtles are extinct</mark>
+<mark class='important'>april 8th</mark>
+
+<mark class='red'>Red Text</mark>
+<mark class='blue'>Blue Text</mark>
+<mark class='green'>Green Text</mark>
+<mark class='purple'>Purple Text</mark>
+```
