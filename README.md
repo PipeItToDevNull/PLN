@@ -70,6 +70,7 @@ This is a personal theme I started creating for 0.16.
 
 ### Highlights and text colours
 <img width="228" alt="image" src="https://user-images.githubusercontent.com/25917750/201436404-97596d8f-98e7-4a6d-babe-6cd4064cb3d0.png">
+
 ```markdown
 ==Yellow==
 <mark class='edit'>dfddrtrtrt</mark>
