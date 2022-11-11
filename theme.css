@@ -588,6 +588,30 @@ mark.important::before {
 }
 
 /*
+ * Text colours using mark
+*/
+/*Red text*/
+mark.red { 
+    color: var(--color-red); 
+    border-bottom: 0px;
+}
+/*Blue text*/
+mark.blue { 
+    color: var(--color-blue); 
+    border-bottom: 0px;
+}
+/*green text*/
+mark.green { 
+    color: var(--color-green); 
+    border-bottom: 0px;
+}
+/*purple text*/
+mark.purple { 
+    color: var(--color-purple); 
+    border-bottom: 0px;
+}
+
+/*
  * Calendar plugin
  *
  * obsidian-calendar-plugin
