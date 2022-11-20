@@ -19,7 +19,7 @@
     --b0: #2E3440;
     --b1: #3B4252;
     --b2: #434C5E;
-    --b3: #4C566A; 
+    --b3: #4C566A;
 
     --w0: #D8DEE9;
     --w1: #E5E9F0;
@@ -350,7 +350,7 @@ body .external-link {
     display: none;
 }
 
-/* 
+/*
  * Checkboxes
 */
 body {
@@ -358,9 +358,9 @@ body {
      * the first checkbox not colouring.... */
 }
 
-.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"], 
+.markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="x"],
 .markdown-source-view.mod-cm6 .HyperMD-task-line[data-task="X"],
-ul > li.task-list-item[data-task="x"], 
+ul > li.task-list-item[data-task="x"],
 ul > li.task-list-item[data-task="X"] {
     text-decoration: none;
 }
@@ -563,7 +563,7 @@ mark::before,
 mark.edit { border-bottom-color: var(--color-red); }
 mark.edit::before {
     color: var(--color-red);
-    content: "Edit:"; 
+    content: "Edit:";
 }
 
 /*Orange highlighter (unfinished)*/
@@ -584,7 +584,7 @@ mark.verify::before {
 mark.important { border-bottom-color: var(--color-green); }
 mark.important::before {
     color: var(--color-green);
-    content: "Important:"; 
+    content: "Important:";
 }
 
 /*
@@ -592,22 +592,27 @@ mark.important::before {
 */
 /*Red text*/
 mark.red { 
-    color: var(--color-red); 
+    color: var(--color-red);
     border-bottom: 0px;
 }
 /*Blue text*/
 mark.blue { 
-    color: var(--color-blue); 
+    color: var(--color-blue);
     border-bottom: 0px;
 }
 /*green text*/
 mark.green { 
-    color: var(--color-green); 
+    color: var(--color-green);
     border-bottom: 0px;
 }
 /*purple text*/
 mark.purple { 
-    color: var(--color-purple); 
+    color: var(--color-purple);
+    border-bottom: 0px;
+}
+/*underlined text*/
+mark.underline { 
+    text-decoration: underline;
     border-bottom: 0px;
 }
 
