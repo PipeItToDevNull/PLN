@@ -1,4 +1,4 @@
-/* 
+/*
  * Pipe Likes Nord
 */
 
@@ -72,7 +72,7 @@
     --color-base-20: var(--w0);
     --color-base-10: var(--w1);
     --color-base-05: var(--w2);
-    --color-base-00: var(--w2); 
+    --color-base-00: var(--w2);
 }
 
 .theme-dark {
@@ -185,7 +185,7 @@ body {
 .cm-active.cm-line {
     background-color: var(--background-modifier-border);
 }
-.cm-gutterElement.cm-active {    
+.cm-gutterElement.cm-active {
     color:  var(--color-yellow);
     font-weight: bold;
     background-color: var(--background-modifier-border);
@@ -217,7 +217,7 @@ body {
 }
 
 /* bullet fix */
-.markdown-source-view.mod-cm6 .cm-formatting-list-ul, 
+.markdown-source-view.mod-cm6 .cm-formatting-list-ul,
 .markdown-source-view.mod-cm6 .cm-formatting-list-ol {
     padding-right: 5px;
 }
@@ -261,11 +261,11 @@ em, .cm-em {
 }
 
 /* this helps spacing with embeds, I dont see neg effects */
-.markdown-rendered h1, 
-.markdown-rendered h2, 
-.markdown-rendered h3, 
-.markdown-rendered h4, 
-.markdown-rendered h5, 
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
 .markdown-rendered h6 {
     margin: 0 0 0 0;
 }
@@ -301,8 +301,8 @@ body {
 }
 
 /* make embeded bullets the same size as normal
-ol > li::marker, 
-ul > li::marker, 
+ol > li::marker,
+ul > li::marker,
 .markdown-embed .markdown-preview-view .cm-s-obsidian .cm-formatting-list {
     font-size: 15px;
 }
@@ -313,7 +313,7 @@ ul > li::marker,
     padding-left: 2px;
 }
 
-/* 
+/*
  * Links
 */
 body {
@@ -330,7 +330,7 @@ body .external-link {
     padding-right: 0px;
 }
 
-/* 
+/*
  * Dataview
 */
 .markdown-source-view.mod-cm6 .edit-block-button {
@@ -354,7 +354,7 @@ body .external-link {
  * Checkboxes
 */
 body {
-    /* for some reason, this is needed to avoid 
+    /* for some reason, this is needed to avoid
      * the first checkbox not colouring.... */
 }
 
@@ -444,7 +444,8 @@ ul > li.task-list-item[data-task="/"] > .task-list-item-checkbox:checked:after {
     color: var(--color-green);
     padding: 3px 5px;
     border-radius: 5px;
-} 
+    font-family: monospace;
+}
 
 /*
  * Callouts
@@ -591,28 +592,34 @@ mark.important::before {
  * Text colours using mark
 */
 /*Red text*/
-mark.red { 
+mark.red {
     color: var(--color-red);
     border-bottom: 0px;
 }
 /*Blue text*/
-mark.blue { 
+mark.blue {
     color: var(--color-blue);
     border-bottom: 0px;
 }
 /*green text*/
-mark.green { 
+mark.green {
     color: var(--color-green);
     border-bottom: 0px;
 }
 /*purple text*/
-mark.purple { 
+mark.purple {
     color: var(--color-purple);
     border-bottom: 0px;
 }
 /*underlined text*/
-mark.underline { 
+mark.underline {
     text-decoration: underline;
+    border-bottom: 0px;
+}
+/* paths */
+mark.path {
+    font-family: monospace;
+    color: var(--text-faint);
     border-bottom: 0px;
 }
 
