@@ -441,7 +441,7 @@ ul > li.task-list-item[data-task="/"] > .task-list-item-checkbox:checked:after {
 */
 .cm-s-obsidian span.cm-inline-code,
 .markdown-preview-view code {
-    color: var(--color-green);
+    color: inherit;
     padding: 3px 5px;
     border-radius: 5px;
     font-family: monospace;
