@@ -135,6 +135,9 @@ body {
     --font-ui-large: 14px;
     --header-height: 30px;
     --file-folding-offset: 10px;
+    /* 1.1 fixes */
+    --checkbox-size: 1.1em;
+    --list-bullet-size: .5em;
 }
 /* change margins, default is 32 */
 body {
@@ -449,7 +452,7 @@ body {
     --callout-padding: 0;
     --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
     --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
-    --callout-radius: 0px;
+    --callout-radius: 5px;
 }
 
 /* remove leading and trailing padding of callout content paragraphs */
@@ -461,12 +464,20 @@ body {
 }
 
 .callout {
-    border-left: 4px solid rgba(var(--callout-color), 1.0);
+    border-top: 4px solid rgba(var(--callout-color), 1.0);
+    border-left: 2px solid rgba(var(--callout-color), 1.0);
 }
 
 /* make quotes look like callouts too */
 body {
-    --blockquote-border-thickness: 4px;
+    --blockquote-border-thickness: 2px;
+}
+/* correct quote padding */
+div.HyperMD-quote.HyperMD-quote-1.cm-line {
+    padding-inline-start: var(--size-4-3) !important;
+}
+.markdown-rendered blockquote {
+    padding: 0 0 0 var(--size-4-3);
 }
 
 /* make the danger callout better */
