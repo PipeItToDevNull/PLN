@@ -81,4 +81,6 @@ This is a personal theme I started creating for 0.16.
 <mark class='blue'>Blue Text</mark>
 <mark class='green'>Green Text</mark>
 <mark class='purple'>Purple Text</mark>
+<mark class='underline'>Underlined Text</mark>
+<mark class='path'>C:\Users\Roo\Foo</mark>
 ```
