@@ -57,7 +57,6 @@ This is a personal theme I started creating for 0.16.
 	```
 
 ### Callouts
-- Callouts are changed to be closer to pre 0.16 style
 - Danger is a unique design now
 - Callouts are condensed
 
