@@ -476,7 +476,9 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="danger"] {
     --callout-icon: alert-octagon;
     --callout-color: 252, 110, 104;
-
+}
+.callout[data-callout="idea"] {
+    --callout-icon: lightbulb;
 }
 
 /* colours */
@@ -507,12 +509,14 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
     --callout-color: 163, 190, 140;
 }
 
+.theme-light .callout[data-callout="idea"],
 .theme-light .callout[data-callout="attention"],
 .theme-light .callout[data-callout="caution"],
 .theme-light .callout[data-callout="warning"] {
     --callout-color: 228, 184, 140;
 }
 
+.theme-dark .callout[data-callout="idea"],
 .theme-dark .callout[data-callout="attention"],
 .theme-dark .callout[data-callout="caution"],
 .theme-dark .callout[data-callout="warning"] {
