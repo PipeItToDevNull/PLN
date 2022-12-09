@@ -472,13 +472,16 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
     padding: 0 0 0 var(--size-4-3);
 }
 
-/* make the danger callout better */
+/* make unique callouts */
 .callout[data-callout="danger"] {
     --callout-icon: alert-octagon;
     --callout-color: 252, 110, 104;
 }
 .callout[data-callout="idea"] {
     --callout-icon: lightbulb;
+}
+.callout[data-callout="links"] {
+    --callout-icon: link;
 }
 
 /* colours */
@@ -537,6 +540,18 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="example"] {
     --callout-color: 180, 142, 173;
 }
+
+.theme-dark .callout[data-callout="cite"],
+.theme-dark .callout[data-callout="quote"],
+.theme-dark .callout[data-callout="links"] {
+    --callout-color: 216, 222, 233;
+}
+.theme-light .callout[data-callout="cite"],
+.theme-light .callout[data-callout="quote"],
+.theme-light .callout[data-callout="links"] {
+    --callout-color: 76, 86, 106;
+}
+
 
 /*
  * Highlighters
