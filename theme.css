@@ -639,6 +639,14 @@ mark.path {
     color: var(--text-faint);
     border-bottom: 0px;
 }
+/* borders */
+mark.borders {
+    border: 1px solid;
+    border-radius: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
 
 /*
  * Calendar plugin
