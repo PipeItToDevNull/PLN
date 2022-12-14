@@ -384,10 +384,11 @@ body.pln-embd-mods {
     visibility: hidden;
 }
 
-/* this is to move embededlists over
+/* this is to move embededlists over in LP
  * 2 pixels and removes a massive gap */
+ul.contains-task-list,
 .pln-embd-mods .markdown-embed .markdown-preview-view {
-    padding: 0 0 0 2px;
+    padding: 0 0 0 0px;
 }
 
 /* fix embeded dv lists in the sidebar */
