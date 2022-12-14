@@ -1,7 +1,7 @@
 # PLN (Pipe Loves Nord)
 
 ## New for 1.0.0 GA
-I have added Style Settingst to toggle my primary changes of embeds, DV's and parts that I remove by default
+I have added Style Settings to toggle my primary changes of embeds, DV's and parts that I remove by default
 
 ## Overview
 This is a personal theme I started creating for 0.16.
@@ -75,7 +75,7 @@ This is a personal theme I started creating for 0.16.
 ==Yellow==
 <mark class='edit'>dfddrtrtrt</mark>
 <mark class='unfinished'>I will be going to</mark>
-<mark class='verify'>turtles are extinct</mark>
+<mark class='verify'>hippos are extinct</mark>
 <mark class='important'>april 8th</mark>
 
 <mark class='red'>Red Text</mark>
