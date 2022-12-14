@@ -90,6 +90,12 @@ settings:
         description: Remove the note icon from tabs (we all know is a note...)
         type: class-toggle
         default: true
+    -
+        id: pln-rm-scroll
+        title: Remove scroll bars
+        description: Hide scroll bars, hover to view them
+        type: class-toggle
+        default: true
 */
 
 .theme-light,
