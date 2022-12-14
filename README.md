@@ -1,7 +1,7 @@
 # PLN (Pipe Loves Nord)
 
 ## New for 1.0.0 GA
-I have added Style Settings to toggle my primary changes of embeds, DV's and parts that I remove by default
+I have added Style Settings (thanks Isabel) to toggle my primary changes of embeds, DV's and parts that I remove by default
 
 ## Overview
 This is a personal theme I started creating for 0.16.
@@ -61,15 +61,18 @@ This is a personal theme I started creating for 0.16.
 ### Callouts
 - Danger is a unique design now
 - Callouts are condensed
+- Idea has been added
+- Links has been added, I use it for holding a DV backlinks query as opposed to the native block at the bottom of notes.
 
 ### Calendar plugin
 - It has been condensed
 - More colour
 
 ### Folders
-- Folder colours are applied automatically, I may change the order or remove some colours that are too close in shade to eachother though.
+- Folder colours are applied automatically, iterating over `n`
 
 ### Highlights and text colours
+The original snippet came from soggymuse but it only worked in LP. I expanded it to work in Reading view and added many more forms to it.
 
 ```markdown
 ==Yellow==
@@ -86,3 +89,26 @@ This is a personal theme I started creating for 0.16.
 <mark class='path'>C:\Users\Roo\Foo</mark>
 <mark class='borders'>Bordered text</mark>
 ```
+
+#### Bonus
+If you use [Espanso](https://espanso.org/) the following form can be used to insert marks easily.
+
+```yml
+name: obsidian
+parent: default
+matches:
+  - trigger: ";;mark"
+    replace: "<mark class='{{form.type}}'>{{form.content}}</mark>"
+    vars:
+    - name: "form"
+      type: form
+      params:
+        layout: "Mark type: {{type}} Content: {{content}}"
+```
+
+## FAQ
+### Why remove things when [Kepano's Hider](https://github.com/kepano/obsidian-hider) exists?
+I prefer having a minimal number of plugins, so if it can be done with CSS I will use CSS.
+
+### How do you have columns?
+I am using [Efemkay's MCL solutions](https://efemkay.github.io/obsidian-modular-css-layout/) which are more CSS snippets to avoid column plugins.
