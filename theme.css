@@ -2,6 +2,96 @@
  * Pipe Likes Nord
 */
 
+/* @settings
+name: PLN by PipeItToDevNull
+id: pln
+settings:
+    -
+        id: pln-link-mods
+        title: Link modifications
+        description: Underline only external links and remove the distinction from unresolved links.
+        type: class-toggle
+        default: true
+    -
+        id: pln-dv-mods
+        title: Dataview modifications
+        description: Globally toggle my various DV modifications
+        type: class-toggle
+        default: true
+    -
+        id: pln-dv-count
+        title: Dataview list count
+        description: Toggle the list count on a DV result
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-mods
+        title: Embed modifications
+        description: Globally toggle my various embed modifications
+        type: class-toggle
+        default: true
+    -
+        id: pln-hi-line
+        title: Highlight active line
+        description: Highlight the active line
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-ribbon
+        title: Remove ribbon
+        description: Remove the left ribbon
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-rside
+        title: Remove sidebar indicators
+        description: Remove the sidebar indicators. They can still be opened with hotkeys.
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-status
+        title: Remove statusbar
+        description: Removes the bottom statusbar
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-tablist
+        title: Remove tablist icon
+        description: Removes the header tab list icon
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-nt
+        title: Remove new tab icon
+        description: Removes the new tab header icon
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-clstab
+        title: Remove close icon
+        description: Remove the close X from tabs
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-nav
+        title: Remove nav icons
+        description: Remove the back and forward icons
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-act
+        title: Remove view actions
+        description: Remove the view action icons from the top of notes
+        type: class-toggle
+        default: true
+    -
+        id: pln-rm-noteic
+        title: Remove note icon
+        description: Remove the note icon from tabs (we all know is a note...)
+        type: class-toggle
+        default: true
+*/
+
 .theme-light,
 .theme-dark {
     --color-red: #bf616a;
@@ -147,7 +237,6 @@ body {
     --file-margins: 10px;
 }
 
-
 /* macos fixes for hidden title */
 .mod-macos {
     --frame-left-space: 65px;
@@ -169,10 +258,6 @@ body {
 .mod-root .mod-pinned {
     color: var(--color-salmon);
 }
-/* note icon for tabs */
-.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
-    display: none;
-}
 
 /* flip and thin stacked titles */
 body {
@@ -185,10 +270,10 @@ body {
 }
 
 /* highlight active line */
-.cm-active.cm-line {
+.pln-hi-line .cm-active.cm-line {
     background-color: var(--background-modifier-border);
 }
-.cm-gutterElement.cm-active {
+.pln-hi-line .cm-gutterElement.cm-active {
     color:  var(--color-yellow);
     font-weight: bold;
     background-color: var(--background-modifier-border);
@@ -200,22 +285,24 @@ body {
 
 /* REMOVE THINGS */
 /* ribbon */
-.workspace-ribbon.mod-left,
-/* right sidebar */
-.sidebar-toggle-button.mod-right,
-.sidebar-toggle-button,
+.pln-rm-ribbon .workspace-ribbon.mod-left,
+/* sidebars */
+.pln-rm-rside .sidebar-toggle-button.mod-right,
+.pln-rm-rside .sidebar-toggle-button,
 /* statusbar */
-.status-bar,
+.pln-rm-status .status-bar,
 /* tab chevron */
-.workspace-tab-header-tab-list .clickable-icon,
+.pln-rm-tablist .workspace-tab-header-tab-list .clickable-icon,
 /* new tab */
-.mod-root .workspace-tab-header-new-tab,
+.pln-rm-nt .mod-root .workspace-tab-header-new-tab,
 /* tab close button */
-.workspace-tab-header-inner-close-button,
+.pln-rm-clstab .workspace-tab-header-inner-close-button,
 /* nav buttons */
-.view-header-nav-buttons,
+.pln-rm-nav .view-header-nav-buttons,
 /* action bottons, top right of note */
-.view-actions {
+.pln-rm-act .view-actions,
+/* note icon for tabs */
+.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
     display: none;
 }
 
@@ -239,21 +326,21 @@ body {
 }
 
 /* scrollbars */
-::-webkit-scrollbar {
+.pln-rm-scroll ::-webkit-scrollbar {
     visibility: hidden;
     background-color: transparent;
     width: 10px;
 }
 
-::-webkit-scrollbar-thumb {
+.pln-rm-scroll ::-webkit-scrollbar-thumb {
     visibility: hidden;
 }
 
-::-webkit-scrollbar:hover {
+.pln-rm-scroll ::-webkit-scrollbar:hover {
     visibility: initial;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.pln-rm-scroll ::-webkit-scrollbar-thumb:hover {
     visibility: initial;
 }
 
@@ -276,7 +363,7 @@ em, .cm-em {
 /*
  * Embeds
 */
-body {
+body.pln-embd-mods {
     --embed-background: inherit;
     --embed-border-left: 0px solid var(--interactive-accent);
     --embed-border-right: none;
@@ -293,13 +380,13 @@ body {
     display: none;
 }
 
-.markdown-embed-link {
+.pln-embd-mods .markdown-embed-link {
     visibility: hidden;
 }
 
 /* this is to move embededlists over
  * 2 pixels and removes a massive gap */
-.markdown-embed .markdown-preview-view {
+.pln-embd-mods .markdown-embed .markdown-preview-view {
     padding: 0 0 0 2px;
 }
 
@@ -311,7 +398,7 @@ body {
 /*
  * Links
 */
-body {
+body.pln-link-mods {
     --link-decoration: none;
     --link-decoration-hover: none;
     --link-external-decoration: underline;
@@ -320,7 +407,7 @@ body {
 }
 
 /* remove the icon from external links */
-body .external-link {
+body.pln-link-mods .external-link {
     background-image: none;
     padding-right: 0px;
 }
@@ -328,20 +415,20 @@ body .external-link {
 /*
  * Dataview
 */
-.markdown-source-view.mod-cm6 .edit-block-button {
+.pln-dv-mods .markdown-source-view.mod-cm6 .edit-block-button {
     display: none;
 }
 /* both of these do the same thing, but
  * I don't know which applies when */
-.dataview.result-group {
+.pln-dv-mods .dataview.result-group {
     padding-left: 2px;
 }
 /* if you offset embeds, this can be 0 otherwise 2px */
-.cm-preview-code-block.cm-embed-block.markdown-rendered {
+.pln-dv-mods .cm-preview-code-block.cm-embed-block.markdown-rendered {
     padding-left: 0;
 }
 /* hides the item count on a list */
-.dataview.small-text {
+.pln-dv-count .dataview.small-text {
     display: none;
 }
 
