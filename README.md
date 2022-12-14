@@ -1,5 +1,9 @@
-# PLN
-## Pipe Loves Nord
+# PLN (Pipe Loves Nord)removed
+
+## New for 1.0.0 GA
+I have added Style Settingst to toggle my primary changes of embeds, DV's and parts that I remove by default
+
+## Overview
 
 This is a personal theme I started creating for 0.16.
 
@@ -12,14 +16,13 @@ This is a personal theme I started creating for 0.16.
 - Stacked titles are flipped 180 degrees, and more compact
 - The active editor line and gutter lines are highlighted
 - Many icons are removed, I use the command pallete more than a mouse.
-	- Sidebar icons are removed
-	- Editor icons are removed
-	- The statusbar is removed
-	- Close icons are removed
-	- Tab file icons are removed
+    - Sidebar icons are removed
+    - Editor icons are removed
+    - The statusbar is removed
+    - Close icons are removed
+    - Tab file icons are removed
 - Scrollbars are hidden until hovered over
 - A frameless mac window no longer has sidebar icons under the window buttons
-
 
 ### Embeds
 - Embeds are stripped of all "indicators" and flow as written text
@@ -37,24 +40,24 @@ This is a personal theme I started creating for 0.16.
 ### Custom checkboxes
 - Completed tasks are not crossed out
 - I added various checkboxes that can be seen in the images. 
-	```
-	- [ ] open
-	- [x] complete
-	- [!] important
-	- [>] deferred
-	- [?] question
-	- [i] info
-	- [-] canceled 
-	- [/] partial
-	```
+    ```
+    - [ ] open
+    - [x] complete
+    - [!] important
+    - [>] deferred
+    - [?] question
+    - [i] info
+    - [-] canceled 
+    - [/] partial
+    ```
 - Custom checkboxes can be queried for in DV:
-	- Find all Important tasks
-	```js
-	task from "PATH\PATH"
-	WHERE !completed
-	WHERE status = "!"
-	GROUP by file.link
-	```
+    - Find all Important tasks
+    ```js
+    task from "PATH\PATH"
+    WHERE !completed
+    WHERE status = "!"
+    GROUP by file.link
+    ```
 
 ### Callouts
 - Danger is a unique design now
