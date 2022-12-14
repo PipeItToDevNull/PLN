@@ -1,7 +1,7 @@
 {
-	"name": "PLN",
-	"version": "1.0.0",
-	"minAppVersion": "0.16.0",
-	"author": "PipeItToDevNull",
-	"authorUrl": "https://blog.dev0.sh"
+    "name": "PLN",
+    "version": "1.0.0",
+    "minAppVersion": "1.0.0",
+    "author": "PipeItToDevNull",
+    "authorUrl": "https://blog.dev0.sh"
 }
