@@ -350,7 +350,7 @@ em, .cm-em {
     transform: skew(-10deg);
 }
 
-/* this helps spacing with embeds, I dont see neg effects */
+/* this unifies spacing in LP and reading (DV in LP is viewed as if it was reading) */
 .markdown-rendered h1,
 .markdown-rendered h2,
 .markdown-rendered h3,
@@ -374,9 +374,9 @@ body.pln-embd-mods {
 }
 
 /* hide headers */
-.internal-embed .markdown-embed h1,
-.internal-embed .markdown-embed h2,
-.internal-embed .markdown-embed h3 {
+.markdown-embed-content>.markdown-rendered h1,
+.markdown-embed-content>.markdown-rendered h2,
+.markdown-embed-content>.markdown-rendered h3 {
     display: none;
 }
 
