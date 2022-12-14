@@ -1,10 +1,9 @@
-# PLN (Pipe Loves Nord)removed
+# PLN (Pipe Loves Nord)
 
 ## New for 1.0.0 GA
 I have added Style Settingst to toggle my primary changes of embeds, DV's and parts that I remove by default
 
 ## Overview
-
 This is a personal theme I started creating for 0.16.
 
 ![Light Screenshot](PLN_Light.png)
