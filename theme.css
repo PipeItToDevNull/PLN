@@ -221,11 +221,6 @@ settings:
   }
 }
 
-/* mystery 1.1 fix */
-ul > li.task-list-item .task-list-item-checkbox {
-    margin-inline-start: 0;
-}
-
 /*
  * Main
 */
@@ -397,7 +392,7 @@ body.pln-embd-mods {
 
 /* this is to move embededlists over in LP
  * 2 pixels and removes a massive gap */
-ul.contains-task-list,
+.markdown-source-view.mod-cm6 ul.contains-task-list,
 .pln-embd-mods .markdown-embed .markdown-preview-view {
     padding: 0 0 0 0px;
 }
