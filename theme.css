@@ -221,6 +221,11 @@ settings:
   }
 }
 
+/* mystery 1.1 fix */
+ul > li.task-list-item .task-list-item-checkbox {
+    margin-inline-start: 0;
+}
+
 /*
  * Main
 */
