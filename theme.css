@@ -380,9 +380,9 @@ body.pln-embd-mods {
 }
 
 /* hide headers */
-.markdown-embed-content>.markdown-rendered h1,
-.markdown-embed-content>.markdown-rendered h2,
-.markdown-embed-content>.markdown-rendered h3 {
+.pln-embd-mods .markdown-embed-content>.markdown-rendered h1,
+.pln-embd-mods .markdown-embed-content>.markdown-rendered h2,
+.pln-embd-mods .markdown-embed-content>.markdown-rendered h3 {
     display: none;
 }
 
@@ -390,12 +390,12 @@ body.pln-embd-mods {
     visibility: hidden;
 }
 
-/* this is to move embededlists over in LP
- * 2 pixels and removes a massive gap */
-.inline-embed ul.contains-task-list,
-.pln-embd-mods .markdown-embed .markdown-preview-view {
+/* this is to move embededlists over in 1.1
+.cm-embed-block ul.contains-task-list, /* dv and callouts 
+.inline-embed ul.contains-task-list /* embeds  { 
     padding: 0 0 0 0px;
 }
+*/
 
 /* fix embeded dv lists in the sidebar */
 .workspace-leaf-content .markdown-embed .markdown-preview-view {
