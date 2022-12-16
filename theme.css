@@ -24,16 +24,40 @@ settings:
         description: Toggle the list count on a DV result
         type: class-toggle
         default: true
-     -
+    -
         id: pln-embd-h1
         title: Hide H1 in embeds
-        description: Do not display H1 in embeds
+        description: Do not display h1 in embeds
         type: class-toggle
         default: true
-     -
+    -
         id: pln-embd-h2
         title: Hide H2 in embeds
-        description: Do not display H2 in embeds
+        description: Do not display h2 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h3
+        title: Hide H3 in embeds
+        description: Do not display h3 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h4
+        title: Hide H4 in embeds
+        description: Do not display h4 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h5
+        title: Hide H5 in embeds
+        description: Do not display h5 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h6
+        title: Hide H6 in embeds
+        description: Do not display h6 in embeds
         type: class-toggle
         default: true
     -
@@ -392,12 +416,12 @@ body.pln-embd-mods {
 }
 
 /* hide headers */
-.pln-embd-mods .pln-embd-h1 .markdown-embed-content>.markdown-rendered h1,
-.pln-embd-mods .pln-embd-h2 .markdown-embed-content>.markdown-rendered h2,
-.pln-embd-mods .pln-embd-h3 .markdown-embed-content>.markdown-rendered h3,
-.pln-embd-mods .pln-embd-h4 .markdown-embed-content>.markdown-rendered h4,
-.pln-embd-mods .pln-embd-h5 .markdown-embed-content>.markdown-rendered h5,
-.pln-embd-mods .pln-embd-h6 .markdown-embed-content>.markdown-rendered h6 {
+.pln-embd-mods.pln-embd-h1 .markdown-embed-content>.markdown-rendered h1,
+.pln-embd-mods.pln-embd-h2 .markdown-embed-content>.markdown-rendered h2,
+.pln-embd-mods.pln-embd-h3 .markdown-embed-content>.markdown-rendered h3,
+.pln-embd-mods.pln-embd-h4 .markdown-embed-content>.markdown-rendered h4,
+.pln-embd-mods.pln-embd-h5 .markdown-embed-content>.markdown-rendered h5,
+.pln-embd-mods.pln-embd-h6 .markdown-embed-content>.markdown-rendered h6 {
     display: none;
 }
 
@@ -406,9 +430,14 @@ body.pln-embd-mods {
 }
 
 /* this is to move embededlists over in 1.1 */
-.cm-embed-block ul.contains-task-list,
-.inline-embed ul.contains-task-list { 
+.pln-embd-mods .cm-embed-block ul.contains-task-list,
+.pln-embd-mods .inline-embed ul.contains-task-list { 
     padding: 0 0 0 0px;
+}
+/* another stupid 1.1 fix the above 
+breaks embeds in reading mode */
+.pln-embd-mods .markdown-reading-view .inline-embed ul.contains-task-list {
+    padding: 0 0 0 20px
 }
 
 /* fix embeded dv lists in the sidebar */
