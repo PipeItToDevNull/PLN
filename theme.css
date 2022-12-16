@@ -47,19 +47,19 @@ settings:
         title: Hide H4 in embeds
         description: Do not display h4 in embeds
         type: class-toggle
-        default: true
+        default: false
     -
         id: pln-embd-h5
         title: Hide H5 in embeds
         description: Do not display h5 in embeds
         type: class-toggle
-        default: true
+        default: false
     -
         id: pln-embd-h6
         title: Hide H6 in embeds
         description: Do not display h6 in embeds
         type: class-toggle
-        default: true
+        default: false
     -
         id: pln-embd-mods
         title: Embed modifications
