@@ -13,6 +13,18 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-hi-line
+        title: Highlight active line
+        description: Highlight the active line
+        type: class-toggle
+        default: true
+    -
+        id: pln-head-dv
+        title: Dataview modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
         id: pln-dv-mods
         title: Dataview modifications
         description: Globally toggle my various DV modifications
@@ -22,6 +34,18 @@ settings:
         id: pln-dv-count
         title: Dataview list count
         description: Toggle the list count on a DV result
+        type: class-toggle
+        default: true
+    -
+        id: pln-head-embd
+        title: Embed modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-embd-mods
+        title: Embed modifications
+        description: Globally toggle my various embed modifications
         type: class-toggle
         default: true
     -
@@ -61,17 +85,11 @@ settings:
         type: class-toggle
         default: false
     -
-        id: pln-embd-mods
-        title: Embed modifications
-        description: Globally toggle my various embed modifications
-        type: class-toggle
-        default: true
-    -
-        id: pln-hi-line
-        title: Highlight active line
-        description: Highlight the active line
-        type: class-toggle
-        default: true
+        id: pln-head-rm
+        title: Removals
+        type: heading
+        level: 2
+        collapsed: true
     -
         id: pln-rm-ribbon
         title: Remove ribbon
