@@ -13,6 +13,18 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-hi-line
+        title: Highlight active line
+        description: Highlight the active line
+        type: class-toggle
+        default: true
+    -
+        id: pln-head-dv
+        title: Dataview modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
         id: pln-dv-mods
         title: Dataview modifications
         description: Globally toggle my various DV modifications
@@ -25,17 +37,59 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-head-embd
+        title: Embed modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
         id: pln-embd-mods
         title: Embed modifications
         description: Globally toggle my various embed modifications
         type: class-toggle
         default: true
     -
-        id: pln-hi-line
-        title: Highlight active line
-        description: Highlight the active line
+        id: pln-embd-h1
+        title: Hide H1 in embeds
+        description: Do not display h1 in embeds
         type: class-toggle
         default: true
+    -
+        id: pln-embd-h2
+        title: Hide H2 in embeds
+        description: Do not display h2 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h3
+        title: Hide H3 in embeds
+        description: Do not display h3 in embeds
+        type: class-toggle
+        default: true
+    -
+        id: pln-embd-h4
+        title: Hide H4 in embeds
+        description: Do not display h4 in embeds
+        type: class-toggle
+        default: false
+    -
+        id: pln-embd-h5
+        title: Hide H5 in embeds
+        description: Do not display h5 in embeds
+        type: class-toggle
+        default: false
+    -
+        id: pln-embd-h6
+        title: Hide H6 in embeds
+        description: Do not display h6 in embeds
+        type: class-toggle
+        default: false
+    -
+        id: pln-head-rm
+        title: Removals
+        type: heading
+        level: 2
+        collapsed: true
     -
         id: pln-rm-ribbon
         title: Remove ribbon
@@ -48,6 +102,12 @@ settings:
         description: Remove the sidebar indicators. They can still be opened with hotkeys.
         type: class-toggle
         default: true
+    -
+        id: pln-rm-lside-tl
+        title: Remove mod top left
+        description: Remove the top tab container in the left sidebar.
+        type: class-toggle
+        default: false
     -
         id: pln-rm-status
         title: Remove statusbar
@@ -308,7 +368,9 @@ body {
 /* action bottons, top right of note */
 .pln-rm-act .view-actions,
 /* note icon for tabs */
-.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
+/* remove top left sidebar container */
+.pln-rm-lside-tl .mod-top-left-space .workspace-tab-header-container {
     display: none;
 }
 
@@ -380,22 +442,29 @@ body.pln-embd-mods {
 }
 
 /* hide headers */
-.pln-embd-mods .markdown-embed-content>.markdown-rendered h1,
-.pln-embd-mods .markdown-embed-content>.markdown-rendered h2,
-.pln-embd-mods .markdown-embed-content>.markdown-rendered h3 {
+.pln-embd-mods.pln-embd-h1 .markdown-embed-content>.markdown-rendered h1,
+.pln-embd-mods.pln-embd-h2 .markdown-embed-content>.markdown-rendered h2,
+.pln-embd-mods.pln-embd-h3 .markdown-embed-content>.markdown-rendered h3,
+.pln-embd-mods.pln-embd-h4 .markdown-embed-content>.markdown-rendered h4,
+.pln-embd-mods.pln-embd-h5 .markdown-embed-content>.markdown-rendered h5,
+.pln-embd-mods.pln-embd-h6 .markdown-embed-content>.markdown-rendered h6 {
     display: none;
 }
 
 .pln-embd-mods .markdown-embed-link {
-    visibility: hidden;
+    display: none;
 }
 
-/* this is to move embededlists over in 1.1
-.cm-embed-block ul.contains-task-list, /* dv and callouts 
-.inline-embed ul.contains-task-list /* embeds  { 
+/* this is to move embededlists over in 1.1 */
+.pln-embd-mods .cm-embed-block ul.contains-task-list,
+.pln-embd-mods .inline-embed ul.contains-task-list { 
     padding: 0 0 0 0px;
 }
-*/
+/* another stupid 1.1 fix the above 
+breaks embeds in reading mode */
+.pln-embd-mods .markdown-reading-view .inline-embed ul.contains-task-list {
+    padding: 0 0 0 20px
+}
 
 /* fix embeded dv lists in the sidebar */
 .workspace-leaf-content .markdown-embed .markdown-preview-view {
@@ -577,6 +646,9 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="links"] {
     --callout-icon: link;
 }
+.callout[data-callout="meta"] {
+    --callout-icon: database;
+}
 
 /* colours */
 .callout[data-callout="note"] {
@@ -637,12 +709,14 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 
 .theme-dark .callout[data-callout="cite"],
 .theme-dark .callout[data-callout="quote"],
-.theme-dark .callout[data-callout="links"] {
+.theme-dark .callout[data-callout="links"],
+.theme-dark .callout[data-callout="meta"] {
     --callout-color: 216, 222, 233;
 }
 .theme-light .callout[data-callout="cite"],
 .theme-light .callout[data-callout="quote"],
-.theme-light .callout[data-callout="links"] {
+.theme-light .callout[data-callout="links"],
+.theme-light .callout[data-callout="meta"] {
     --callout-color: 76, 86, 106;
 }
 
