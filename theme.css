@@ -7,6 +7,12 @@ name: PLN by PipeItToDevNull
 id: pln
 settings:
     -
+        id: pln-head-gen
+        title: General modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
         id: pln-link-mods
         title: Link modifications
         description: Underline only external links and remove the distinction from unresolved links.
@@ -156,6 +162,24 @@ settings:
         description: Hide scroll bars, hover to view them
         type: class-toggle
         default: true
+    -
+        id: pln-head-co
+        title: Callout modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-rm-co-meta
+        title: Hide Meta callout in reading mode
+        description: Remove the custom "meta" callout in reading mode
+        type: class-toggle
+        default: false
+    -
+        id: pln-rm-co-links
+        title: Hide Links callout in reading mode
+        description: Remove the custom "links" callout in reading mode
+        type: class-toggle
+        default: false
 */
 
 .theme-light,
@@ -370,7 +394,7 @@ body {
 /* note icon for tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container */
-.pln-rm-lside-tl .mod-top-left-space .workspace-tab-header-container {
+.pln-rm-lside-tl .mod-left-split .mod-top-left-space .workspace-tab-header-container {
     display: none;
 }
 
@@ -648,6 +672,12 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 }
 .callout[data-callout="meta"] {
     --callout-icon: database;
+}
+
+/* remove meta callouts in reading mode */
+.pln-rm-co-links .markdown-reading-view .callout[data-callout="links"],
+.pln-rm-co-meta .markdown-reading-view .callout[data-callout="meta"] {
+    display: none;
 }
 
 /* colours */
