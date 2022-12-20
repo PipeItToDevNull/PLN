@@ -175,11 +175,23 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pln-pdf-rm-co-meta
+        title: Hide Meta callout in PDF exports
+        description: Remove the custom "meta" callout in PDF exports only
+        type: class-toggle
+        default: true
+    -
         id: pln-rm-co-links
         title: Hide Links callout in reading mode
         description: Remove the custom "links" callout in reading mode
         type: class-toggle
         default: false
+    -
+        id: pln-pdf-rm-co-links
+        title: Hide Links callout in PDF exports
+        description: Remove the custom "links" callout in PDF exports only
+        type: class-toggle
+        default: true
 */
 
 .theme-light,
@@ -299,10 +311,16 @@ settings:
 
 /* pdf fixes */
 @media print {
-  .theme-dark {
-    --highlight-mix-blend-mode: darken;
-    --list-marker-color: var(--b0);
-  }
+    .theme-dark {
+        --highlight-mix-blend-mode: darken;
+        --list-marker-color: var(--b0);
+        --code-background: var(--w2);
+        --code-normal: var(--b0);
+    }
+    .pln-pdf-rm-co-links .callout[data-callout="links"],
+    .pln-pdf-rm-co-meta .callout[data-callout="meta"] {
+            display: none;
+    }
 }
 
 /*
