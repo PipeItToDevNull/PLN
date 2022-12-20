@@ -103,6 +103,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-rm-lside-tl
+        title: Remove mod top left
+        description: Remove the top tab container in the left sidebar.
+        type: class-toggle
+        default: false
+    -
         id: pln-rm-status
         title: Remove statusbar
         description: Removes the bottom statusbar
@@ -362,7 +368,9 @@ body {
 /* action bottons, top right of note */
 .pln-rm-act .view-actions,
 /* note icon for tabs */
-.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon {
+.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
+/* remove top left sidebar container */
+.pln-rm-lside-tl .mod-top-left-space .workspace-tab-header-container {
     display: none;
 }
 
