@@ -638,6 +638,9 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="links"] {
     --callout-icon: link;
 }
+.callout[data-callout="meta"] {
+    --callout-icon: database;
+}
 
 /* colours */
 .callout[data-callout="note"] {
@@ -698,12 +701,14 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 
 .theme-dark .callout[data-callout="cite"],
 .theme-dark .callout[data-callout="quote"],
-.theme-dark .callout[data-callout="links"] {
+.theme-dark .callout[data-callout="links"],
+.theme-dark .callout[data-callout="meta"] {
     --callout-color: 216, 222, 233;
 }
 .theme-light .callout[data-callout="cite"],
 .theme-light .callout[data-callout="quote"],
-.theme-light .callout[data-callout="links"] {
+.theme-light .callout[data-callout="links"],
+.theme-light .callout[data-callout="meta"] {
     --callout-color: 76, 86, 106;
 }
 
