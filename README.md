@@ -62,7 +62,16 @@ This is a personal theme I started creating for 0.16.
 - Danger is a unique design now
 - Callouts are condensed
 - Idea has been added
-- Links has been added, I use it for holding a DV backlinks query as opposed to the native block at the bottom of notes.
+- Links and Meta have been added, I use them for holding a DV backlinks query and my meta-data as opposed to native frontmatter or the backlinks pane.
+    - Both of these callouts can be toggled to appear in Reading and PDF exports.
+
+![links_meta.png](links_meta.png)
+
+Query for Links callout
+```js
+TABLE without id file.inlinks AS "Links from", file.outlinks AS "Links to"
+WHERE file.path = this.file.path
+```
 
 ### Calendar plugin
 - It has been condensed
