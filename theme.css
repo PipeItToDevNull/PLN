@@ -444,7 +444,7 @@ body.pln-embd-mods {
 }
 
 .pln-embd-mods .markdown-embed-link {
-    visibility: hidden;
+    display: none;
 }
 
 /* this is to move embededlists over in 1.1 */
