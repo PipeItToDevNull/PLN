@@ -393,6 +393,11 @@ body {
     display: none;
 }
 
+/* fix table font size */
+body {
+    --table-text-size: var(--font-text-size);
+}
+
 /* highlight active line */
 .pln-hi-line .cm-active.cm-line {
     background-color: var(--background-modifier-border);
