@@ -109,9 +109,9 @@ settings:
         type: class-toggle
         default: true
     -
-        id: pln-rm-lside-tl
+        id: pln-rm-win-lside-tl
         title: Remove mod top left
-        description: Remove the top tab container in the left sidebar.
+        description: Remove the top tab container in the left sidebar in Windows in hidden frameless.
         type: class-toggle
         default: false
     -
@@ -423,7 +423,7 @@ body {
 /* note icon for tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
-.pln-rm-lside-tl .is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
+.mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
     display: none;
 }
 
@@ -452,15 +452,12 @@ body {
     background-color: transparent;
     width: 10px;
 }
-
 .pln-rm-scroll ::-webkit-scrollbar-thumb {
     visibility: hidden;
 }
-
 .pln-rm-scroll ::-webkit-scrollbar:hover {
     visibility: initial;
 }
-
 .pln-rm-scroll ::-webkit-scrollbar-thumb:hover {
     visibility: initial;
 }
@@ -873,7 +870,6 @@ mark.borders {
     padding-left: 2px;
     padding-right: 2px;
 }
-
 
 /*
  * Calendar plugin
