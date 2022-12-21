@@ -351,6 +351,11 @@ body {
     --file-margins: 10px;
 }
 
+/* folding indicator */
+.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator {
+    padding-right: 0px;
+}
+
 /* macos fixes for hidden title */
 .mod-macos {
     --frame-left-space: 65px;
