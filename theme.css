@@ -163,6 +163,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-rm-mac-tside
+        title: Hide top bar in MacOS
+        description: Hide the top bar on MacOS when in stacked tabs. (Works best in Frameless/hidden title bars)
+        type: class-toggle
+        default: true
+    -
         id: pln-head-co
         title: Callout modifications
         type: heading
@@ -377,6 +383,11 @@ body {
     letter-spacing: 1px;
 }
 
+/* hide the top bar when stacked on macos */
+.mod-macos.pln-rm-mac-tside.is-hidden-frameless .mod-vertical .mod-stacked .workspace-tab-header-container {
+    display: none;
+}
+
 /* highlight active line */
 .pln-hi-line .cm-active.cm-line {
     background-color: var(--background-modifier-border);
@@ -411,8 +422,8 @@ body {
 .pln-rm-act .view-actions,
 /* note icon for tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
-/* remove top left sidebar container */
-.pln-rm-lside-tl .mod-left-split .mod-top-left-space .workspace-tab-header-container {
+/* remove top left sidebar container in hidden*/
+.pln-rm-lside-tl .is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
     display: none;
 }
 
