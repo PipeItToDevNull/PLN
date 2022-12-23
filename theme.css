@@ -194,13 +194,13 @@ settings:
         default: true
     -
         id: pln-head-vi
-        title: Vision impairment modifications
+        title: High contrast modifications
         type: heading
         level: 2
         collapsed: true
     -
         id: pln-vision
-        title: Vision impaired yellow
+        title: High contrast toggle
         descriptioon: Change main text to a vision impaired yellow. You should change your accent colour to something that compliments #cccc00. Don't use this with light mode...
         type: class-toggle
         default: false
