@@ -25,18 +25,6 @@ settings:
         type: class-toggle
         default: true
     -
-        id: pln-vision
-        title: Vision impaired yellow
-        descriptioon: Change main text to a vision impaired yellow. You should change your accent colour to something that compliments #cccc00. Don't use this with light mode...
-        type: class-toggle
-        default: false
-    -
-        id: pln-head-dv
-        title: Dataview modifications
-        type: heading
-        level: 2
-        collapsed: true
-    -
         id: pln-dv-mods
         title: Dataview modifications
         description: Globally toggle my various DV modifications
@@ -204,6 +192,35 @@ settings:
         description: Remove the custom "links" callout in PDF exports only
         type: class-toggle
         default: true
+    -
+        id: pln-head-vi
+        title: Vision impairment modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-vision
+        title: Vision impaired yellow
+        descriptioon: Change main text to a vision impaired yellow. You should change your accent colour to something that compliments #cccc00. Don't use this with light mode...
+        type: class-toggle
+        default: false
+    -
+        id: pln-vision-yel
+        title: Primary color
+        description: This is the primary color to be used in vision impaired mode.
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#cccc00'
+    -
+        id: pln-vision-gry
+        title: Secondary color
+        description: This is used for code blocks and buttons mostly
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#4C4E52'
+    -
 */
 
 .theme-light,
@@ -323,32 +340,33 @@ settings:
 
 /* any vision accomodations would be here */
 .pln-vision {
-    --yel: #cccc00;
-    --gry: #4C4E52;
+    --pln-vision-yel: #cccc00;
+    --pln-vision-gry: #4C4E52;
 
-    --text-normal: var(--yel);
-    --text-faint: var(--yel);
-    --text-muted: var(--yel);
+    --text-normal: var(--pln-vision-yel);
+    --text-faint: var(--pln-vision-yel);
+    --text-muted: var(--pln-vision-yel);
     --background-primary: black;
     --background-primary-alt: var(-gry);
     --background-secondary: black;
     --background-secondary-alt: black;
-    --background-modifier-border: var(--yel);
+    --background-modifier-border: var(--pln-vision-yel);
+    --text-on-accent: black;
 
-    --color-base-30: var(--gry);
-    --color-base-35: var(--yel);
+    --color-base-30: var(--pln-vision-gry);
+    --color-base-35: var(--pln-vision-yel);
 
-    --color-red: var(--yel);
-    --color-orange: var(--yel);
-    --color-yellow-light: var(--yel);
-    --color-yellow-dark: var(--yel);
-    --color-green: var(--yel);
-    --color-purple: var(--yel);
-    --color-sea-green: var(--yel);
-    --color-cyan: var(--yel);
-    --color-frost: var(--yel);
-    --color-blue: var(--yel);
-    --color-salmon: var(--yel);
+    --color-red: var(--pln-vision-yel);
+    --color-orange: var(--pln-vision-yel);
+    --color-yellow-light: var(--pln-vision-yel);
+    --color-yellow-dark: var(--pln-vision-yel);
+    --color-green: var(--pln-vision-yel);
+    --color-purple: var(--pln-vision-yel);
+    --color-sea-green: var(--pln-vision-yel);
+    --color-cyan: var(--pln-vision-yel);
+    --color-frost: var(--pln-vision-yel);
+    --color-blue: var(--pln-vision-yel);
+    --color-salmon: var(--pln-vision-yel);
 }
 
 /* pdf fixes */
