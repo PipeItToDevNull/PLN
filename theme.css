@@ -23,7 +23,7 @@ settings:
         title: Highlight active line
         description: Highlight the active line
         type: class-toggle
-        default: true
+        default: false
     -
         id: pln-dv-mods
         title: Dataview modifications
