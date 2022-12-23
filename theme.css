@@ -25,6 +25,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-vision
+        title: Vision impaired yellow
+        descriptioon: Change main text to a vision impaired yellow. You should change your accent colour to something that compliments #cccc00. Don't use this with light mode...
+        type: class-toggle
+        default: false
+    -
         id: pln-head-dv
         title: Dataview modifications
         type: heading
@@ -313,6 +319,36 @@ settings:
     --color-base-70: var(--w2);
     /* main font */
     --color-base-100: var(--w3);
+}
+
+/* any vision accomodations would be here */
+.pln-vision {
+    --yel: #cccc00;
+    --gry: #4C4E52;
+
+    --text-normal: var(--yel);
+    --text-faint: var(--yel);
+    --text-muted: var(--yel);
+    --background-primary: black;
+    --background-primary-alt: var(-gry);
+    --background-secondary: black;
+    --background-secondary-alt: black;
+    --background-modifier-border: var(--yel);
+
+    --color-base-30: var(--gry);
+    --color-base-35: var(--yel);
+
+    --color-red: var(--yel);
+    --color-orange: var(--yel);
+    --color-yellow-light: var(--yel);
+    --color-yellow-dark: var(--yel);
+    --color-green: var(--yel);
+    --color-purple: var(--yel);
+    --color-sea-green: var(--yel);
+    --color-cyan: var(--yel);
+    --color-frost: var(--yel);
+    --color-blue: var(--yel);
+    --color-salmon: var(--yel);
 }
 
 /* pdf fixes */
