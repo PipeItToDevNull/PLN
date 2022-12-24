@@ -1,0 +1,85 @@
+/*
+ * Folders
+/*
+/* https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066 */
+/* thanks to Evelf */
+.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title,
+.mod-root > .nav-folder-children > .is-collapsed .collapse-icon svg.svg-icon,
+.mod-root .nav-folder .collapse-icon svg.svg-icon {
+    color: var(--b0);
+}
+.mod-root .nav-folder .nav-folder-children .collapse-icon svg.svg-icon {
+    color: var(--nav-collapse-icon-color);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) > .nav-folder-title {
+    background-color: var(--color-red);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) .nav-file-title {
+    border-left: 3px solid var(--color-red);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) > .nav-folder-title {
+    background-color: var(--color-orange);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) .nav-file-title {
+    border-left: 3px solid var(--color-orange);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) > .nav-folder-title {
+    background-color: var(--color-yellow-light);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) .nav-file-title {
+    border-left: 3px solid var(--color-yellow-light);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) > .nav-folder-title {
+    background-color: var(--color-green);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) .nav-file-title {
+    border-left: 3px solid var(--color-green);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) > .nav-folder-title {
+    background-color: var(--color-sea-green);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) .nav-file-title {
+    border-left: 3px solid var(--color-sea-green);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) > .nav-folder-title {
+    background-color: var(--color-cyan);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) .nav-file-title {
+    border-left: 3px solid var(--color-cyan);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) > .nav-folder-title {
+    background-color: var(--color-frost);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) .nav-file-title {
+    border-left: 3px solid var(--color-frost);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) > .nav-folder-title {
+    background-color: var(--color-blue);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) .nav-file-title {
+    border-left: 3px solid var(--color-blue);
+}
+
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) > .nav-folder-title {
+    background-color: var(--color-purple);
+}
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) .nav-folder-title,
+.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) .nav-file-title {
+    border-left: 3px solid var(--color-purple);
+}

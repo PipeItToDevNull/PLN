@@ -1,0 +1,93 @@
+/*
+ * Highlighters
+ * Original by soggymuse, modified by Pipe
+*/
+/* removes the default css */
+mark,
+.markdown-rendered mark,
+.cm-s-obsidian span.cm-highlight {
+    color: inherit;
+    background: none;
+    border-radius: 4px;
+    border-bottom: 3px solid;
+    border-bottom-color: var(--color-yellow);
+}
+
+/*Add highlighter's label before highlighted text*/
+mark::before,
+.cm-s-obsidian span.cm-highlight::before {
+    padding: 0 5px;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: Palatino;
+}
+
+/*Red highlighter (edit)*/
+mark.edit { border-bottom-color: var(--color-red); }
+mark.edit::before {
+    color: var(--color-red);
+    content: "Edit:";
+}
+
+/*Orange highlighter (unfinished)*/
+mark.unfinished { border-bottom-color: var(--color-orange); }
+mark.unfinished::before {
+    color: var(--color-orange);
+    content: "Unfinished:";
+}
+
+/*Pink highlighter (verify)*/
+mark.verify { border-bottom-color: var(--color-purple); }
+mark.verify::before {
+    color: var(--color-purple);
+    content: "Verify:";
+}
+
+/* Green highlighter (important)*/
+mark.important { border-bottom-color: var(--color-green); }
+mark.important::before {
+    color: var(--color-green);
+    content: "Important:";
+}
+
+/*
+ * Text colours using mark
+*/
+/*Red text*/
+mark.red {
+    color: var(--color-red);
+    border-bottom: 0px;
+}
+/*Blue text*/
+mark.blue {
+    color: var(--color-blue);
+    border-bottom: 0px;
+}
+/*green text*/
+mark.green {
+    color: var(--color-green);
+    border-bottom: 0px;
+}
+/*purple text*/
+mark.purple {
+    color: var(--color-purple);
+    border-bottom: 0px;
+}
+/*underlined text*/
+mark.underline {
+    text-decoration: underline;
+    border-bottom: 0px;
+}
+/* paths */
+mark.path {
+    font-family: monospace;
+    color: var(--text-faint);
+    border-bottom: 0px;
+}
+/* borders */
+mark.borders {
+    border: 1px solid;
+    border-radius: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
