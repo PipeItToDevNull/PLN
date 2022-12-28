@@ -49,6 +49,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-embd-title
+        title: Embeded note titles
+        description: Hide the title of an embeded note
+        type: class-toggle
+        default: true
+    -
         id: pln-embd-h1
         title: Hide H1 in embeds
         description: Do not display h1 in embeds
@@ -565,6 +571,11 @@ body.pln-embd-mods {
     display: none;
 }
 
+/* hide titles in emebds */
+.pln-embd-mods.pln-embd-title .embed-title {
+    display: none;
+}
+
 .pln-embd-mods .markdown-embed-link {
     display: none;
 }
@@ -764,9 +775,10 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
     --callout-icon: database;
 }
 
-/* remove meta callouts in reading mode */
+/* remove meta callouts in reading mode and when embeded*/
 .pln-rm-co-links .markdown-reading-view .callout[data-callout="links"],
-.pln-rm-co-meta .markdown-reading-view .callout[data-callout="meta"] {
+.pln-rm-co-meta .markdown-reading-view .callout[data-callout="meta"],
+.markdown-embed .callout[data-callout="meta"] {
     display: none;
 }
 
