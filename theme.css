@@ -53,42 +53,42 @@ settings:
         type: variable-color
         opacity: false
         format: hex
-        default: '#5E81AC'
+        default: '#BF616A'
     -
         id: pln-hdcl-2
         title: H2 color
         type: variable-color
         opacity: false
         format: hex
-        default: '#81a1c1'
+        default: '#D08770'
     -
         id: pln-hdcl-3
         title: H3 color
         type: variable-color
         opacity: false
         format: hex
-        default: '#88C0D0'
+        default: '#EBCB8B'
     -
         id: pln-hdcl-4
         title: H4 color
         type: variable-color
         opacity: false
         format: hex
-        default: '#8FBCBB'
+        default: '#A3BE8C'
     -
         id: pln-hdcl-5
         title: H5 color
         type: variable-color
         opacity: false
         format: hex
-        default: '#A3BE8C'
+        default: '#8FBCBB'
     -
         id: pln-hdcl-6
         title: H5 color
         type: variable-color
         opacity: false
         format: hex
-        default: '#EBCB8B'
+        default: '#88C0D0'
     -
         id: pln-head-embd
         title: Embed modifications
