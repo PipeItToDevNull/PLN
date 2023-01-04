@@ -37,6 +37,59 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-head-heads
+        title: Header colors
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-hdcl
+        title: Header color toggle
+        type: class-toggle
+        default: false
+    -
+        id: pln-hdcl-1
+        title: H1 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#5E81AC'
+    -
+        id: pln-hdcl-2
+        title: H2 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#81a1c1'
+    -
+        id: pln-hdcl-3
+        title: H3 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#88C0D0'
+    -
+        id: pln-hdcl-4
+        title: H4 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#8FBCBB'
+    -
+        id: pln-hdcl-5
+        title: H5 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#A3BE8C'
+    -
+        id: pln-hdcl-6
+        title: H5 color
+        type: variable-color
+        opacity: false
+        format: hex
+        default: '#EBCB8B'
+    -
         id: pln-head-embd
         title: Embed modifications
         type: heading
@@ -409,6 +462,16 @@ body {
 }
 .mod-stacked {
     --file-margins: 10px;
+}
+
+/* header colors */
+body.pln-hdcl {
+    --h1-color: var(--pln-hdcl-1);
+    --h2-color: var(--pln-hdcl-2);
+    --h3-color: var(--pln-hdcl-3);
+    --h4-color: var(--pln-hdcl-4);
+    --h5-color: var(--pln-hdcl-5);
+    --h6-color: var(--pln-hdcl-6);
 }
 
 /* folding indicator */
