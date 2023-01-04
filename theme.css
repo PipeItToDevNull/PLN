@@ -45,6 +45,7 @@ settings:
     -
         id: pln-hdcl
         title: Header color toggle
+        description: You must open each color and "save" it to render properly. See issue 94 for style settings.
         type: class-toggle
         default: false
     -
