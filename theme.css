@@ -842,6 +842,7 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 /* remove meta callouts in reading mode and when embeded*/
 .pln-rm-co-links .markdown-reading-view .callout[data-callout="links"],
 .pln-rm-co-meta .markdown-reading-view .callout[data-callout="meta"],
+.markdown-embed .callout[data-callout="links"],
 .markdown-embed .callout[data-callout="meta"] {
     display: none;
 }
