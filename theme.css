@@ -1042,7 +1042,7 @@ mark.borders {
   --color-text-weeknum: var(--color-yellow);
 }
 #calendar-container .year {
-    color: var(--color-cyan);
+    color: var(--color-accent-1);
 }
 
 /* padding fixes for calendar */
