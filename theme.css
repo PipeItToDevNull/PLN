@@ -7,6 +7,36 @@ name: PLN by PipeItToDevNull
 id: pln
 settings:
     -
+        id: pln-head-accent
+        title: Accent colours
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: color-accent
+        title: Accent colour
+        type: variable-themed-color
+        format: hsl-split
+        opacity: false
+        default-light: '#5E81AC'
+        default-dark: '#81A1C1'
+    -
+        id: color-accent-1
+        title: Accent colour 1
+        type: variable-themed-color
+        format: hsl-split
+        opacity: false
+        default-light: '#5E81AC'
+        default-dark: '#81A1C1'
+    -
+        id: color-accent-2
+        title: Accent colour 2
+        type: variable-themed-color
+        format: hsl-split
+        opacity: false
+        default-light: '#81A1C1'
+        default-dark: '#5E81AC'
+    -
         id: pln-head-gen
         title: General modifications
         type: heading
@@ -311,17 +341,14 @@ settings:
     --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
 
     --bold-weight: var(--font-bold);
+
+    --accent-h: var(--color-accent-h);
+    --accent-s: var(--color-accent-s);
+    --accent-l: var(--color-accent-l);
 }
 
 .theme-light {
     --color-yellow: var(--color-yellow-dark);
-    --color-accent: var(--color-blue);
-    --color-accent-1: var(--color-blue);
-    --color-accent-2: var(--color-frost);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 213;
-    --accent-s: 32%;
-    --accent-l: 53%;
 
     /* the note background */
     --background-primary: var(--w3) ;
@@ -358,13 +385,6 @@ settings:
 
 .theme-dark {
     --color-yellow: var(--color-yellow-light);
-    --color-accent: var(--color-frost);
-    --color-accent-1: var(--color-frost);
-    --color-accent-2: var(--color-blue);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 210;
-    --accent-s: 34%;
-    --accent-l: 63%;
 
     /* the note background */
     --background-primary: var(--b1) ;
