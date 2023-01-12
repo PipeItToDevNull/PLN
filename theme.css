@@ -151,6 +151,12 @@ settings:
         level: 2
         collapsed: true
     -
+        id: pln-rm-folder-nav
+        title: Remove folder nav
+        description: Remove the folder navigation icons
+        type: class-toggle
+        default: false
+    -
         id: pln-rm-ribbon
         title: Remove ribbon
         description: Remove the left ribbon
@@ -537,6 +543,8 @@ body {
 }
 
 /* REMOVE THINGS */
+/* folder navigation buttons */
+.pln-rm-folder-nav .nav-buttons-container,
 /* ribbon */
 .pln-rm-ribbon .workspace-ribbon.mod-left,
 /* sidebars */
