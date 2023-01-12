@@ -103,6 +103,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-embd-link
+        title: Embeded note link icon
+        description: Hide the link icon for an embedded note
+        type: class-toggle
+        default: true
+    -
         id: pln-embd-title
         title: Embeded note titles
         description: Hide the title of an embeded note
@@ -640,7 +646,8 @@ body.pln-embd-mods {
     display: none;
 }
 
-.pln-embd-mods .markdown-embed-link {
+/* hide the link icon for embeds */
+.pln-embd-mods.pln-embd-link .markdown-embed-link {
     display: none;
 }
 
