@@ -1,8 +1,5 @@
 # PLN (Pipe Loves Nord)
 
-## New for 1.0.0 GA
-I have added Style Settings (thanks Isabel) to toggle my primary changes of embeds, DV's and parts that I remove by default
-
 ## Overview
 This is a personal theme I started creating for 0.16.
 
@@ -14,7 +11,7 @@ This is a personal theme I started creating for 0.16.
 - Fonts are generally smaller
 - Stacked titles are flipped 180 degrees, and more compact
 - The active editor line and gutter lines are highlighted
-- Many icons are removed, I use the command pallete more than a mouse.
+- Many icons are removed, I use the command pallete more than a mouse. All removals can be controlled via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
     - Sidebar icons are removed
     - Editor icons are removed
     - The statusbar is removed
@@ -25,7 +22,7 @@ This is a personal theme I started creating for 0.16.
 
 ### Embeds
 - Embeds are stripped of all "indicators" and flow as written text
-- H1-3 of embeds are hidden, kind of janky but it works for most cases
+- H1-3 of embeds are hidden with options to hide all headers or no headers via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 
 ### Links
 - Internal links are not underlined
@@ -33,7 +30,7 @@ This is a personal theme I started creating for 0.16.
 - External link icons are removed
 
 ### Dataview
-- Styling is removed like embeds so they flow like written text
+- Styling is removed like embeds so they flow like written text. Edits can be toggled via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 - Hide the item count on task lists
 
 ### Custom checkboxes
