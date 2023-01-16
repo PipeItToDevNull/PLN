@@ -6,6 +6,23 @@ This is a personal theme I started creating for 0.16.
 ![Light Screenshot](PLN_Light.png)
 ![Dark Screenshot](PLN_Dark.png)
 
+## Colours
+Below are our colours from Nord and what they are called. Yellow-light and Yellow-dark are a necessary evil to actually have yellow be readable in Light mode, Yellow-light is the true Nord colour.
+
+```css
+--color-red: #bf616a;
+--color-orange: #d08770;
+--color-yellow-light: #ebcb8b;
+--color-yellow-dark: #e4b860;
+--color-green: #a3be8c;
+--color-purple: #b48ead;
+--color-sea-green: #8fbcbb;
+--color-cyan: #88c0d0;
+--color-frost: #81a1c1;
+--color-blue: #5e81ac;
+--color-salmon: #FC6E68;
+```
+
 ## Changes
 ### Basics
 - Fonts are generally smaller

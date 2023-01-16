@@ -988,24 +988,44 @@ mark.important::before {
 /*
  * Text colours using mark
 */
-/*Red text*/
 mark.red {
     color: var(--color-red);
     border-bottom: 0px;
 }
-/*Blue text*/
-mark.blue {
-    color: var(--color-blue);
+mark.orange {
+    color: var(--color-orange);
     border-bottom: 0px;
 }
-/*green text*/
+mark.yellow {
+    color: var(--color-yellow);
+    border-bottom: 0px;
+}
 mark.green {
     color: var(--color-green);
     border-bottom: 0px;
 }
-/*purple text*/
 mark.purple {
     color: var(--color-purple);
+    border-bottom: 0px;
+}
+mark.sea-green {
+    color: var(--color-sea-green);
+    border-bottom: 0px;
+}
+mark.cyan {
+    color: var(--color-cyan);
+    border-bottom: 0px;
+}
+mark.frost {
+    color: var(--color-frost);
+    border-bottom: 0px;
+}
+mark.blue {
+    color: var(--color-blue);
+    border-bottom: 0px;
+}
+mark.salmon {
+    color: var(--color-salmon);
     border-bottom: 0px;
 }
 /*underlined text*/
