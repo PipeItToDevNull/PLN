@@ -157,6 +157,12 @@ settings:
         level: 2
         collapsed: true
     -
+        id: pln-rm-attachments
+        title: Hide attachments
+        description: Hide attachments in the file explorer
+        type: class-toggle
+        default: false
+    -
         id: pln-rm-folder-nav
         title: Remove folder nav
         description: Remove the folder navigation icons
@@ -549,6 +555,8 @@ body {
 }
 
 /* REMOVE THINGS */
+/* hide attachments */
+.pln-rm-attachments .nav-file:has(.nav-file-tag),
 /* folder navigation buttons */
 .pln-rm-folder-nav .nav-buttons-container,
 /* ribbon */
