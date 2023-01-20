@@ -37,6 +37,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-view-invert
+        title: Invert view icons
+        description: Invert the Reading and Edit view icons in the top right of notes.
+        type: class-toggle
+        default: false
+    -
         id: pln-head-heads
         title: Header colors
         type: heading
@@ -533,6 +539,20 @@ body {
 /* hide the top bar when stacked on macos */
 .mod-macos.pln-rm-mac-tside.is-hidden-frameless .mod-vertical .mod-stacked .workspace-tab-header-container {
     display: none;
+}
+
+/* invert reading icons to make more sense visually */
+.pln-view-invert .clickable-icon.view-action[aria-label^="Current view: editing"] {
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'%3E%3C/path%3E%3Cpath d='M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: var(--icon-color);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+.pln-view-invert .clickable-icon.view-action[aria-label^="Current view: reading"] {
+    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z'%3E%3C/path%3E%3Cpath d='M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'%3E%3C/path%3E%3C/svg%3E");
+    background-color: var(--icon-color);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 
 /* fix table font size */
