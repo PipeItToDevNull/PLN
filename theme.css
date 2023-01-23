@@ -869,17 +869,17 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 
 /* make unique callouts */
 .callout[data-callout="danger"] {
-    --callout-icon: alert-octagon;
+    --callout-icon: lucide-alert-octagon;
     --callout-color: 252, 110, 104;
 }
 .callout[data-callout="idea"] {
-    --callout-icon: lightbulb;
+    --callout-icon: lucide-lightbulb;
 }
 .callout[data-callout="links"] {
-    --callout-icon: link;
+    --callout-icon: lucide-link;
 }
 .callout[data-callout="meta"] {
-    --callout-icon: database;
+    --callout-icon: lucide-database;
 }
 
 /* remove meta callouts in reading mode and when embeded*/
