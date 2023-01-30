@@ -359,6 +359,9 @@ settings:
     /* lines between objects */
     /* slider background */
     --background-modifier-border: var(--w0);
+    /* PLN specific RGBA for the above
+     * used in kepano card edits */
+    --card-color: 216, 222, 233;
 
     /* main font */
     --color-base-100: var(--b0);
@@ -402,6 +405,9 @@ settings:
     /* lines between objects */
     /* slider background */
     --background-modifier-border: var(--b3);
+    /* PLN specific RGBA for the above
+     * used in kepano card edits */
+    --card-color: 76, 86, 106;
 
     --color-base-00: var(--b0);
     --color-base-10: var(--b0);
@@ -652,6 +658,17 @@ em, .cm-em {
 .markdown-rendered h5,
 .markdown-rendered h6 {
     margin: 0 0 0 0;
+}
+
+/*
+ * Card edits
+*/
+.cards table.dataview > tbody > tr {
+    background-color: rgba(var(--card-color), 0.4) !important;
+    border-top: 4px solid rgba(var(--card-color)) !important;
+    border-left: 2px solid rgba(var(--card-color)) !important;
+    border-right: none !important;
+    border-bottom: none !important;
 }
 
 /*
