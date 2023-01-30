@@ -277,6 +277,24 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-head-cards
+        title: Kepano Cards modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-cards-sort
+        title: Hide Remove sort icon
+        description: Remove the sort icon from above a collection of cards
+        type: class-toggle
+        default: true
+    -
+        id: pln-cards-borders
+        title: Card border edits
+        description: Change the border of cards to match callouts
+        type: class-toggle
+        default: true
+    -
         id: pln-head-vi
         title: High contrast modifications
         type: heading
@@ -663,7 +681,10 @@ em, .cm-em {
 /*
  * Card edits
 */
-.cards table.dataview > tbody > tr {
+.pln-cards-sort .cards table.dataview thead {
+    display: none !important;
+}
+.pln-cards-borders .cards table.dataview > tbody > tr {
     background-color: rgba(var(--card-color), 0.4) !important;
     border-top: 4px solid rgba(var(--card-color)) !important;
     border-left: 2px solid rgba(var(--card-color)) !important;
