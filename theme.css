@@ -304,10 +304,10 @@ settings:
         id: pln-cards-color-rgb
         title: Card border color
         type: variable-themed-color
-        format: 'rgb-values'
+        format: rgb-values
         opacity: false
-        default-light: '216, 222, 233'
-        default-dark: '76, 86, 106'
+        default-light: 'rgb(216, 222, 233)'
+        default-dark: 'rgb(76, 86, 106)'
     -
         id: pln-head-vi
         title: High contrast modifications
