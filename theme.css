@@ -247,6 +247,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-rm-srchSug
+        title: Hide search help
+        description: Hide the pop up that appears when clicking the search field
+        type: class-toggle
+        default: true
+    -
         id: pln-head-co
         title: Callout modifications
         type: heading
@@ -622,6 +628,8 @@ body {
 .pln-rm-nav .view-header-nav-buttons,
 /* action bottons, top right of note */
 .pln-rm-act .view-actions,
+/* suggestion pop up box */
+.pln-rm-srchSug .suggestion-container.mod-search-suggestion,
 /* note icon for tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
