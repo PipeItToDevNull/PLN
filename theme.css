@@ -51,7 +51,7 @@ settings:
     -
         id: pln-hdcl
         title: Header color toggle
-        description: You must open each color and "save" it to render properly. See issue 94 for style settings.
+        description: You must open each color and "save" it to render properly.
         type: class-toggle
         default: false
     -
@@ -321,7 +321,7 @@ settings:
         type: class-toggle
         default: false
     -
-        id: pln-vision-yel
+        id: pln-vision-high
         title: Primary color
         description: This is the primary color to be used in vision impaired mode.
         type: variable-color
@@ -329,7 +329,7 @@ settings:
         format: hex
         default: '#cccc00'
     -
-        id: pln-vision-gry
+        id: pln-vision-low
         title: Secondary color
         description: This is used for code blocks and buttons mostly
         type: variable-color
@@ -456,33 +456,33 @@ settings:
 
 /* any vision accomodations would be here */
 .pln-vision {
-    --pln-vision-yel: #cccc00;
-    --pln-vision-gry: #4C4E52;
+    --pln-vision-high: #cccc00;
+    --pln-vision-low: #4C4E52;
 
-    --text-normal: var(--pln-vision-yel);
-    --text-faint: var(--pln-vision-yel);
-    --text-muted: var(--pln-vision-yel);
+    --text-normal: var(--pln-vision-high);
+    --text-faint: var(--pln-vision-high);
+    --text-muted: var(--pln-vision-high);
     --background-primary: black;
-    --background-primary-alt: var(-gry);
+    --background-primary-alt: var(--pln-vision-low);
     --background-secondary: black;
     --background-secondary-alt: black;
-    --background-modifier-border: var(--pln-vision-yel);
+    --background-modifier-border: var(--pln-vision-high);
     --text-on-accent: black;
 
-    --color-base-30: var(--pln-vision-gry);
-    --color-base-35: var(--pln-vision-yel);
+    --color-base-30: var(--pln-vision-low);
+    --color-base-35: var(--pln-vision-high);
 
-    --color-red: var(--pln-vision-yel);
-    --color-orange: var(--pln-vision-yel);
-    --color-yellow-light: var(--pln-vision-yel);
-    --color-yellow-dark: var(--pln-vision-yel);
-    --color-green: var(--pln-vision-yel);
-    --color-purple: var(--pln-vision-yel);
-    --color-sea-green: var(--pln-vision-yel);
-    --color-cyan: var(--pln-vision-yel);
-    --color-frost: var(--pln-vision-yel);
-    --color-blue: var(--pln-vision-yel);
-    --color-salmon: var(--pln-vision-yel);
+    --color-red: var(--pln-vision-high);
+    --color-orange: var(--pln-vision-high);
+    --color-yellow-light: var(--pln-vision-high);
+    --color-yellow-dark: var(--pln-vision-high);
+    --color-green: var(--pln-vision-high);
+    --color-purple: var(--pln-vision-high);
+    --color-sea-green: var(--pln-vision-high);
+    --color-cyan: var(--pln-vision-high);
+    --color-frost: var(--pln-vision-high);
+    --color-blue: var(--pln-vision-high);
+    --color-salmon: var(--pln-vision-high);
 }
 
 /* pdf fixes */
@@ -523,6 +523,12 @@ body {
 
 /* header colors */
 body.pln-hdcl {
+    --pln-hdcl-1: #BF616A;
+    --pln-hdcl-2: #D08770;
+    --pln-hdcl-3: #EBCB8B;
+    --pln-hdcl-4: #A3BE8C;
+    --pln-hdcl-5: #8FBCBB;
+    --pln-hdcl-6: #88C0D0;
     --h1-color: var(--pln-hdcl-1);
     --h2-color: var(--pln-hdcl-2);
     --h3-color: var(--pln-hdcl-3);
@@ -693,6 +699,12 @@ em, .cm-em {
 */
 .pln-cards-sort .cards table.dataview thead {
     display: none !important;
+}
+.pln-cards-borders.theme-light { 
+    --pln-cards-color-rgb: 216, 222, 233;
+} 
+.pln-cards-borders.theme-dark { 
+    --pln-cards-color-rgb: 76, 86, 106;
 }
 .pln-cards-borders .cards table.dataview > tbody > tr {
     background-color: rgba(var(--pln-cards-color-rgb), 0.4) !important;
