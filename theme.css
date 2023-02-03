@@ -284,7 +284,7 @@ settings:
         default: true
     -
         id: pln-head-cards
-        title: Kepano Cards modifications
+        title: Kepano Cards modificationss
         type: heading
         level: 2
         collapsed: true
@@ -297,7 +297,7 @@ settings:
     -
         id: pln-cards-borders
         title: Card border edits
-        description: Change the border of cards to match callouts
+        description: Change the border of cards to match callouts. You are required to have Kepano's snippet, this just changes it's style.
         type: class-toggle
         default: true
     -
