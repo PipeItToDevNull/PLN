@@ -599,10 +599,10 @@ body {
 }
 
 /* highlight active line */
-.pln-hi-line .cm-active.cm-line {
+.pln-hi-line:not(.pln-vision) .cm-active.cm-line {
     background-color: var(--background-modifier-border);
 }
-.pln-hi-line .cm-gutterElement.cm-active {
+.pln-hi-line:not(.pln-vision) .cm-gutterElement.cm-active {
     color:  var(--color-yellow);
     font-weight: bold;
     background-color: var(--background-modifier-border);
