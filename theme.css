@@ -1134,6 +1134,14 @@ mark.borders {
     padding-left: 2px;
     padding-right: 2px;
 }
+/* spoiler */
+mark.spoiler {
+    border-bottom: 0px;
+    background-color: var(--text-normal);
+}
+mark.spoiler:hover {
+    background-color: inherit;
+}
 
 /*
  * Calendar plugin
