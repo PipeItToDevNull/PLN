@@ -520,6 +520,9 @@ body {
 .mod-stacked {
     --file-margins: 10px;
 }
+.mod-stacked:has(.cm-gutter) {
+    --file-margins: 2px
+}
 
 /* header colors */
 body.pln-hdcl {
