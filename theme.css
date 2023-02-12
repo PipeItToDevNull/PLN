@@ -309,6 +309,12 @@ settings:
         default-light: 'rgb(216, 222, 233)'
         default-dark: 'rgb(76, 86, 106)'
     -
+        id: cards
+        title: Add cards class to all files, and allow export.
+        description: This will add the cards class to all files, a primary function for this will be cards rendering when you PDF export a file.
+        type: class-toggle
+        default: false
+    -
         id: pln-head-vi
         title: High contrast modifications
         type: heading
@@ -492,11 +498,18 @@ settings:
         --list-marker-color: var(--b0);
         --code-background: var(--w2);
         --code-normal: var(--b0);
+        --table-header-color: var(--b0);
+        --text-muted: var(--b0);
     }
     .pln-pdf-rm-co-links .callout[data-callout="links"],
     .pln-pdf-rm-co-meta .callout[data-callout="meta"] {
             display: none;
     }
+    /* hacky method to make cards exportable */
+    .cards.pln-cards-borders.theme-dark,
+    .pln-cards-borders.theme-dark { 
+        --pln-cards-color-rgb: 216, 222, 233 !important;
+    } 
 }
 
 /*
@@ -700,15 +713,19 @@ em, .cm-em {
 /*
  * Card edits
 */
+.cards.pln-cards-sort table.dataview thead,
 .pln-cards-sort .cards table.dataview thead {
     display: none !important;
 }
+.cards.pln-cards-borders.theme-light,
 .pln-cards-borders.theme-light { 
     --pln-cards-color-rgb: 216, 222, 233;
 } 
+.cards.pln-cards-borders.theme-dark,
 .pln-cards-borders.theme-dark { 
     --pln-cards-color-rgb: 76, 86, 106;
 }
+.cards.pln-cards-borders table.dataview > tbody > tr,
 .pln-cards-borders .cards table.dataview > tbody > tr {
     background-color: rgba(var(--pln-cards-color-rgb), 0.4) !important;
     border-top: 4px solid rgb(var(--pln-cards-color-rgb)) !important;
