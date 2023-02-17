@@ -660,9 +660,12 @@ body {
 }
 
 /* bullet fix */
-.markdown-source-view.mod-cm6 .cm-formatting-list-ul,
-.markdown-source-view.mod-cm6 .cm-formatting-list-ol {
+/* thanks sails */
+.cm-formatting-list-ul > .list-bullet {
     padding-right: 5px;
+}
+.cm-formatting-list-ul:not(:has(> .list-bullet)) {
+    margin-right: 5px;
 }
 
 /* suggestion box */
