@@ -25,6 +25,18 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pln-hide-files
+        title: Enable hidden directories and files
+        description: Hide any file/folder starting with _ (underscore)
+        type: class-toggle
+        default: false
+    -
+        id: pln-hide-attachments
+        title: Hide attachments
+        description: Hide attachments in the file explorer
+        type: class-toggle
+        default: false
+    -
         id: pln-dv-mods
         title: Dataview modifications
         description: Globally toggle my various DV modifications
@@ -162,12 +174,6 @@ settings:
         type: heading
         level: 2
         collapsed: true
-    -
-        id: pln-rm-attachments
-        title: Hide attachments
-        description: Hide attachments in the file explorer
-        type: class-toggle
-        default: false
     -
         id: pln-rm-folder-nav
         title: Remove folder nav
@@ -630,7 +636,7 @@ body {
 
 /* REMOVE THINGS */
 /* hide attachments */
-.pln-rm-attachments .nav-file:has(.nav-file-tag),
+.pln-hide-attachments .nav-file:has(.nav-file-tag),
 /* folder navigation buttons */
 .pln-rm-folder-nav .nav-buttons-container,
 /* ribbon */
@@ -656,6 +662,12 @@ body {
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
 .mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
+    display: none;
+}
+
+/* Hide files and dirs starting with _ */
+.pln-hide-files div[data-path^="_"],
+.pln-hide-files div[data-path*="/_"] {
     display: none;
 }
 
