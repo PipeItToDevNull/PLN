@@ -694,7 +694,8 @@ body {
 /* note icon for tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
-.mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
+.mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container,
+.hide-properties .metadata-container.metadata-container.metadata-container {
     display: none;
 }
 
