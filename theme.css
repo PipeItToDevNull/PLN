@@ -725,6 +725,10 @@ body {
 body {
     --list-spacing: 1px;
 }
+/* fix spacing in edit mode for the top of lists*/
+.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+    padding-top: var(--p-spacing);
+}
 
 /* scrollbars */
 .pln-rm-scroll ::-webkit-scrollbar {
