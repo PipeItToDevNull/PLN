@@ -539,7 +539,13 @@ body {
     --h5-size: 1.12em;
     --h6-size: 1.12em;
     /*this is spacing before a header, it is stupid*/
-    --p-spacing: 0;
+    --heading-spacing: 0;
+    --p-spacing: .5rem;
+}
+
+/* changed in 1.4*/
+hr {
+    margin: 1.5em;
 }
 
 /* change margins, default is 32 */
