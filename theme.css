@@ -259,6 +259,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-rm-readprop
+        title: Hide properties in reading mode
+        description: Hide the metadata properties box when in reading mode
+        type: class-toggle
+        default: true
+    -
         id: pln-head-co
         title: Callout modifications
         type: heading
@@ -596,6 +602,9 @@ body {
 .metadata-property-key {
     border-right: 2px solid rgb(var(--pln-cards-color-rgb));
 }
+.pln-rm-readprop .markdown-reading-view .metadata-container {
+    display: none;
+}
 
 /* macos fixes for hidden title */
 .mod-macos {
@@ -695,7 +704,11 @@ body {
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
 .mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-.hide-properties .metadata-container.metadata-container.metadata-container {
+/* css class to hide metadata in a specific note */
+.hide-properties .metadata-container.metadata-container.metadata-container,
+/* hide the placeholder values in metadata*/
+.metadata-input-longtext:empty:before,
+.multi-select-input:before {
     display: none;
 }
 
@@ -1030,6 +1043,7 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
+.callout[data-callout="quote"],
 .callout[data-callout="tldr"] {
     --callout-color: 129, 161, 193;
 }
@@ -1081,13 +1095,11 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 }
 
 .theme-dark .callout[data-callout="cite"],
-.theme-dark .callout[data-callout="quote"],
 .theme-dark .callout[data-callout="links"],
 .theme-dark .callout[data-callout="meta"] {
     --callout-color: 216, 222, 233;
 }
 .theme-light .callout[data-callout="cite"],
-.theme-light .callout[data-callout="quote"],
 .theme-light .callout[data-callout="links"],
 .theme-light .callout[data-callout="meta"] {
     --callout-color: 76, 86, 106;
