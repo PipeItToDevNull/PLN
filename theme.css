@@ -393,6 +393,9 @@ settings:
     --w2: #ECEFF4;
     --w3: #f5f7f9;
 
+    --w0-rgb: 216, 222, 233;
+    --b3-rgb: 76, 86, 106;
+
     --text-highlight-bg: rgba(180, 142, 173, 0.4);
     --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
 
@@ -534,7 +537,7 @@ settings:
     /* hacky method to make cards exportable */
     .cards.pln-cards-borders.theme-dark,
     .pln-cards-borders.theme-dark { 
-        --pln-cards-color-rgb: 216, 222, 233 !important;
+        --pln-cards-color-rgb: var(--w0-rgb) !important;
     } 
 }
 
@@ -799,11 +802,11 @@ em, .cm-em {
 }
 .cards.pln-cards-borders.theme-light,
 .pln-cards-borders.theme-light { 
-    --pln-cards-color-rgb: 216, 222, 233;
+    --pln-cards-color-rgb: var(--w0-rgb);
 } 
 .cards.pln-cards-borders.theme-dark,
 .pln-cards-borders.theme-dark { 
-    --pln-cards-color-rgb: 76, 86, 106;
+    --pln-cards-color-rgb: var(--b3-rgb);
 }
 .cards.pln-cards-borders table.dataview > tbody > tr,
 .pln-cards-borders .cards table.dataview > tbody > tr {
@@ -1111,12 +1114,12 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .theme-dark .callout[data-callout="cite"],
 .theme-dark .callout[data-callout="links"],
 .theme-dark .callout[data-callout="meta"] {
-    --callout-color: 216, 222, 233;
+    --callout-color: var(--w0-rgb);
 }
 .theme-light .callout[data-callout="cite"],
 .theme-light .callout[data-callout="links"],
 .theme-light .callout[data-callout="meta"] {
-    --callout-color: 76, 86, 106;
+    --callout-color: var(--b3-rgb);
 }
 
 
