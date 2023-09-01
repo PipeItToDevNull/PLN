@@ -371,6 +371,18 @@ settings:
     --color-blue: #5e81ac;
     --color-salmon: #FC6E68;
 
+    --color-red-rgb: 191, 97, 106;
+    --color-orange-rgb: 208, 135, 112;
+    --color-yellow-light-rgb: 235, 203, 139;
+    --color-yellow-dark-rgb: 228, 184, 96;
+    --color-green-rgb: 163, 190, 140;
+    --color-purple-rgb: 180, 142, 173;
+    --color-sea-green-rgb: 143, 188, 187;
+    --color-cyan-rgb: 136, 192, 208;
+    --color-frost-rgb: 129, 161, 193;
+    --color-blue-rgb: 94, 129, 172;
+    --color-salmon-rgb: 252, 110, 104;
+
     --b0: #2E3440;
     --b1: #3B4252;
     --b2: #434C5E;
@@ -389,6 +401,7 @@ settings:
 
 .theme-light {
     --color-yellow: var(--color-yellow-dark);
+    --color-yellow-rgb: var(--color-yellow-dark-rgb);
     --color-accent: var(--color-blue);
     --color-accent-1: var(--color-blue);
     --color-accent-2: var(--color-frost);
@@ -432,6 +445,7 @@ settings:
 
 .theme-dark {
     --color-yellow: var(--color-yellow-light);
+    --color-yellow-rgb: var(--color-yellow-light-rgb);
     --color-accent: var(--color-frost);
     --color-accent-1: var(--color-frost);
     --color-accent-2: var(--color-blue);
@@ -1016,7 +1030,7 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 /* make unique callouts */
 .callout[data-callout="danger"] {
     --callout-icon: lucide-alert-octagon;
-    --callout-color: 252, 110, 104;
+    --callout-color: var(--color-salmon-rgb);
 }
 .callout[data-callout="idea"] {
     --callout-icon: lucide-lightbulb;
@@ -1038,14 +1052,14 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 
 /* colours */
 .callout[data-callout="note"] {
-    --callout-color: 94, 129, 172;
+    --callout-color: var(--color-blue-rgb);
 }
 
 .callout[data-callout="abstract"],
 .callout[data-callout="summary"],
 .callout[data-callout="quote"],
 .callout[data-callout="tldr"] {
-    --callout-color: 129, 161, 193;
+    --callout-color: var(--color-frost-rgb);
 }
 
 .callout[data-callout="info"],
@@ -1053,7 +1067,7 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="tip"],
 .callout[data-callout="hint"],
 .callout[data-callout="important"] {
-    --callout-color: 136, 192, 208;
+    --callout-color: var(--color-cyan-rgb);
 }
 
 .callout[data-callout="success"],
@@ -1062,36 +1076,36 @@ div.HyperMD-quote.HyperMD-quote-1.cm-line {
 .callout[data-callout="question"],
 .callout[data-callout="help"],
 .callout[data-callout="faq"] {
-    --callout-color: 163, 190, 140;
+    --callout-color: var(--color-green-rgb);
 }
 
 .theme-light .callout[data-callout="idea"],
 .theme-light .callout[data-callout="attention"],
 .theme-light .callout[data-callout="caution"],
 .theme-light .callout[data-callout="warning"] {
-    --callout-color: 228, 184, 140;
+    --callout-color: var(--color-yellow-dark-rgb);
 }
 
 .theme-dark .callout[data-callout="idea"],
 .theme-dark .callout[data-callout="attention"],
 .theme-dark .callout[data-callout="caution"],
 .theme-dark .callout[data-callout="warning"] {
-    --callout-color: 235, 203, 139;
+    --callout-color: var(--color-yellow-light-rgb);
 }
 
 .callout[data-callout="failure"],
 .callout[data-callout="fail"],
 .callout[data-callout="missing"] {
-    --callout-color: 208, 135, 112;
+    --callout-color: var(--color-orange-rgb);
 }
 
 .callout[data-callout="error"],
 .callout[data-callout="bug"] {
-    --callout-color: 191, 97, 106;
+    --callout-color: var(--color-red-rgb);
 }
 
 .callout[data-callout="example"] {
-    --callout-color: 180, 142, 173;
+    --callout-color: var(--color-purple-rgb);
 }
 
 .theme-dark .callout[data-callout="cite"],
@@ -1115,10 +1129,10 @@ mark,
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight {
     color: inherit;
-    background: none;
-    border-radius: 4px;
-    border-bottom: 3px solid;
-    border-bottom-color: var(--color-yellow);
+    background: rgba(var(--color-yellow-rgb),0.2);
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: var(--color-yellow);
 }
 
 /*Add highlighter's label before highlighted text*/
@@ -1131,28 +1145,40 @@ mark::before,
 }
 
 /*Red highlighter (edit)*/
-mark.edit { border-bottom-color: var(--color-red); }
+mark.edit { 
+    border-color: var(--color-red);
+    background: rgba(var(--color-red-rgb),0.2);
+}
 mark.edit::before {
     color: var(--color-red);
     content: "Edit:";
 }
 
 /*Orange highlighter (unfinished)*/
-mark.unfinished { border-bottom-color: var(--color-orange); }
+mark.unfinished { 
+    border-color: var(--color-orange);
+    background: rgba(var(--color-orange-rgb),0.2);
+}
 mark.unfinished::before {
     color: var(--color-orange);
     content: "Unfinished:";
 }
 
 /*Pink highlighter (verify)*/
-mark.verify { border-bottom-color: var(--color-purple); }
+mark.verify { 
+    border-color: var(--color-purple);
+    background: rgba(var(--color-purple-rgb),0.2);
+}
 mark.verify::before {
     color: var(--color-purple);
     content: "Verify:";
 }
 
 /* Green highlighter (important)*/
-mark.important { border-bottom-color: var(--color-green); }
+mark.important { 
+    border-color: var(--color-green);
+    background: rgba(var(--color-green-rgb),0.2);
+}
 mark.important::before {
     color: var(--color-green);
     content: "Important:";
@@ -1163,54 +1189,66 @@ mark.important::before {
 */
 mark.red {
     color: var(--color-red);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.orange {
     color: var(--color-orange);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.yellow {
     color: var(--color-yellow);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.green {
     color: var(--color-green);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.purple {
     color: var(--color-purple);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.sea-green {
     color: var(--color-sea-green);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.cyan {
     color: var(--color-cyan);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.frost {
     color: var(--color-frost);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.blue {
     color: var(--color-blue);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 mark.salmon {
     color: var(--color-salmon);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 /*underlined text*/
 mark.underline {
     text-decoration: underline;
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 /* paths */
 mark.path {
     font-family: monospace;
     color: var(--text-faint);
-    border-bottom: 0px;
+    background: none;
+    border: 0px;
 }
 /* borders */
 mark.borders {
@@ -1218,10 +1256,11 @@ mark.borders {
     border-radius: 0px;
     padding-left: 2px;
     padding-right: 2px;
+    background: none;
 }
 /* spoiler */
 mark.spoiler {
-    border-bottom: 0px;
+    border: 0px;
     background-color: var(--text-normal);
 }
 mark.spoiler:hover {
