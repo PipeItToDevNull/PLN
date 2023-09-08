@@ -818,7 +818,7 @@ em, .cm-em {
 }
 /* add bullets */
 .dataview-result-list-li::marker {
-    content: '• ';
+    content: '•';
 }
 
 /*
