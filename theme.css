@@ -816,6 +816,10 @@ em, .cm-em {
     border-right: none !important;
     border-bottom: none !important;
 }
+/* add bullets */
+.dataview-result-list-li::marker {
+    content: '• ';
+}
 
 /*
  * Embeds
