@@ -820,7 +820,9 @@ em, .cm-em {
 .dataview-result-list-li::marker {
     content: '•';
 }
-
+.cards table.dataview {
+    font-size: unset;
+}
 /*
  * Embeds
 */
