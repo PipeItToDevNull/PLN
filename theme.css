@@ -827,7 +827,7 @@ em, .cm-em {
 */
 body.pln-embd-mods {
     --embed-background: inherit;
-    --embed-border-left: 0px solid var(--interactive-accent);
+    --embed-border-left: none;
     --embed-border-right: none;
     --embed-border-top: none;
     --embed-border-bottom: none;
