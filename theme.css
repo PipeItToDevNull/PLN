@@ -259,7 +259,7 @@ settings:
         type: class-toggle
         default: true
     -
-        id: pln-rm-readprop
+        id: hide-properties
         title: Hide properties in reading mode
         description: Hide the metadata properties box when in reading mode
         type: class-toggle
@@ -619,8 +619,8 @@ body {
 .metadata-property-key {
     border-right: 2px solid rgb(var(--pln-cards-color-rgb));
 }
-.pln-rm-readprop .markdown-reading-view .metadata-container {
-    display: none;
+.hide-properties {
+    --metadata-display-reading: none;;
 }
 
 /* macos fixes for hidden title */
@@ -721,8 +721,6 @@ body {
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
 .mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-/* css class to hide metadata in a specific note */
-.hide-properties .metadata-container.metadata-container.metadata-container,
 /* hide the placeholder values in metadata*/
 .metadata-input-longtext:empty:before,
 .multi-select-input:before {
@@ -816,6 +814,7 @@ em, .cm-em {
     border-right: none !important;
     border-bottom: none !important;
 }
+
 /* add bullets */
 .dataview-result-list-li::marker {
     content: '•';
