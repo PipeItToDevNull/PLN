@@ -620,7 +620,7 @@ body {
     border-right: 2px solid rgb(var(--pln-cards-color-rgb));
 }
 .hide-properties {
-    --metadata-display-reading: none;;
+    --metadata-display-reading: none;
 }
 
 /* macos fixes for hidden title */
