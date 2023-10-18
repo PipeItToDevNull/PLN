@@ -7,6 +7,51 @@ name: PLN by PipeItToDevNull
 id: pln
 settings:
     -
+        id: pln-head-fonts
+        title: Font sizes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: font-ui-smaller
+        title: Font-UI-Smaller
+        description: Used for settings panel category headers and other things
+        type: variable-number-slider
+        default: 10
+        min: 10
+        max: 30
+        step: 1
+        format: px
+    -
+        id: font-ui-small
+        title: Font-UI-Small, folder names, and other things
+        type: variable-number-slider
+        default: 10
+        min: 10
+        max: 30
+        step: 1
+        format: px
+    -
+        id: font-ui-medium
+        title: Font-UI-Medium
+        description: Used for settings panel body, calendar, 
+        type: variable-number-slider
+        default: 12
+        min: 10
+        max: 30
+        step: 1
+        format: px
+    -
+        id: font-ui-large
+        title: Font-UI-Large
+        description: Used for things
+        type: variable-number-slider
+        default: 14
+        min: 10
+        max: 30
+        step: 1
+        format: px
+    -
         id: pln-head-gen
         title: General modifications
         type: heading
