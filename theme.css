@@ -966,6 +966,7 @@ ul > li.task-list-item[data-task="X"] {
 
 /* > */
 input[type=checkbox][data-task=">"],
+input[type=checkbox][data-task=">"]:hover,
 ul > li.task-list-item[data-task=">"] > .task-list-item-checkbox {
     background-color: var(--color-orange);
     border-color: var(--color-orange);
@@ -976,7 +977,8 @@ ul > li.task-list-item[data-task=">"] > .task-list-item-checkbox:checked:after {
 }
 
 /* ? */
-input[type=checkbox][data-task="?"]:checked,
+input[type=checkbox][data-task="?"],
+input[type=checkbox][data-task="?"]:hover,
 ul > li.task-list-item[data-task="?"] > .task-list-item-checkbox {
     background-color: var(--color-yellow);
     border-color: var(--color-yellow);
@@ -988,6 +990,7 @@ ul > li.task-list-item[data-task="?"] > .task-list-item-checkbox:checked:after {
 
 /* - */
 input[type=checkbox][data-task="-"],
+input[type=checkbox][data-task="-"]:hover,
 ul > li.task-list-item[data-task="-"] > .task-list-item-checkbox {
     background-color: var(--color-purple);
     border-color: var(--color-purple);
@@ -1004,6 +1007,7 @@ ul > li.task-list-item[data-task="-"] {
 
 /* ! */
 input[type=checkbox][data-task="!"],
+input[type=checkbox][data-task="!"]:hover,
 ul > li.task-list-item[data-task="!"] > .task-list-item-checkbox {
     background-color: var(--color-red);
     border-color: var(--color-red);
@@ -1015,6 +1019,7 @@ ul > li.task-list-item[data-task="!"] > .task-list-item-checkbox:checked:after {
 
 /* i */
 input[type=checkbox][data-task="i"],
+input[type=checkbox][data-task="i"]:hover,
 ul > li.task-list-item[data-task="i"] > .task-list-item-checkbox {
     background-color: var(--color-green);
     border-color: var(--color-green);
@@ -1026,6 +1031,7 @@ ul > li.task-list-item[data-task="i"] > .task-list-item-checkbox:checked:after {
 
 /* / */
 input[type=checkbox][data-task="/"],
+input[type=checkbox][data-task="/"]:hover,
 ul > li.task-list-item[data-task="/"] > .task-list-item-checkbox {
     background-color: var(--color-sea-green);
     border-color: var(--color-sea-green);
