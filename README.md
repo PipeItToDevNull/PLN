@@ -113,7 +113,10 @@ The original snippet came from soggymuse but it only worked in LP. I expanded it
 <mark class='borders'>Bordered text</mark>
 ```
 
-#### Bonus
+## CSS Classes
+In Style Settings you can find a "Hide properties in reading mode" setting. This is controled via the `hide-properties` class. You can manually add this class (or any other Style Settings class) to a note in the "cssClasses" property to selectively enforce this setting. I use this for my "Home" note.
+
+## Bonus
 If you use [Espanso](https://espanso.org/) the following form can be used to insert marks easily.
 
 ```yml
