@@ -24,7 +24,8 @@ settings:
         format: px
     -
         id: font-ui-small
-        title: Font-UI-Small, folder names, and other things
+        title: Font-UI-Small
+        description: Used for folder names and other things
         type: variable-number-slider
         default: 10
         min: 10
