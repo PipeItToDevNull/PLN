@@ -136,6 +136,20 @@ settings:
                 format: rgb
         default: '#FC6E68'
     -
+        id: accent-light-hsl
+        title: Accent Light
+        type: variable-color
+        opacity: false
+        format: hsl-split
+        default: '#5E81AC'
+    -
+        id: accent-dark-hsl
+        title: Accent Dark
+        type: variable-color
+        opacity: false
+        format: hsl-split
+        default: '#81a1c1'
+    -
         id: b0
         title: B0
         type: variable-color
@@ -648,6 +662,14 @@ settings:
     --color-blue: #5e81ac;
     --color-salmon: #FC6E68;
 
+    --accent-light-hsl-h: 213;
+    --accent-light-hsl-s: 32%;
+    --accent-light-hsl-l: 53%;
+
+    --accent-dark-hsl-h: 210;
+    --accent-dark-hsl-s: 34%;
+    --accent-dark-hsl-l: 63%;
+
     --color-red-rgb: 191, 97, 106;
     --color-orange-rgb: 208, 135, 112;
     --color-yellow-light-rgb: 235, 203, 139;
@@ -673,6 +695,7 @@ settings:
     --w0-rgb: 216, 222, 233;
     --b3-rgb: 76, 86, 106;
 
+    --text-accent: var(--color-accent);
     --text-highlight-bg: rgba(180, 142, 173, 0.4);
     --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
 
@@ -682,13 +705,10 @@ settings:
 .theme-light {
     --color-yellow: var(--color-yellow-dark);
     --color-yellow-rgb: var(--color-yellow-dark-rgb);
-    --color-accent: var(--color-blue);
-    --color-accent-1: var(--color-blue);
-    --color-accent-2: var(--color-frost);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 213;
-    --accent-s: 32%;
-    --accent-l: 53%;
+
+    --accent-h: var(--accent-light-hsl-h);
+    --accent-s: var(--accent-light-hsl-s);
+    --accent-l: var(--accent-light-hsl-l);
 
     /* the note background */
     --background-primary: var(--w3) ;
@@ -726,13 +746,10 @@ settings:
 .theme-dark {
     --color-yellow: var(--color-yellow-light);
     --color-yellow-rgb: var(--color-yellow-light-rgb);
-    --color-accent: var(--color-frost);
-    --color-accent-1: var(--color-frost);
-    --color-accent-2: var(--color-blue);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 210;
-    --accent-s: 34%;
-    --accent-l: 63%;
+
+    --accent-h: var(--accent-dark-hsl-h);
+    --accent-s: var(--accent-dark-hsl-s);
+    --accent-l: var(--accent-dark-hsl-l);
 
     /* the note background */
     --background-primary: var(--b1) ;
@@ -1567,7 +1584,7 @@ mark.spoiler:hover {
 
 /* colors */
 #calendar-container {
-  --color-dot: var(--color-accent-2);
+  --color-dot: var(--color-accent);
   --color-arrow: var(--color-salmon);
   --color-background-weekend: var(--background-primary);
   --color-text-weeknum: var(--color-yellow);
