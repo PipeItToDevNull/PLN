@@ -7,6 +7,251 @@ name: PLN by PipeItToDevNull
 id: pln
 settings:
     -
+        id: pln-head-colours
+        title: Colours
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: color-red
+        title: Red
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-red-rgb
+                format: rgb
+        default: '#bf616a'
+    -
+        id: color-orange
+        title: Orange
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-orange-rgb
+                format: rgb
+        default: '#d08770'
+    -
+        id: color-yellow-light
+        title: Yellow-Light
+        description: Used on the dark theme
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-yellow-light-rgb
+                format: rgb
+        default: '#ebcb8b'
+    -
+        id: color-yellow-dark
+        title: Yellow-Dark
+        description: Used on the light theme
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-yellow-dark-rgb
+                format: rgb
+        default: '#e4b860'
+    -
+        id: color-green
+        title: Green
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-green-rgb
+                format: rgb
+        default: '#a3be8c'
+    -
+        id: color-purple
+        title: Purple
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-purple-rgb
+                format: rgb
+        default: '#b48ead'
+    -
+        id: color-sea-green
+        title: Sea-Green
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-sea-green-rgb
+                format: rgb
+        default: '#8fbcbb'
+    -
+        id: color-cyan
+        title: Cyan
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-cyan-rgb
+                format: rgb
+        default: '#88c0d0'
+    -
+        id: color-frost
+        title: Frost
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-frost-rgb
+                format: rgb
+        default: '#81a1c1'
+    -
+        id: color-blue
+        title: Blue
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-blue-rgb
+                format: rgb
+        default: '#5e81ac'
+    -
+        id: color-salmon
+        title: Salmon
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: color-salmon-rgb
+                format: rgb
+        default: '#FC6E68'
+    -
+        id: accent-light-hsl
+        title: Accent Light
+        type: variable-color
+        opacity: false
+        format: hsl-split
+        default: '#5E81AC'
+    -
+        id: accent-dark-hsl
+        title: Accent Dark
+        type: variable-color
+        opacity: false
+        format: hsl-split
+        default: '#81a1c1'
+    -
+        id: b0
+        title: B0
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: b0-rgb
+                format: rgb
+        default: '#2E3440'
+    -
+        id: b1
+        title: B1
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: b1-rgb
+                format: rgb
+        default: '#3B4252'
+    -
+        id: b2
+        title: B2
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: b2-rgb
+                format: rgb
+        default: '#434C5E'
+    -
+        id: b3
+        title: B3
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: b3-rgb
+                format: rgb
+        default: '#4C566A'
+    -
+        id: w0
+        title: W0
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: w0-rgb
+                format: rgb
+        default: '#D8DEE9'
+    -
+        id: w1
+        title: W1
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: w1-rgb
+                format: rgb
+        default: '#E5E9F0'
+    -
+        id: w2
+        title: W2
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: w2-rgb
+                format: rgb
+        default: '#ECEFF4'
+    -
+        id: w3
+        title: W3
+        type: variable-color
+        opacity: false
+        format: hex
+        alt-format:
+            - 
+                id: w3-rgb
+                format: rgb
+        default: '#f5f7f9'
+    -
+        id: text-highlight-bg
+        title: Text Highlight Background
+        type: variable-color
+        opacity: true
+        format: rgb
+        default: '180, 142, 173, 0.4'
+    -
+        id: text-highlight-bg-active
+        title: Text Highlight Background - Active
+        type: variable-color
+        opacity: true
+        format: rgb
+        default: '180, 142, 173, 0.4'
+    -
         id: pln-head-fonts
         title: Font sizes
         type: heading
@@ -35,7 +280,7 @@ settings:
     -
         id: font-ui-medium
         title: Font-UI-Medium
-        description: Used for settings panel body, calendar, 
+        description: Used for settings panel body, calendar
         type: variable-number-slider
         default: 12
         min: 10
@@ -61,7 +306,7 @@ settings:
     -
         id: pln-link-mods
         title: Link modifications
-        description: Underline only external links and remove the distinction from unresolved links.
+        description: Underline only external links and remove the distinction from unresolved links
         type: class-toggle
         default: true
     -
@@ -97,7 +342,7 @@ settings:
     -
         id: pln-view-invert
         title: Invert view icons
-        description: Invert the Reading and Edit view icons in the top right of notes.
+        description: Invert the Reading and Edit view icons in the top right of notes
         type: class-toggle
         default: false
     -
@@ -109,7 +354,7 @@ settings:
     -
         id: pln-hdcl
         title: Header color toggle
-        description: You must open each color and "save" it to render properly.
+        description: You must open each color and "save" it to render properly
         type: class-toggle
         default: false
     -
@@ -235,13 +480,13 @@ settings:
     -
         id: pln-rm-rside
         title: Remove sidebar indicators
-        description: Remove the sidebar indicators. They can still be opened with hotkeys.
+        description: Remove the sidebar indicators. They can still be opened with hotkeys
         type: class-toggle
         default: true
     -
         id: pln-rm-win-lside-tl
         title: Remove mod top left
-        description: Remove the top tab container in the left sidebar in Windows in hidden frameless.
+        description: Remove the top tab container in the left sidebar in Windows in hidden frameless
         type: class-toggle
         default: false
     -
@@ -355,7 +600,7 @@ settings:
     -
         id: pln-cards-borders
         title: Card border edits
-        description: Change the border of cards to match callouts. You are required to have Kepano's snippet, this just changes it's style.
+        description: Change the border of cards to match callouts. You are required to have Kepano's snippet, this just changes it's style
         type: class-toggle
         default: true
     -
@@ -369,7 +614,7 @@ settings:
     -
         id: cards
         title: Add cards class to all files, and allow export.
-        description: This will add the cards class to all files, a primary function for this will be cards rendering when you PDF export a file.
+        description: This will add the cards class to all files, a primary function for this will be cards rendering when you PDF export a file
         type: class-toggle
         default: false
     -
@@ -387,7 +632,7 @@ settings:
     -
         id: pln-vision-high
         title: Primary color
-        description: This is the primary color to be used in vision impaired mode.
+        description: This is the primary color to be used in vision impaired mode
         type: variable-color
         opacity: false
         format: hex
@@ -417,6 +662,14 @@ settings:
     --color-blue: #5e81ac;
     --color-salmon: #FC6E68;
 
+    --accent-light-hsl-h: 213;
+    --accent-light-hsl-s: 32%;
+    --accent-light-hsl-l: 53%;
+
+    --accent-dark-hsl-h: 210;
+    --accent-dark-hsl-s: 34%;
+    --accent-dark-hsl-l: 63%;
+
     --color-red-rgb: 191, 97, 106;
     --color-orange-rgb: 208, 135, 112;
     --color-yellow-light-rgb: 235, 203, 139;
@@ -442,6 +695,7 @@ settings:
     --w0-rgb: 216, 222, 233;
     --b3-rgb: 76, 86, 106;
 
+    --text-accent: var(--color-accent);
     --text-highlight-bg: rgba(180, 142, 173, 0.4);
     --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
 
@@ -451,13 +705,10 @@ settings:
 .theme-light {
     --color-yellow: var(--color-yellow-dark);
     --color-yellow-rgb: var(--color-yellow-dark-rgb);
-    --color-accent: var(--color-blue);
-    --color-accent-1: var(--color-blue);
-    --color-accent-2: var(--color-frost);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 213;
-    --accent-s: 32%;
-    --accent-l: 53%;
+
+    --accent-h: var(--accent-light-hsl-h);
+    --accent-s: var(--accent-light-hsl-s);
+    --accent-l: var(--accent-light-hsl-l);
 
     /* the note background */
     --background-primary: var(--w3) ;
@@ -495,13 +746,10 @@ settings:
 .theme-dark {
     --color-yellow: var(--color-yellow-light);
     --color-yellow-rgb: var(--color-yellow-light-rgb);
-    --color-accent: var(--color-frost);
-    --color-accent-1: var(--color-frost);
-    --color-accent-2: var(--color-blue);
-    /* this is the HSL value of --color-accent */
-    --accent-h: 210;
-    --accent-s: 34%;
-    --accent-l: 63%;
+
+    --accent-h: var(--accent-dark-hsl-h);
+    --accent-s: var(--accent-dark-hsl-s);
+    --accent-l: var(--accent-dark-hsl-l);
 
     /* the note background */
     --background-primary: var(--b1) ;
@@ -1336,7 +1584,7 @@ mark.spoiler:hover {
 
 /* colors */
 #calendar-container {
-  --color-dot: var(--color-accent-2);
+  --color-dot: var(--color-accent);
   --color-arrow: var(--color-salmon);
   --color-background-weekend: var(--background-primary);
   --color-text-weeknum: var(--color-yellow);
