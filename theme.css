@@ -364,6 +364,12 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pln-boxed-tags
+        title: Box tags
+        description: Make tags more boxy with a solid border
+        type: class-toggle
+        default: true
+    -
         id: pln-head-heads
         title: Header colors
         type: heading
@@ -1345,6 +1351,25 @@ body {
     --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
     --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
     --callout-radius: 5px;
+}
+
+/* 
+ * Tags
+*/
+.pln-boxed-tags {
+    --tag-radius: 5px;
+    --tag-border-width: 2px;
+}
+.pln-boxed-tags .cm-hashtag-begin {
+    display: none;
+}
+.pln-boxed-tags a.tag,
+.pln-boxed-tags .cm-hashtag.cm-hashtag-end {
+    border-right: var(--tag-border-width) solid var(--tag-border-color);
+    border-left: var(--tag-border-width) solid var(--tag-border-color);
+    border-radius: var(--tag-radius);
+    padding-left: var(--tag-padding-x);
+    padding-right: var(--tag-padding-x);
 }
 
 /* remove leading and trailing padding of callout content paragraphs */
