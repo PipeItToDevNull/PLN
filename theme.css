@@ -1077,6 +1077,14 @@ body {
     margin-right: 5px;
 }
 
+/* reading bullet fixes */
+ul > li.task-list-item .task-list-item-checkbox {
+    margin-inline-start: -17px;
+}
+.markdown-source-view.mod-cm6 .task-list-label {
+    margin-inline-start: -6px;
+}
+
 /* suggestion box */
 .suggestion-item {
     font-size: var(--font-ui-small);
@@ -1195,14 +1203,28 @@ body.pln-embd-mods {
 }
 
 /* this is to move embededlists over in 1.1 */
-.pln-embd-mods .cm-embed-block ul.contains-task-list,
-.pln-embd-mods .inline-embed ul.contains-task-list { 
+.pln-embd-mods .cm-embed-block .contains-task-list,
+.pln-embd-mods .inline-embed .contains-task-list { 
     padding: 0 0 0 0px;
 }
 /* another stupid 1.1 fix the above 
 breaks embeds in reading mode */
-.pln-embd-mods .markdown-reading-view .inline-embed ul.contains-task-list {
-    padding: 0 0 0 20px
+.pln-embd-mods .markdown-reading-view .inline-embed .contains-task-list {
+    padding-inline-start: var(--list-indent);
+}
+/* contains list in contains list (bullets under a checkbox like reading mode) */
+/* the first level needs to be 40 and all others are 20 */
+.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list,
+.pln-embd-mods .inline-embed .contains-task-list .contains-task-list {
+    padding-inline-start: calc(var(--list-indent)*2);
+}
+/* another level of the above, this fixes all additional levels */
+.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list .contains-task-list {
+    padding-inline-start: var(--list-indent);
+}
+/* fixes checkboxes that are under another checkbox, otherwise the above makes them too indented */
+.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list .dataview.task-list-item {
+    margin-left: calc(var(--list-indent)*-1);
 }
 
 /* fix embeded dv lists in the sidebar */
