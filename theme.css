@@ -892,6 +892,11 @@ body {
     --heading-spacing: 0;
     --p-spacing: .5rem;
 }
+/* this brings back header spacing in reading mode */
+/* default is 2.5 p-spacing and p-spacing default is 1rem */
+.markdown-rendered {
+    --heading-spacing: calc(var(--p-spacing)*2);
+}
 
 /* changed in 1.4*/
 hr {
@@ -1008,9 +1013,14 @@ body {
     -webkit-mask-position: center;
 }
 
+/* table stuff */
 /* fix table font size */
 body {
     --table-text-size: var(--font-text-size);
+}
+/* space out tables from text  a bitin reading mode */
+.markdown-rendered table {
+    margin-top: var(--heading-spacing);
 }
 
 /* highlight active line */
