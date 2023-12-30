@@ -424,6 +424,30 @@ settings:
         format: hex
         default: '#88C0D0'
     -
+        id: pln-head-props
+        title: Properties modifications
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: hide-properties
+        title: Hide properties in reading mode
+        description: Hide the metadata properties box when in reading mode. Add 'hide-properties' as a class to any file to selectively apply this.
+        type: class-toggle
+        default: true
+    -
+        id: pln-props-heading
+        title: Hide properties heading
+        description: We know it is a properties box, you don't need to label it.
+        type: class-toggle
+        default: true
+    -
+        id: pln-props-list
+        title: List 'list' properties
+        description: Put every property on its own line instead of a long single line list.
+        type: class-toggle
+        default: true
+    -
         id: pln-head-embd
         title: Embed modifications
         type: heading
@@ -577,12 +601,6 @@ settings:
         id: pln-rm-srchSug
         title: Hide search help
         description: Hide the pop up that appears when clicking the search field
-        type: class-toggle
-        default: true
-    -
-        id: hide-properties
-        title: Hide properties in reading mode
-        description: Hide the metadata properties box when in reading mode
         type: class-toggle
         default: true
     -
@@ -953,6 +971,13 @@ body {
 }
 .hide-properties {
     --metadata-display-reading: none;
+}
+.pln-props-heading .metadata-properties-heading {
+    display: none;
+}
+
+.pln-props-list .metadata-property-value .multi-select-container {
+    display: block;
 }
 
 /* macos fixes for hidden title */
