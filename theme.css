@@ -328,12 +328,6 @@ settings:
         type: class-toggle
         default: false
     -
-        id: pln-hide-attachments
-        title: Hide attachments
-        description: Hide attachments in the file explorer
-        type: class-toggle
-        default: false
-    -
         id: pln-dv-mods
         title: Dataview modifications
         description: Globally toggle my various DV modifications
@@ -369,6 +363,43 @@ settings:
         description: Make tags more boxy with a solid border
         type: class-toggle
         default: true
+    -
+        id: pln-head-attachments
+        title: Attachment options
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: pln-attachments
+        title: Hide attachments
+        description: Hide all attachments in the file explorer
+        type: class-toggle
+        default: false
+    -
+        id: pln-attachments-canvas
+        title: Unhide canvas files
+        type: class-toggle
+        default: false
+    -
+        id: pln-attachments-pdf
+        title: Unhide pdf files
+        type: class-toggle
+        default: false
+    -
+        id: pln-attachments-docx
+        title: Unhide docx files
+        type: class-toggle
+        default: false
+    -
+        id: pln-attachments-xlsx
+        title: Unhide xlsx files
+        type: class-toggle
+        default: false
+    -
+        id: pln-attachments-images
+        title: Unhide image files
+        type: class-toggle
+        default: false
     -
         id: pln-head-heads
         title: Header colors
@@ -1065,7 +1096,7 @@ body {
 
 /* REMOVE THINGS */
 /* hide attachments */
-.pln-hide-attachments .nav-file:has(.nav-file-tag),
+.pln-attachments .nav-file:has(.nav-file-tag),
 /* folder navigation buttons */
 .pln-rm-folder-nav .nav-buttons-container,
 /* ribbon */
@@ -1095,6 +1126,17 @@ body {
 .metadata-input-longtext:empty:before,
 .multi-select-input:before {
     display: none;
+}
+
+/* selectively show certain attachments */
+.pln-attachments.pln-attachments-canvas .nav-file:has([data-path$=".canvas"]),
+.pln-attachments.pln-attachments-pdf .nav-file:has([data-path$=".pdf"]),
+.pln-attachments.pln-attachments-docx .nav-file:has([data-path$=".docx"]),
+.pln-attachments.pln-attachments-xlsx .nav-file:has([data-path$=".xlsx"]),
+.pln-attachments.pln-attachments-images .nav-file:has([data-path$=".jpg"]),
+.pln-attachments.pln-attachments-images .nav-file:has([data-path$=".jpeg"]),
+.pln-attachments.pln-attachments-images .nav-file:has([data-path$=".png"]) {
+    display: contents !important;
 }
 
 /* Hide files and dirs starting with _ */
