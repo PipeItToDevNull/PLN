@@ -1098,7 +1098,7 @@ body {
 /* hide attachments */
 .pln-attachments .nav-file:has(.nav-file-tag),
 /* folder navigation buttons */
-.pln-rm-folder-nav .nav-buttons-container,
+.pln-rm-folder-nav .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container,
 /* ribbon */
 .pln-rm-ribbon .workspace-ribbon.mod-left,
 /* sidebars */
