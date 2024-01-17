@@ -1305,7 +1305,8 @@ breaks embeds in reading mode */
 }
 
 /* fix embeded dv lists in the sidebar */
-.workspace-leaf-content .markdown-embed .markdown-preview-view {
+.pln-embd-mods .mod-left-split .workspace-leaf-content .markdown-embed .markdown-preview-view,
+.pln-embd-mods .mod-right-split .workspace-leaf-content .markdown-embed .markdown-preview-view {
     padding-left: 2px;
 }
 
@@ -1332,14 +1333,22 @@ body.pln-link-mods .external-link {
 .pln-dv-mods .markdown-source-view.mod-cm6 .edit-block-button {
     display: none;
 }
-/* both of these do the same thing, but
- * I don't know which applies when */
-.pln-dv-mods .dataview.result-group {
+/* move dataview results over 2px to align with embeds in reading mode */
+.pln-dv-mods .markdown-reading-view .dataview.result-group {
     padding-left: 2px;
+}
+/* do not move dataview results over in live preview mode */
+.pln-dv-mods .is-live-preview .dataview.result-group {
+    padding-left: 0px;
 }
 /* if you offset embeds, this can be 0 otherwise 2px */
 .pln-dv-mods .cm-preview-code-block.cm-embed-block.markdown-rendered {
     padding-left: 0;
+}
+/* move the checkbox container over pixels in reading mode */
+/* this was an issue on my daily notes when embedding all PTIs */
+.pln-dv-mods .markdown-reading-view .dataview-container .contains-task-list {
+    padding-left: 20px;
 }
 /* hides the item count on a list */
 .pln-dv-count .dataview.small-text {
