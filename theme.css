@@ -1007,7 +1007,7 @@ body {
     display: none;
 }
 
-.pln-props-list .metadata-property-value .multi-select-container {
+.pln-props-list .metadata-property-value .multi-select-container:not(:has(.multi-select-pill)) {
     display: block;
 }
 
