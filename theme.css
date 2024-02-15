@@ -1453,16 +1453,6 @@ ul > li.task-list-item[data-task="/"] > .task-list-item-checkbox:checked:after {
     font-family: monospace;
 }
 
-/*
- * Callouts
-*/
-body {
-    --callout-padding: 0;
-    --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
-    --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
-    --callout-radius: 5px;
-}
-
 /* 
  * Tags
 */
@@ -1480,6 +1470,16 @@ body {
     border-radius: var(--tag-radius);
     padding-left: var(--tag-padding-x);
     padding-right: var(--tag-padding-x);
+}
+
+/*
+ * Callouts
+*/
+body {
+    --callout-padding: 0;
+    --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
+    --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
+    --callout-radius: 5px;
 }
 
 /* remove leading and trailing padding of callout content paragraphs */
