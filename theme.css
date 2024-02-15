@@ -1500,9 +1500,6 @@ body {
     --blockquote-border-thickness: 2px;
 }
 /* correct quote padding */
-div.HyperMD-quote.HyperMD-quote-1.cm-line {
-    padding-inline-start: var(--size-4-3) !important;
-}
 .markdown-rendered blockquote {
     padding: 0 0 0 var(--size-4-3);
 }
