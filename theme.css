@@ -1011,6 +1011,15 @@ body {
 .pln-props-list .metadata-property:not([data-property-key="tags"]) .metadata-property-value .multi-select-container {
     display: block;
 }
+/* improve meta data container in sidebar */
+.workspace > .workspace-split:not(.mod-root) .metadata-container {
+    margin-left: 5px;
+    padding-left: 2px;
+}
+
+.markdown-source-view.mod-cm6 .cm-table-widget {
+    padding-top: 0;
+}
 
 /* macos fixes for hidden title */
 .mod-macos {
