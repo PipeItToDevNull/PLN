@@ -774,6 +774,7 @@ settings:
     --w0-rgb: 216, 222, 233;
     --b3-rgb: 76, 86, 106;
 
+    --text-error: var(--color-salmon);
     --text-accent: var(--color-accent);
     --text-highlight-bg: rgba(180, 142, 173, 0.4);
     --text-highlight-bg-active: rgba(180, 142, 173, 0.4);
