@@ -1797,80 +1797,81 @@ mark.spoiler:hover {
 /*
 /* https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066 */
 /* thanks to Evelf */
+/* updated for v1.6.0 */
 
 .tree-item-children {
     --nav-indentation-guide-width: 3px;
     border-bottom-left-radius: 5px;
 }
-.mod-root > .nav-folder-children > .nav-folder > .tree-item-self,
-.mod-root > .nav-folder-children > .is-collapsed .collapse-icon svg.svg-icon,
-.mod-root .nav-folder .collapse-icon svg.svg-icon {
-    color: var(--b0);
-}
-.mod-root .nav-folder .nav-folder-children .collapse-icon svg.svg-icon {
-    color: var(--nav-collapse-icon-color);
+/* changes the top level folders to darker text so they can be read on the coloured folder background*/
+.nav-files-container > div > .nav-folder > .nav-folder-title,
+.nav-files-container > div > .nav-folder > .nav-folder-title:hover,
+.nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon svg.svg-icon {
+    --nav-item-color: var(--b0);
+    --nav-item-color-hover: var(--b0);
+    --nav-collapse-icon-color: var(--b0);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+2) > .tree-item-self {
     background-color: var(--color-red);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+2) .tree-item-children {
     --nav-indentation-guide-color: var(--color-red);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+3) > .tree-item-self {
     background-color: var(--color-orange);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+3) .tree-item-children {
     --nav-indentation-guide-color: var(--color-orange);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+4) > .tree-item-self {
     background-color: var(--color-yellow-light);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+4) .tree-item-children {
     --nav-indentation-guide-color: var(--color-yellow-light);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+5) > .tree-item-self {
     background-color: var(--color-green);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+5) .tree-item-children {
     --nav-indentation-guide-color: var(--color-green);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+6) > .tree-item-self {
     background-color: var(--color-sea-green);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+6) .tree-item-children {
     --nav-indentation-guide-color: var(--color-sea-green);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+7) > .tree-item-self {
     background-color: var(--color-cyan);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+7) .tree-item-children {
     --nav-indentation-guide-color: var(--color-cyan);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+8) > .tree-item-self {
     background-color: var(--color-frost);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+8) .tree-item-children {
     border-left: 3px solid var(--color-frost);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+9) > .tree-item-self {
     background-color: var(--color-blue);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+9) .tree-item-children {
     --nav-indentation-guide-color: var(--color-blue);
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) > .tree-item-self {
+.nav-files-container > div > .nav-folder:nth-child(9n+10) > .tree-item-self {
     background-color: var(--color-purple);
 }
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) .tree-item-children {
+.nav-files-container > div > .nav-folder:nth-child(9n+10) .tree-item-children {
     --nav-indentation-guide-color: var(--color-purple);
 }
 
