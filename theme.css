@@ -563,6 +563,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-rm-settings
+        title: Remove settings pane
+        description: Remove the settings pane at the bottom of the left sidebar added in 1.6
+        type: class-toggle
+        default: false
+    -
         id: pln-rm-rside
         title: Remove sidebar indicators
         description: Remove the sidebar indicators. They can still be opened with hotkeys
@@ -1118,6 +1124,8 @@ body {
 .pln-rm-folder-nav .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container,
 /* ribbon */
 .pln-rm-ribbon .workspace-ribbon.mod-left,
+/* settings pane */
+body:not(.is-mobile).pln-rm-settings .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 /* sidebars */
 .pln-rm-rside .sidebar-toggle-button.mod-right,
 .pln-rm-rside .sidebar-toggle-button,
