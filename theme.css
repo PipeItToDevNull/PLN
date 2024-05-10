@@ -1267,6 +1267,11 @@ em, .cm-em {
 .cards table.dataview {
     font-size: unset;
 }
+/* 1.6 fix for bullets being moved away from left side */
+.cards {
+    --list-indent: 0;
+}
+
 /*
  * Embeds
 */
@@ -1304,35 +1309,25 @@ body.pln-embd-mods {
     display: none;
 }
 
+/* hide the new 1.6 left border */
+/* also moves them over from 0.85em */
+.pln-embd-mods .markdown-embed {
+    border-inline-start: none;
+    --checkbox-margin-inline-start: 0.4em;
+}
+
 /* this is to move embededlists over in 1.1 */
 .pln-embd-mods .cm-embed-block .contains-task-list,
 .pln-embd-mods .inline-embed .contains-task-list { 
     padding: 0 0 0 0px;
 }
-/* another stupid 1.1 fix the above 
-breaks embeds in reading mode */
-.pln-embd-mods .markdown-reading-view .inline-embed .contains-task-list {
-    padding-inline-start: var(--list-indent);
-}
-/* contains list in contains list (bullets under a checkbox like reading mode) */
-/* the first level needs to be 40 and all others are 20 */
-.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list,
-.pln-embd-mods .inline-embed .contains-task-list .contains-task-list {
-    padding-inline-start: calc(var(--list-indent)*2);
-}
-/* another level of the above, this fixes all additional levels */
-.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list .contains-task-list {
-    padding-inline-start: var(--list-indent);
-}
-/* fixes checkboxes that are under another checkbox, otherwise the above makes them too indented */
-.pln-embd-mods .cm-embed-block .contains-task-list .contains-task-list .dataview.task-list-item {
-    margin-left: calc(var(--list-indent)*-1);
-}
 
-/* fix embeded dv lists in the sidebar */
-.pln-embd-mods .mod-left-split .workspace-leaf-content .markdown-embed .markdown-preview-view,
-.pln-embd-mods .mod-right-split .workspace-leaf-content .markdown-embed .markdown-preview-view {
-    padding-left: 2px;
+/* 1.6 fix to move lists back over in embeds */
+.pln-embd-mods .is-live-preview .markdown-embed {
+    --list-indent: 0;
+}
+.pln-embd-mods .is-live-preview .task-list-item .task-list-item {
+    --list-indent: 2.25em;
 }
 
 /*
@@ -1378,6 +1373,18 @@ body.pln-link-mods .external-link {
 /* hides the item count on a list */
 .pln-dv-count .dataview.small-text {
     display: none;
+}
+/* 1.6 fix to move lists back over in embeds */
+.pln-dv-mods .dataview-container {
+    --list-indent: 0;
+}
+/* 1.6 fix to move list items over in DV queries in LP*/
+.pln-dv-mods .is-live-preview .dataview.task-list-item {
+    margin-left: -6px;
+}
+/* 1.6 for child items in LP */
+.pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-item-checkbox {
+    --checkbox-margin-inline-start: 3em;
 }
 
 /*
