@@ -1331,6 +1331,19 @@ body.pln-embd-mods {
 }
 
 /*
+ * Checkbox fixes in callouts for 1.6
+*/
+.is-live-preview .callout .task-list-item {
+    margin-inline-start: 0;
+}
+
+/* blank callout over-ride for 1.6 */
+.markdown-reading-view [data-callout="blank"] .callout-content :is(li),
+.markdown-reading-view [data-callout="blank-titled"] .callout-content :is(li) {
+    margin-inline-start: var(--list-indent);
+}
+
+/*
  * Links
 */
 body.pln-link-mods {
