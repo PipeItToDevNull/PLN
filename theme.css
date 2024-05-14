@@ -1806,6 +1806,9 @@ mark.spoiler:hover {
 #calendar-container .year {
     color: var(--color-cyan);
 }
+#calendar-container .active {
+    --color-dot: var(--text-on-accent);
+}
 
 /* padding fixes for calendar */
 .workspace-leaf-content .view-content {
