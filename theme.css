@@ -557,12 +557,6 @@ settings:
         type: class-toggle
         default: false
     -
-        id: pln-rm-ribbon
-        title: Remove ribbon
-        description: Remove the left ribbon
-        type: class-toggle
-        default: true
-    -
         id: pln-rm-settings
         title: Remove settings pane
         description: Remove the settings pane at the bottom of the left sidebar added in 1.6
@@ -1122,8 +1116,6 @@ body {
 .pln-attachments .nav-file:has(.nav-file-tag),
 /* folder navigation buttons */
 .pln-rm-folder-nav .workspace-leaf-content[data-type="file-explorer"] .nav-buttons-container,
-/* ribbon */
-.pln-rm-ribbon .workspace-ribbon.mod-left,
 /* settings pane */
 body:not(.is-mobile).pln-rm-settings .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
 /* sidebars */
@@ -1398,6 +1390,10 @@ body.pln-link-mods .external-link {
 /* 1.6 for child items in LP */
 .pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-item-checkbox {
     --checkbox-margin-inline-start: 3em;
+}
+/* 1.6 for bullet items in LP */
+.pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-basic-item {
+    margin-inline-start: 3em;
 }
 
 /*
