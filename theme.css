@@ -1391,13 +1391,17 @@ body.pln-link-mods .external-link {
 .pln-dv-mods .dataview-container {
     --list-indent: 0;
 }
-/* 1.6 fix to move list items over in DV queries in LP*/
-.pln-dv-mods .is-live-preview .dataview.task-list-item {
+/* 1.6 fix to move list items over in DV queries in LP unless it is in an embed */
+.pln-dv-mods .is-live-preview:not(:has(.markdown-embed-content)) .dataview.task-list-item {
     margin-left: -6px;
 }
 /* 1.6 for child items in LP */
 .pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-item-checkbox {
     --checkbox-margin-inline-start: 3em;
+}
+/* 1.6 for bullet items in LP */
+.pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-basic-item {
+    margin-inline-start: 3em;
 }
 
 /*
