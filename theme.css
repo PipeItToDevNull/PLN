@@ -1387,13 +1387,23 @@ body.pln-link-mods .external-link {
 .pln-dv-mods .is-live-preview:not(:has(.markdown-embed-content)) .dataview.task-list-item {
     margin-left: -6px;
 }
-/* 1.6 for child items in LP */
+/* commented out to fix daily not in 1.6.1
+/* 1.6 for child items in LP 
 .pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-item-checkbox {
     --checkbox-margin-inline-start: 3em;
 }
-/* 1.6 for bullet items in LP */
+/* 1.6 for bullet items in LP 
 .pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-basic-item {
     margin-inline-start: 3em;
+}
+*/
+/* fix non-checkbox list under a dataview task in LP */
+.pln-dv-mods .is-live-preview .dataview.result-group .contains-task-list .task-list-item ul:not(:has(.task-list-item-checkbox)) {
+    padding-inline-start: 4em;
+}
+/* fix non-checkbox list under a dataview task in Reading */
+.pln-dv-mods .markdown-reading-view .dataview.result-group .task-list-item ul {
+    padding-inline-start: 2em;
 }
 
 /*
