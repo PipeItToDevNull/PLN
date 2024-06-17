@@ -352,6 +352,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-pretty-pinned
+        title: Prettier pinned tabs
+        description: Shrink down pinned tabs to only the note icon. I recommend making prettier note icons as well if you do this.
+        type: class-toggle
+        default: false
+    -
         id: pln-stacked-100
         title: Stacked tabs 100% width
         description: Make stacked tabs take up 100% of the window width instead of an annoying amount of unknown space
@@ -1045,6 +1051,21 @@ body {
 /* stop the pin from being clickable */
 .pln-pin-protect .mod-pinned {
     pointer-events: none;
+}
+
+/* pretty pinned tabs */
+.pln-pretty-pinned:not(:has(.mod-stacked)) .workspace-tab-header:has(.mod-pinned) {
+  max-width: 30px !important;
+  /* also hide the title of pinned tabs */
+  & .workspace-tab-header-inner-title {
+    display: none;
+  }
+  & .workspace-tab-header-inner-icon {
+    display: flex !important;
+  }
+  & .mod-pinned {
+    display: none;
+  }
 }
 
 /* flip and thin stacked titles */
