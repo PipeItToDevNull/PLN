@@ -1053,7 +1053,7 @@ body {
     --tab-stacked-text-align: right;
     --tab-stacked-header-width: 20px;
 }
-.workspace-tab-header-inner-title {
+.mod-stacked .workspace-tab-header-inner-title {
     letter-spacing: 1px;
 }
 .pln-stacked-100 {
