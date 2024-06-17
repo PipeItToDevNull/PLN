@@ -613,7 +613,7 @@ settings:
     -
         id: pln-rm-noteic
         title: Remove note icon
-        description: Remove the note icon from tabs (we all know is a note...)
+        description: Remove the note icon from stacked tabs (we all know is a note...)
         type: class-toggle
         default: true
     -
@@ -1135,7 +1135,7 @@ body:not(.is-mobile).pln-rm-settings .workspace-split.mod-left-split .workspace-
 .pln-rm-act .view-actions,
 /* suggestion pop up box */
 .pln-rm-srchSug .suggestion-container.mod-search-suggestion,
-/* note icon for tabs */
+/* note icon for stacked tabs */
 .pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
 /* remove top left sidebar container in hidden*/
 .mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container,
