@@ -1800,7 +1800,7 @@ mark.underline {
 }
 /* paths */
 mark.path {
-    font-family: monospace;
+    font-family: var(--font-monospace);
     color: var(--text-faint);
     background: none;
     border: 0px;
