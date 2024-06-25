@@ -1877,7 +1877,7 @@ mark.spoiler:hover {
 }
 
 /* optionally make the collapse icons folders instead */
-.pln-folder-icons .collapse-icon.is-collapsed svg.svg-icon {
+.pln-folder-icons .nav-files-container .collapse-icon.is-collapsed svg.svg-icon {
     transform: none;
 }
 .pln-folder-icons .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon svg {
