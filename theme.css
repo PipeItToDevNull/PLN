@@ -1345,7 +1345,8 @@ body.pln-embd-mods {
 .pln-embd-mods .is-live-preview .markdown-embed {
     --list-indent: 0;
 }
-.pln-embd-mods .is-live-preview .task-list-item .task-list-item {
+/* this includes an OR to make basic list items also move over */
+.pln-embd-mods .is-live-preview .task-list-item .task-list-item, .task-list-basic-item {
     --list-indent: 2.25em;
 }
 
@@ -1411,9 +1412,11 @@ body.pln-link-mods .external-link {
     --list-indent: 0;
 }
 /* 1.6 fix to move list items over in DV queries in LP unless it is in an embed */
+/* This is not exact but it is a better fix than margin-left: -6px */
 .pln-dv-mods .is-live-preview:not(:has(.markdown-embed-content)) .dataview.task-list-item {
-    margin-left: -6px;
+    margin-inline-start: var(--list-indent);
 }
+
 /* commented out to fix daily not in 1.6.1
 /* 1.6 for child items in LP 
 .pln-dv-mods .is-live-preview .dataview-container .contains-task-list .contains-task-list .task-list-item-checkbox {
@@ -1426,7 +1429,7 @@ body.pln-link-mods .external-link {
 */
 /* 1.6 fix non-checkbox list under a dataview task in LP */
 .pln-dv-mods .is-live-preview .dataview.result-group .contains-task-list .task-list-item ul:not(:has(.task-list-item-checkbox)) {
-    padding-inline-start: 4em;
+    padding-inline-start: 2em;
 }
 /* 1.6 fix non-checkbox list under a dataview task in Reading */
 .pln-dv-mods .markdown-reading-view .dataview.result-group .task-list-item ul {
