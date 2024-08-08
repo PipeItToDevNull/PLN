@@ -1341,10 +1341,13 @@ body.pln-embd-mods {
     padding: 0 0 0 0px;
 }
 
-/* 1.6 fix to move lists back over in embeds */
+/* 1.6 fix to move lists back over in embeds
+2024-08-08 - this is seen breacking a basic embeded list in DFS migration which used:
+    class="internal-embed markdown-embed inline-embed is-loaded"
 .pln-embd-mods .is-live-preview .markdown-embed {
     --list-indent: 0;
 }
+*/
 /* this includes an OR to make basic list items also move over */
 .pln-embd-mods .is-live-preview .task-list-item .task-list-item, .task-list-basic-item {
     --list-indent: 2.25em;
