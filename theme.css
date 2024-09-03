@@ -310,6 +310,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-hilite-mods
+        title: Highlight (mark) modifications
+        description: Change ==highlight== (mark) styling from the default. This may interfere with some plugins, disable this if you see issues.
+        type: class-toggle
+        default: true
+    -
         id: pln-hi-line
         title: Highlight active line
         description: Highlight the active line
@@ -1686,9 +1692,9 @@ body {
  * Original by soggymuse, modified by Pipe
 */
 /* removes the default css */
-mark,
-.markdown-rendered mark,
-.cm-s-obsidian span.cm-highlight {
+.pln-hilite-mods mark,
+.pln-hilite-mods .markdown-rendered mark,
+.pln-hilite-mods .cm-s-obsidian span.cm-highlight {
     color: inherit;
     background: rgba(var(--color-yellow-rgb),0.2);
     border-radius: 5px;
@@ -1697,8 +1703,8 @@ mark,
 }
 
 /*Add highlighter's label before highlighted text*/
-mark::before,
-.cm-s-obsidian span.cm-highlight::before {
+.pln-hilite-mods mark::before,
+.pln-hilite-mods .cm-s-obsidian span.cm-highlight::before {
     padding: 0 5px;
     text-transform: lowercase;
     font-style: italic;
@@ -1706,41 +1712,41 @@ mark::before,
 }
 
 /*Red highlighter (edit)*/
-mark.edit { 
+.pln-hilite-mods mark.edit { 
     border-color: var(--color-red);
     background: rgba(var(--color-red-rgb),0.2);
 }
-mark.edit::before {
+.pln-hilite-mods mark.edit::before {
     color: var(--color-red);
     content: "Edit:";
 }
 
 /*Orange highlighter (unfinished)*/
-mark.unfinished { 
+.pln-hilite-mods mark.unfinished { 
     border-color: var(--color-orange);
     background: rgba(var(--color-orange-rgb),0.2);
 }
-mark.unfinished::before {
+.pln-hilite-mods mark.unfinished::before {
     color: var(--color-orange);
     content: "Unfinished:";
 }
 
 /*Pink highlighter (verify)*/
-mark.verify { 
+.pln-hilite-mods mark.verify { 
     border-color: var(--color-purple);
     background: rgba(var(--color-purple-rgb),0.2);
 }
-mark.verify::before {
+.pln-hilite-mods mark.verify::before {
     color: var(--color-purple);
     content: "Verify:";
 }
 
 /* Green highlighter (important)*/
-mark.important { 
+.pln-hilite-mods mark.important { 
     border-color: var(--color-green);
     background: rgba(var(--color-green-rgb),0.2);
 }
-mark.important::before {
+.pln-hilite-mods mark.important::before {
     color: var(--color-green);
     content: "Important:";
 }
@@ -1748,71 +1754,71 @@ mark.important::before {
 /*
  * Text colours using mark
 */
-mark.red {
+.pln-hilite-mods mark.red {
     color: var(--color-red);
     background: none;
     border: 0px;
 }
-mark.orange {
+.pln-hilite-mods mark.orange {
     color: var(--color-orange);
     background: none;
     border: 0px;
 }
-mark.yellow {
+.pln-hilite-mods mark.yellow {
     color: var(--color-yellow);
     background: none;
     border: 0px;
 }
-mark.green {
+.pln-hilite-mods mark.green {
     color: var(--color-green);
     background: none;
     border: 0px;
 }
-mark.purple {
+.pln-hilite-mods mark.purple {
     color: var(--color-purple);
     background: none;
     border: 0px;
 }
-mark.sea-green {
+.pln-hilite-mods mark.sea-green {
     color: var(--color-sea-green);
     background: none;
     border: 0px;
 }
-mark.cyan {
+.pln-hilite-mods mark.cyan {
     color: var(--color-cyan);
     background: none;
     border: 0px;
 }
-mark.frost {
+.pln-hilite-mods mark.frost {
     color: var(--color-frost);
     background: none;
     border: 0px;
 }
-mark.blue {
+.pln-hilite-mods mark.blue {
     color: var(--color-blue);
     background: none;
     border: 0px;
 }
-mark.salmon {
+.pln-hilite-mods mark.salmon {
     color: var(--color-salmon);
     background: none;
     border: 0px;
 }
 /*underlined text*/
-mark.underline {
+.pln-hilite-mods mark.underline {
     text-decoration: underline;
     background: none;
     border: 0px;
 }
 /* paths */
-mark.path {
+.pln-hilite-mods mark.path {
     font-family: var(--font-monospace);
     color: var(--text-faint);
     background: none;
     border: 0px;
 }
 /* borders */
-mark.borders {
+.pln-hilite-mods mark.borders {
     border: 1px solid;
     border-radius: 0px;
     padding-left: 2px;
@@ -1820,11 +1826,11 @@ mark.borders {
     background: none;
 }
 /* spoiler */
-mark.spoiler {
+.pln-hilite-mods mark.spoiler {
     border: 0px;
     background-color: var(--text-normal);
 }
-mark.spoiler:hover {
+.pln-hilite-mods mark.spoiler:hover {
     background-color: inherit;
 }
 
