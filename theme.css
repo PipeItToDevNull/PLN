@@ -328,6 +328,12 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pln-hi-tr
+        title: Highlight table rows when hovering
+        description: Highlight the row in a table that your cursor is hovering over
+        type: class-toggle
+        default: false
+    -
         id: pln-hide-files
         title: Enable hidden directories and files
         description: Hide any file/folder starting with _ (underscore)
@@ -1139,6 +1145,10 @@ body {
 /* space out tables from text  a bitin reading mode */
 .markdown-rendered table {
     margin-top: var(--heading-spacing);
+}
+/* highlight the hovered row in a table */
+.pln-hi-tr .mod-root tr:hover {
+    background-color: var(--background-secondary) !important;
 }
 
 /* highlight active line */
