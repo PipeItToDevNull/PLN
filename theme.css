@@ -1942,7 +1942,7 @@ body {
 }
 
 /* Make items focused via arrow keys highlighted */
-.tree-item-self.has-focus {
+.nav-files-container .tree-item-self.has-focus {
     background-color: var(--background-modifier-hover);
 }
 
