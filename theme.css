@@ -1941,6 +1941,11 @@ body {
     background-color: var(--b0);
 }
 
+/* Make items focused via arrow keys highlighted */
+.nav-files-container .tree-item-self.has-focus {
+    background-color: var(--background-modifier-hover);
+}
+
 /* Coloursssssss */
 .nav-files-container > div > .nav-folder:nth-child(9n+2) > .tree-item-self {
     background-color: var(--color-red);
