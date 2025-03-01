@@ -1412,6 +1412,81 @@ body.pln-link-mods .external-link {
 }
 
 /*
+ * Multi-row tabs
+*/
+/* Primary wrapping functions */
+.mod-root .workspace-tab-header-container {
+    flex-wrap: wrap;
+    min-height: var(--header-height);
+    height: unset;
+}
+.mod-root .workspace-tab-header-container-inner {
+    flex-wrap: wrap;
+}
+
+/* Remove the shoulders on tabs so the bubbles work */
+.mod-root .workspace-tabs .workspace-tab-header::before,
+.mod-root .workspace-tabs .workspace-tab-header::after {
+    display: none;
+}
+
+/* Make tabs into bubbles */
+.mod-root .workspace-tabs .workspace-tab-header {
+    --tab-max-width: 200px;
+    --tab-min-width: 120px;
+    min-width: var(--tab-min-width);
+    flex-shrink: 0;
+    margin-bottom: 4px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Prevent hovering over tabs from making them larger and twitching the display */
+.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header .workspace-tab-header-inner-close-button svg {
+    height: calc(var(--icon-size) /2);
+    width: calc(var(--icon-size) /2);
+}
+/* Make all close buttons light up */
+.workspace-tab-header .workspace-tab-header-inner-close-button:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+/* Shrink pinned tabs */
+.mod-root .workspace-tabs .workspace-tab-header:has(.mod-pinned) {
+    --tab-width: 30px;
+    --tab-min-width: 30px;
+}
+
+/* Original code */
+.is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
+    height: 40px;
+}
+
+/* .mod-root .workspace-tab-header-new-tab +  */
+.mod-root .workspace-tab-header-spacer {
+    display: none;
+}
+
+/* Corrects spacing below tabs */
+.mod-root .workspace-tab-header-tab-list {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+
+/* Move icon */
+.mod-root .workspace-tab-header-new-tab {
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+.mod-root .sidebar-toggle-button {
+    position: absolute;
+    right: 60px;
+    top: 30px;
+}
+
+/*
  * Dataview
 */
 .pln-dv-mods .markdown-source-view.mod-cm6 .edit-block-button {
