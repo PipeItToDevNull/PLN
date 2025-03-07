@@ -1446,6 +1446,7 @@ body.pln-link-mods .external-link {
     height: calc(var(--icon-size) /2);
     width: calc(var(--icon-size) /2);
 }
+
 /* Make all close buttons light up */
 .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
     background-color: var(--background-modifier-hover);
@@ -1457,16 +1458,6 @@ body.pln-link-mods .external-link {
     --tab-min-width: 30px;
 }
 
-/* Original code */
-.is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
-    height: 40px;
-}
-
-/* .mod-root .workspace-tab-header-new-tab +  */
-.mod-root .workspace-tab-header-spacer {
-    display: none;
-}
-
 /* Corrects spacing below tabs */
 .mod-root .workspace-tab-header-tab-list {
     position: absolute;
@@ -1474,16 +1465,27 @@ body.pln-link-mods .external-link {
     top: 30px;
 }
 
-/* Move icon */
-.mod-root .workspace-tab-header-new-tab {
+/* Move new tab icon */
+.mod-macos .mod-root .workspace-tab-header-new-tab {
     position: absolute;
     right: 0;
     top: -5px;
 }
+
+/* Move sidebar toggle */
 .mod-root .sidebar-toggle-button {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     right: 60px;
-    top: 30px;
+    top: 30px; */
+}
+
+/* Original code */
+.is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
+    height: 40px;
+}
+.mod-root .workspace-tab-header-spacer {
+    display: none;
 }
 
 /*
