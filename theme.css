@@ -1471,6 +1471,11 @@ body.pln-link-mods .external-link {
     right: 0;
     top: -5px;
 }
+.mod-windows .mod-root .workspace-tab-header-new-tab {
+    position: absolute;
+    left: 0px;
+    top: -5px;
+}
 
 /* Move sidebar toggle */
 .mod-root .sidebar-toggle-button {
