@@ -1436,7 +1436,7 @@ body.pln-link-mods .external-link {
 
 /* Make tabs into bubbles and expand them out*/
 .mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
-    --tab-min-width: 30px;
+    --tab-min-width: 20px;
 }
 .mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
     --tab-max-width: 200px;
