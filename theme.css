@@ -1415,13 +1415,17 @@ body.pln-link-mods .external-link {
  * Multi-row tabs
 */
 /* Primary wrapping functions */
-.mod-root .workspace-tab-header-container {
+.mod-root .workspace-tab-header-container:hover {
     flex-wrap: wrap;
     min-height: var(--header-height);
     height: unset;
 }
 .mod-root .workspace-tab-header-container-inner {
     flex-wrap: wrap;
+}
+/* Remove drag, this is required for hover to work. It does not break the ability to drag tabs */
+.mod-root .workspace-tab-header-container-inner {
+    -webkit-app-region: no-drag;
 }
 
 /* Remove the shoulders on tabs so the bubbles work */
@@ -1430,8 +1434,11 @@ body.pln-link-mods .external-link {
     display: none;
 }
 
-/* Make tabs into bubbles */
-.mod-root .workspace-tabs .workspace-tab-header {
+/* Make tabs into bubbles and expand them out*/
+.mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
+    --tab-min-width: 30px;
+}
+.mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
     --tab-max-width: 200px;
     --tab-min-width: 120px;
     min-width: var(--tab-min-width);
