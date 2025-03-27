@@ -1090,22 +1090,23 @@ body {
 }
 
 /* pretty pinned tabs */
-.pln-pretty-pinned:not(:has(.mod-stacked)) .workspace-tab-header:has(.mod-pinned) {
-    --tab-max-width: 30px;
-    /* also hide the title of pinned tabs */
-    & .workspace-tab-header-inner-title {
-        display: none;
+.pln-pretty-pinned:not(:has(.mod-stacked)) { 
+    & .workspace-tab-header:has(.mod-pinned) {
+        --tab-max-width: 30px;
+        /* also hide the title of pinned tabs */
+        & .workspace-tab-header-inner-title {
+            display: none;
+        }
+        & .workspace-tab-header-inner-icon {
+            display: flex !important;
+        }
+        & .mod-pinned {
+            display: none;
+        }
     }
-    & .workspace-tab-header-inner-icon {
-        display: flex !important;
-    }
-    & .mod-pinned {
-        display: none;
-    }
-}
-/* Pretty pinned tabs and multiple tab rows interopability */
-.pln-pretty-pinned.pln-tab-rows .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
+    &.pln-tab-rows .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
     --tab-min-width: 20px;
+    }
 }
 
 /* flip and thin stacked titles */
