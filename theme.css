@@ -1085,17 +1085,17 @@ body {
 
 /* pretty pinned tabs */
 .pln-pretty-pinned:not(:has(.mod-stacked)) .workspace-tab-header:has(.mod-pinned) {
-  max-width: 30px !important;
-  /* also hide the title of pinned tabs */
-  & .workspace-tab-header-inner-title {
-    display: none;
-  }
-  & .workspace-tab-header-inner-icon {
-    display: flex !important;
-  }
-  & .mod-pinned {
-    display: none;
-  }
+    --tab-max-width: 30px;
+    /* also hide the title of pinned tabs */
+    & .workspace-tab-header-inner-title {
+        display: none;
+    }
+    & .workspace-tab-header-inner-icon {
+        display: flex !important;
+    }
+    & .mod-pinned {
+        display: none;
+    }
 }
 
 /* flip and thin stacked titles */
