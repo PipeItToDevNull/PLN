@@ -370,6 +370,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-tab-rows
+        title: Multiple tab rows
+        description: When hovering, the tabs area will be expanded into multiple rows to make viewing tab titles easier.
+        type: class-toggle
+        default: false
+    -
         id: pln-pretty-pinned
         title: Prettier pinned tabs
         description: Shrink down pinned tabs to only the note icon. I recommend making prettier note icons as well if you do this.
@@ -1414,90 +1420,86 @@ body.pln-link-mods .external-link {
 /*
  * Multi-row tabs
 */
-/* Primary wrapping functions */
-.mod-root .workspace-tab-header-container:hover {
-    flex-wrap: wrap;
-    min-height: var(--header-height);
-    height: unset;
-}
-.mod-root .workspace-tab-header-container-inner {
-    flex-wrap: wrap;
-}
-/* Remove drag, this is required for hover to work. It does not break the ability to drag tabs */
-.mod-root .workspace-tab-header-container-inner {
-    -webkit-app-region: no-drag;
-}
+.pln-tab-rows {
+    /* Primary wrapping functions */
+    & .workspace-tab-header-container:hover {
+        flex-wrap: wrap;
+        min-height: var(--header-height);
+        height: unset;
+    }
+    & .workspace-tab-header-container-inner {
+        flex-wrap: wrap;
+    }
+    /* Remove drag, this is required for hover to work. It does not break the ability to drag tabs */
+    & .workspace-tab-header-container-inner {
+        -webkit-app-region: no-drag;
+    }
 
-/* Remove the shoulders on tabs so the bubbles work */
-.mod-root .workspace-tabs .workspace-tab-header::before,
-.mod-root .workspace-tabs .workspace-tab-header::after {
-    display: none;
-}
+    /* Remove the shoulders on tabs so the bubbles work */
+    & .workspace-tabs .workspace-tab-header::before,
+    & .workspace-tabs .workspace-tab-header::after {
+        display: none;
+    }
 
-/* Make tabs into bubbles and expand them out*/
-.mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
-    --tab-min-width: 20px;
-}
-.mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
-    --tab-max-width: 200px;
-    --tab-min-width: 120px;
-    min-width: var(--tab-min-width);
-    flex-shrink: 0;
-    margin-bottom: 4px;
-    border-radius: 5px;
-    margin-right: 5px;
-}
+    /* Make tabs into bubbles and expand them out*/
+    & .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
+        --tab-min-width: 20px;
+    }
+    & .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
+        --tab-max-width: 200px;
+        --tab-min-width: 120px;
+        min-width: var(--tab-min-width);
+        flex-shrink: 0;
+        margin-bottom: 4px;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
 
-/* Prevent hovering over tabs from making them larger and twitching the display */
-.mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header .workspace-tab-header-inner-close-button svg {
-    height: calc(var(--icon-size) /2);
-    width: calc(var(--icon-size) /2);
-}
+    /* Prevent hovering over tabs from making them larger and twitching the display */
+    & .workspace-tabs:not(.mod-stacked) .workspace-tab-header .workspace-tab-header-inner-close-button svg {
+        height: calc(var(--icon-size) /2);
+        width: calc(var(--icon-size) /2);
+    }
 
-/* Make all close buttons light up */
-.workspace-tab-header .workspace-tab-header-inner-close-button:hover {
-    background-color: var(--background-modifier-hover);
-}
+    /* Make all close buttons light up */
+    & .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
+        background-color: var(--background-modifier-hover);
+    }
 
-/* Shrink pinned tabs */
-.mod-root .workspace-tabs .workspace-tab-header:has(.mod-pinned) {
-    --tab-width: 30px;
-    --tab-min-width: 30px;
-}
+    /* Corrects spacing below tabs */
+    &  .workspace-tab-header-tab-list {
+        position: absolute;
+        right: 0;
+        top: 30px;
+    }
 
-/* Corrects spacing below tabs */
-.mod-root .workspace-tab-header-tab-list {
-    position: absolute;
-    right: 0;
-    top: 30px;
-}
+    /* Move new tab icon */
+    &.mod-macos .mod-root .workspace-tab-header-new-tab {
+        position: absolute;
+        right: 0;
+        top: -5px;
+    }
+    &.mod-windows .workspace-tab-header-new-tab {
+        position: absolute;
+        left: 0px;
+        top: -5px;
+    }
 
-/* Move new tab icon */
-.mod-macos .mod-root .workspace-tab-header-new-tab {
-    position: absolute;
-    right: 0;
-    top: -5px;
-}
-.mod-windows .mod-root .workspace-tab-header-new-tab {
-    position: absolute;
-    left: 0px;
-    top: -5px;
-}
+    /* Move sidebar toggle */
+    & .sidebar-toggle-button {
+        display: none;
+        /* position: absolute;
+        right: 60px;
+        top: 30px; */
+    }
 
-/* Move sidebar toggle */
-.mod-root .sidebar-toggle-button {
-    display: none;
-    /* position: absolute;
-    right: 60px;
-    top: 30px; */
-}
-
-/* Original code */
-.is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
-    height: 40px;
-}
-.mod-root .workspace-tab-header-spacer {
-    display: none;
+    /* Original code */
+    & .is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
+        height: 40px;
+    }
+    & .workspace-tab-header-spacer {
+        display: none;
+    }
 }
 
 /*
