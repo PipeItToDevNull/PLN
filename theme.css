@@ -1440,30 +1440,30 @@ body.pln-link-mods .external-link {
         flex-wrap: wrap;
         min-height: var(--header-height);
         height: unset;
+
+        /* primary bubble creation */
+        & .workspace-tab-header {
+            --tab-max-width: 200px;
+            --tab-min-width: 120px;
+            min-width: var(--tab-min-width);
+            flex-shrink: 0;
+            margin-bottom: 4px;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        /* Remove the shoulders on tabs so the bubbles work */
+        & .workspace-tab-header::before,
+        & .workspace-tab-header::after {
+            display: none;
+        }
+
     }
-    & .workspace-tab-header-container-inner {
-        flex-wrap: wrap;
-    }
+
     /* Remove drag, this is required for hover to work. It does not break the ability to drag tabs */
     & .workspace-tab-header-container-inner {
+        flex-wrap: wrap;
         -webkit-app-region: no-drag;
-    }
-
-    /* Remove the shoulders on tabs so the bubbles work */
-    & .workspace-tabs .workspace-tab-header::before,
-    & .workspace-tabs .workspace-tab-header::after {
-        display: none;
-    }
-
-    /* Make tabs into bubbles and expand them out*/
-    & .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
-        --tab-max-width: 200px;
-        --tab-min-width: 120px;
-        min-width: var(--tab-min-width);
-        flex-shrink: 0;
-        margin-bottom: 4px;
-        border-radius: 5px;
-        margin-right: 5px;
     }
 
     /* Prevent hovering over tabs from making them larger and twitching the display */
