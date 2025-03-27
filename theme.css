@@ -1103,6 +1103,10 @@ body {
         display: none;
     }
 }
+/* Pretty pinned tabs and multiple tab rows interopability */
+.pln-pretty-pinned.pln-tab-rows .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
+    --tab-min-width: 20px;
+}
 
 /* flip and thin stacked titles */
 body {
@@ -1442,9 +1446,6 @@ body.pln-link-mods .external-link {
     }
 
     /* Make tabs into bubbles and expand them out*/
-    & .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
-        --tab-min-width: 20px;
-    }
     & .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header {
         --tab-max-width: 200px;
         --tab-min-width: 120px;
