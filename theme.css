@@ -378,7 +378,7 @@ settings:
     -
         id: pln-pretty-pinned
         title: Prettier pinned tabs
-        description: Shrink down pinned tabs to only the note icon. I recommend making prettier note icons as well if you do this.
+        description: Shrink down pinned tabs to only the note icon. I recommend making custom note icons as well if you do this.
         type: class-toggle
         default: false
     -
