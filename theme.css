@@ -1425,7 +1425,7 @@ body.pln-link-mods .external-link {
 /*
  * Multi-row tabs
 */
-.pln-tab-rows {
+.pln-tab-rows:not(:has(.mod-stacked)) {
     /* Primary wrapping functions */
     & .workspace-tab-header-container:hover {
         flex-wrap: wrap;
