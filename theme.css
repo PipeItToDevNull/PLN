@@ -1457,7 +1457,6 @@ body.pln-link-mods .external-link {
         & .workspace-tab-header::after {
             display: none;
         }
-
     }
 
     /* Remove drag, this is required for hover to work. It does not break the ability to drag tabs */
