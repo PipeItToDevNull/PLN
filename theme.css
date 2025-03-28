@@ -1104,8 +1104,7 @@ body {
         }
     }
     &.pln-tab-rows .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
-        --tab-min-width: 120px;
-        --tab-max-width: 200px;
+        --tab-max-width: unset;
         & .workspace-tab-header-inner-title {
             display: contents;
         }
@@ -1442,11 +1441,11 @@ body.pln-link-mods .external-link {
         height: unset;
 
         /* primary bubble creation */
+        /* here be dragons */
         & .workspace-tab-header {
-            --tab-max-width: 200px;
-            --tab-min-width: 120px;
-            min-width: var(--tab-min-width);
-            flex-shrink: 0;
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis:auto;
             margin-bottom: 4px;
             border-radius: 5px;
             margin-right: 5px;
