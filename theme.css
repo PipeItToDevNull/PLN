@@ -1436,6 +1436,7 @@ body.pln-link-mods .external-link {
 .pln-tab-rows:not(:has(.mod-stacked)) {
     /* Primary wrapping functions */
     & .workspace-tab-header-container:hover {
+        --tab-width: unset; /* Kapirklaa */
         flex-wrap: wrap;
         min-height: var(--header-height);
         height: unset;
@@ -1443,6 +1444,8 @@ body.pln-link-mods .external-link {
         /* primary bubble creation */
         /* here be dragons */
         & .workspace-tab-header {
+            width: unset; /* Kapirklaa */
+            container-type: normal; /* Kapirklaa */
             flex-shrink: 1;
             flex-grow: 1;
             flex-basis:auto;
