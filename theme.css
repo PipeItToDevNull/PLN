@@ -1453,8 +1453,7 @@ body.pln-link-mods .external-link {
         }
 
         /* Remove the shoulders on tabs so the bubbles work */
-        & .workspace-tab-header::before,
-        & .workspace-tab-header::after {
+        & .workspace-tab-header::before, .workspace-tab-header::after {
             display: none;
         }
     }
