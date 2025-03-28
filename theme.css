@@ -1452,7 +1452,6 @@ body.pln-link-mods .external-link {
             flex-basis:auto;
             margin-bottom: 4px;
             border-radius: 5px;
-            margin-right: 5px;
         }
 
         /* Remove the shoulders on tabs so the bubbles work */
@@ -1468,14 +1467,22 @@ body.pln-link-mods .external-link {
     }
 
     /* Prevent hovering over tabs from making them larger and twitching the display */
-    & .workspace-tabs:not(.mod-stacked) .workspace-tab-header .workspace-tab-header-inner-close-button svg {
-        height: calc(var(--icon-size) /2);
-        width: calc(var(--icon-size) /2);
-    }
-
-    /* Make all close buttons light up */
-    & .workspace-tab-header .workspace-tab-header-inner-close-button:hover {
-        background-color: var(--background-modifier-hover);
+    & .workspace-tabs {
+        & .workspace-tab-header {
+            & .workspace-tab-header-inner-close-button svg {
+                height: calc(var(--icon-size) /2);
+                width: calc(var(--icon-size) /2);
+            }
+            /* Make all close buttons light up */
+            & .workspace-tab-header-inner-close-button:hover {
+                background-color: var(--background-modifier-hover);
+            }
+        }
+        /* make the close icon absolute, so it does not re-calculate the size of tabs on hover */
+        & .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
+            position: absolute;
+            right: 5px;
+        }
     }
 
     /* Corrects spacing below tabs */
