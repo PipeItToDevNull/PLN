@@ -1434,9 +1434,9 @@ body.pln-link-mods .external-link {
  * Multi-row tabs
  * https://discord.com/channels/686053708261228577/702656734631821413/1355022160397078599
 */
-.pln-tab-rows:not(:has(.mod-stacked)) .workspace-spit {
+.pln-tab-rows:not(:has(.mod-stacked)) {
     /* Primary wrapping functions */
-    & .workspace-tab-header-container:hover {
+    & .mod-root .workspace-tab-header-container:hover {
         --tab-width: unset; /* Kapirklaa */
         flex-wrap: wrap;
         min-height: var(--header-height);
