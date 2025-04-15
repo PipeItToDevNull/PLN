@@ -1464,6 +1464,7 @@ body.pln-link-mods .external-link {
     & .workspace-tab-header-container-inner {
         flex-wrap: wrap;
         -webkit-app-region: no-drag;
+        padding-right: 50px;
     }
 
     /* Prevent hovering over tabs from making them larger and twitching the display */
@@ -1500,7 +1501,7 @@ body.pln-link-mods .external-link {
     }
     &.mod-windows .workspace-tab-header-new-tab {
         position: absolute;
-        left: 0px;
+        right: 135px;
         top: -5px;
     }
 
