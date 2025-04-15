@@ -1512,6 +1512,11 @@ body.pln-link-mods .external-link {
         top: 30px; */
     }
 
+    /* shorten the separator between tabs */
+    .workspace .mod-root .workspace-tab-header-inner::after {
+        height: 10px;
+    }
+
     /* Original code */
     & .is-hidden-frameless:not(.is-fullscreen):not(.mod-macos) .workspace-tabs.mod-top-right-space .workspace-tab-header-container:after {
         height: 40px;
