@@ -1483,6 +1483,7 @@ body.pln-link-mods .external-link {
             }
         }
         /* make the close icon absolute, so it does not re-calculate the size of tabs on hover */
+        /* preferably this would stay flex but have its spacing preserved */
         & .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
             position: absolute;
             right: 5px;
@@ -1502,10 +1503,15 @@ body.pln-link-mods .external-link {
         right: 0;
         top: -5px;
     }
-    &.mod-windows .workspace-tab-header-new-tab {
-        position: absolute;
-        right: 135px;
-        top: -5px;
+    &.mod-windows {
+        & .workspace-tab-header-new-tab {
+            position: absolute;
+            right: 135px;
+            top: -5px;
+        }
+        & .is-right-sidedock-open .workspace-tab-header-new-tab {
+            right: 0px;
+        }
     }
 
     /* Move sidebar toggle */
