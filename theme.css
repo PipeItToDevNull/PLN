@@ -1526,7 +1526,7 @@ body.pln-link-mods .external-link {
     }
 
     /* shorten the separator between tabs */
-    .workspace .mod-root .workspace-tab-header-inner::after {
+    & .workspace .mod-root .workspace-tab-header-inner::after {
         height: 10px;
     }
 
