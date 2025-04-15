@@ -1506,7 +1506,7 @@ body.pln-link-mods .external-link {
     &.mod-windows {
         & .workspace-tab-header-new-tab {
             position: absolute;
-            right: 135px;
+            right: 130px;
             top: -5px;
         }
         & .is-right-sidedock-open .workspace-tab-header-new-tab {
