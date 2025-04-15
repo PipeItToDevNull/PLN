@@ -1471,7 +1471,7 @@ body.pln-link-mods .external-link {
     }
 
     /* Prevent hovering over tabs from making them larger and twitching the display */
-    & .workspace-tabs {
+    & .mod-root .workspace-tabs {
         & .workspace-tab-header {
             & .workspace-tab-header-inner-close-button svg {
                 height: calc(var(--icon-size) /2);
@@ -1482,11 +1482,14 @@ body.pln-link-mods .external-link {
                 background-color: var(--background-modifier-hover);
             }
         }
-        /* make the close icon absolute, so it does not re-calculate the size of tabs on hover */
-        /* preferably this would stay flex but have its spacing preserved */
-        & .workspace-tab-header:hover .workspace-tab-header-inner-close-button {
-            position: absolute;
-            right: 5px;
+        /* make the close icons work better by always taking up space and only showing the x on hover
+           also does not overlap the words (absolute positioning causes overlap) */
+        & .workspace-tab-header-container:hover .workspace-tab-header .workspace-tab-header-inner-close-button {
+            display: flex;
+            width: 12px;
+        }
+        & .workspace-tab-header:not(:hover) .workspace-tab-header-inner-close-button svg {
+            display: none;
         }
     }
 
