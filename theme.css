@@ -1510,7 +1510,7 @@ body.pln-link-mods .external-link {
             top: -5px;
         }
         & .is-right-sidedock-open .workspace-tab-header-new-tab {
-            right: 0px;
+            right: 0;
         }
     }
 
