@@ -1464,11 +1464,7 @@ body.pln-link-mods .external-link {
     & .workspace-tab-header-container-inner {
         flex-wrap: wrap;
         -webkit-app-region: no-drag;
-    }
-    /* Move the tabs over with padding to make room for new tab icon */
-    & .mod-root .workspace-tab-header-container-inner {
-        padding-right: 50px;
-    }
+    } 
 
     /* Prevent hovering over tabs from making them larger and twitching the display */
     & .mod-root .workspace-tabs {
@@ -1500,6 +1496,10 @@ body.pln-link-mods .external-link {
         top: 30px;
     }
 
+    /* Move the tabs over with padding to make room for new tab icon */
+    & .mod-root .workspace-tab-header-container-inner {
+        padding-right: 50px;
+    }
     /* Move new tab icon */
     &.mod-macos .mod-root .workspace-tab-header-new-tab {
         position: absolute;
