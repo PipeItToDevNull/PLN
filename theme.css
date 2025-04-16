@@ -1519,7 +1519,7 @@ body.pln-link-mods {
 
     /* Move the tabs over with padding to make room for new tab icon */
     & .mod-root .workspace-tab-header-container-inner {
-        padding-right: 50px;
+        padding-right: 53px;
     }
     /* Move new tab icon */
     &.mod-macos .mod-root .workspace-tab-header-new-tab {
@@ -1530,7 +1530,7 @@ body.pln-link-mods {
     &.mod-windows {
         & .workspace-tab-header-new-tab {
             position: absolute;
-            right: 130px;
+            right: 138px;
             top: -5px;
         }
         & .is-right-sidedock-open .workspace-tab-header-new-tab {
