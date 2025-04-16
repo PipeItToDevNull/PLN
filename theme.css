@@ -1107,7 +1107,7 @@ body {
             display: none;
         }
     }
-    &.pln-tab-rows .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
+    &.pln-tab-rows .mod-root .workspace-tabs .workspace-tab-header-container:hover .workspace-tab-header:has(.mod-pinned) {
         --tab-max-width: unset;
         & .workspace-tab-header-inner-title {
             display: contents;
