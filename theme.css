@@ -509,6 +509,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-props-emptyval
+        title: Hide placeholder text
+        description: Hide the "Empty" text that is a placeholder for empty keys
+        type: class-toggle
+        default: true
+    -
         id: pln-props-list
         title: List 'list' properties
         description: Put every property on its own line instead of a long single line list.
@@ -1057,7 +1063,12 @@ body {
     }
     & .metadata-property-key {
         border-right: 2px solid rgb(var(--pln-cards-color-rgb));
-    } 
+    }
+    /* hide the placeholder values in metadata*/
+    &.pln-props-emptyval .metadata-input-longtext:empty:before,
+    &.pln-props-emptyval .multi-select-input:before {
+        display: none;
+    }
     &.pln-props-heading .metadata-properties-heading {
         display: none;
     }
@@ -1232,10 +1243,7 @@ body {
     /* note icon for stacked tabs */
     &.pln-rm-noteic .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner-icon,
     /* remove top left sidebar container in hidden*/
-    &.mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container,
-    /* hide the placeholder values in metadata*/
-    & .metadata-input-longtext:empty:before,
-    & .multi-select-input:before {
+    &.mod-windows.pln-rm-win-lside-tl.is-hidden-frameless .mod-left-split .mod-top-left-space .workspace-tab-header-container {
         display: none;
     }
 }
