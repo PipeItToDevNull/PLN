@@ -364,11 +364,17 @@ settings:
         type: class-toggle
         default: false
     -
-        id: pln-pin-protect
-        title: Protect the Pin icon
-        description: Blocks the click event on the Pin icon so it cannot be removed accidently
+        id: pln-boxed-tags
+        title: Box tags
+        description: Make tags more boxy with a solid border
         type: class-toggle
         default: true
+    -
+        id: pln-head-tabs
+        title: Tab modifications
+        type: heading
+        level: 2
+        collapsed: true
     -
         id: pln-tab-rows
         title: Multiple tab rows
@@ -382,20 +388,20 @@ settings:
         type: class-toggle
         default: false
     -
+        id: pln-pin-protect
+        title: Protect the Pin icon
+        description: Blocks the click event on the Pin icon so it cannot be removed accidently
+        type: class-toggle
+        default: false
+    -
         id: pln-stacked-100
         title: Stacked tabs 100% width
         description: Make stacked tabs take up 100% of the window width instead of an annoying amount of unknown space
         type: class-toggle
         default: false
     -
-        id: pln-boxed-tags
-        title: Box tags
-        description: Make tags more boxy with a solid border
-        type: class-toggle
-        default: true
-    -
         id: pln-head-attachments
-        title: Attachment options
+        title: Attachment modifications
         type: heading
         level: 2
         collapsed: true
@@ -580,6 +586,12 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: pln-rm-mods
+        title: Removals toggle
+        description: Globally toggle my various removals
+        type: class-toggle
+        default: true
     -
         id: pln-rm-folder-nav
         title: Remove folder nav
