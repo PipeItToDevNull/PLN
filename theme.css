@@ -1794,7 +1794,7 @@ body {
     padding: 0 0 0 var(--size-4-3);
 }
 
-/* make unique callouts */
+/* make unique callout icons */
 .callout[data-callout="danger"] {
     --callout-icon: lucide-alert-octagon;
     --callout-color: var(--color-salmon-rgb);
@@ -1807,6 +1807,46 @@ body {
 }
 .callout[data-callout="meta"] {
     --callout-icon: lucide-database;
+}
+
+/* callouts to make special tables */
+div[data-callout^="table-"].callout {
+    border: 0; padding: 0;
+    background: unset; box-shadow: unset;
+    & > .callout-content {
+        display: contents
+    }
+    & > .callout-title {
+        display: none 
+    }
+}
+div[data-callout*="vertical_row"] {
+    & thead tr th:first-child {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        height: auto;
+        min-width: 0 !important;
+    }
+    & tbody tr td:first-child {
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        height: auto;
+        min-width: 0 !important;
+        letter-spacing: 1px;
+    }
+}
+div[data-callout*="bold_row"] {
+    & tbody tr td:first-child {
+        font-weight: var(--table-header-weight);
+    }
+}
+div[data-callout*="plain_columns"] {
+    & thead tr th {
+        font-weight: normal;
+    }
+    & thead tr th:first-child {
+        font-weight: var(--table-header-weight);
+    }
 }
 
 /* remove meta callouts in reading mode and when embeded*/
