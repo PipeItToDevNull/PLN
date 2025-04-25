@@ -1820,6 +1820,7 @@ div[data-callout^="table-"].callout {
         display: none 
     }
 }
+/* make the first row vertical and bold */
 div[data-callout*="vertical_row"] {
     & thead tr th:first-child {
         writing-mode: vertical-lr;
@@ -1833,18 +1834,21 @@ div[data-callout*="vertical_row"] {
         height: auto;
         min-width: 0 !important;
         letter-spacing: 1px;
+        font-weight: var(--table-header-weight);
     }
 }
+/* bold the first row of a table */
 div[data-callout*="bold_row"] {
     & tbody tr td:first-child {
         font-weight: var(--table-header-weight);
     }
 }
+/* make the top row standard text unless bold_row is also specified */
 div[data-callout*="plain_columns"] {
     & thead tr th {
         font-weight: normal;
     }
-    & thead tr th:first-child {
+    &[data-callout*="bold_row"] thead tr th:first-child {
         font-weight: var(--table-header-weight);
     }
 }
