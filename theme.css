@@ -253,7 +253,7 @@ settings:
         default: '180, 142, 173, 0.4'
     -
         id: pln-head-fonts
-        title: Font sizes
+        title: Font modifications
         type: heading
         level: 2
         collapsed: true
@@ -297,6 +297,12 @@ settings:
         max: 30
         step: 1
         format: px
+    -
+        id: pln-italics
+        title: More italic italics
+        description: Make italics more pronounced
+        type: class-toggle
+        default: true
     -
         id: pln-head-gen
         title: General modifications
@@ -1322,9 +1328,11 @@ body {
 }
 
 /* more italic */
-em, .cm-em {
-    display: inline-block;
-    transform: skew(-10deg);
+.pln-italics {
+        em, .cm-em {
+            display: inline-block;
+            transform: skew(-10deg);
+        }
 }
 
 /* this unifies spacing in LP and reading (DV in LP is viewed as if it was reading) */
