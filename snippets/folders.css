@@ -3,83 +3,120 @@
 /*
 /* https://forum.obsidian.md/t/iterative-rainbow-folder-colors-css/21066 */
 /* thanks to Evelf */
-.mod-root > .nav-folder-children > .nav-folder > .nav-folder-title,
-.mod-root > .nav-folder-children > .is-collapsed .collapse-icon svg.svg-icon,
-.mod-root .nav-folder .collapse-icon svg.svg-icon {
-    color: var(--b0);
-}
-.mod-root .nav-folder .nav-folder-children .collapse-icon svg.svg-icon {
-    color: var(--nav-collapse-icon-color);
+/* updated for v1.6.0 */
+
+.tree-item-children {
+    --nav-indentation-guide-width: 3px;
+    border-bottom-left-radius: 5px;
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) > .nav-folder-title {
-    background-color: var(--color-red);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+2) .nav-file-title {
-    border-left: 3px solid var(--color-red);
+body {
+    /* optionally make the collapse icons folders instead */
+    & .nav-files-container .collapse-icon.is-collapsed svg.svg-icon {
+        transform: none;
+    }
+
+    /* Make all folder chevrons into icons, and make them all white */
+    & .nav-files-container > div > .nav-folder .collapse-icon svg {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder-open'%3E%3Cpath d='m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+        color: var(--icon-color);
+        background-color: var(--icon-color);
+    }
+    /* Change top level to grey */
+    & .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon svg {
+        color: var(--b0);
+        background-color: var(--b0);
+    }
+
+    /* Make all folder chevrons into icons, and make them all white */
+    & .nav-files-container > div > .nav-folder .collapse-icon.is-collapsed  svg {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='4' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z'/%3E%3C/svg%3E");
+        color: var(--icon-color);
+        background-color: var(--icon-color);
+    }
+    /* Change top level to grey */
+    & .nav-files-container > div > .nav-folder > .nav-folder-title > .collapse-icon.is-collapsed svg {
+        color: var(--b0);
+        background-color: var(--b0);
+    }
 }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) > .nav-folder-title {
-    background-color: var(--color-orange);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+3) .nav-file-title {
-    border-left: 3px solid var(--color-orange);
-}
+.nav-files-container {
+    /* changes the top level folders to darker text so they can be read on the coloured folder background*/
+    & > div > .nav-folder > .nav-folder-title,
+    & > div > .nav-folder > .nav-folder-title:hover,
+    & > div > .nav-folder > .nav-folder-title > .collapse-icon svg.svg-icon {
+        --nav-item-color: var(--b0);
+        --nav-item-color-hover: var(--b0);
+        --nav-collapse-icon-color: var(--b0);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) > .nav-folder-title {
-    background-color: var(--color-yellow-light);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+4) .nav-file-title {
-    border-left: 3px solid var(--color-yellow-light);
-}
+    /* Make items focused via arrow keys highlighted */
+    & .tree-item-self.has-focus {
+        background-color: var(--background-modifier-hover);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) > .nav-folder-title {
-    background-color: var(--color-green);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+5) .nav-file-title {
-    border-left: 3px solid var(--color-green);
-}
+    /* Coloursssssss */
+    & > div > .nav-folder:nth-child(9n+2) > .tree-item-self {
+        background-color: var(--color-red);
+    }
+    & > div > .nav-folder:nth-child(9n+2) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-red);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) > .nav-folder-title {
-    background-color: var(--color-sea-green);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+6) .nav-file-title {
-    border-left: 3px solid var(--color-sea-green);
-}
+    & > div > .nav-folder:nth-child(9n+3) > .tree-item-self {
+        background-color: var(--color-orange);
+    }
+    & > div > .nav-folder:nth-child(9n+3) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-orange);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) > .nav-folder-title {
-    background-color: var(--color-cyan);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+7) .nav-file-title {
-    border-left: 3px solid var(--color-cyan);
-}
+    & > div > .nav-folder:nth-child(9n+4) > .tree-item-self {
+        background-color: var(--color-yellow-light);
+    }
+    & > div > .nav-folder:nth-child(9n+4) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-yellow-light);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) > .nav-folder-title {
-    background-color: var(--color-frost);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+8) .nav-file-title {
-    border-left: 3px solid var(--color-frost);
-}
+    & > div > .nav-folder:nth-child(9n+5) > .tree-item-self {
+        background-color: var(--color-green);
+    }
+    & > div > .nav-folder:nth-child(9n+5) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-green);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) > .nav-folder-title {
-    background-color: var(--color-blue);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+9) .nav-file-title {
-    border-left: 3px solid var(--color-blue);
-}
+    & > div > .nav-folder:nth-child(9n+6) > .tree-item-self {
+        background-color: var(--color-sea-green);
+    }
+    & > div > .nav-folder:nth-child(9n+6) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-sea-green);
+    }
 
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) > .nav-folder-title {
-    background-color: var(--color-purple);
-}
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) .nav-folder-title,
-.mod-root > .nav-folder-children > .nav-folder:nth-child(9n+10) .nav-file-title {
-    border-left: 3px solid var(--color-purple);
+    & > div > .nav-folder:nth-child(9n+7) > .tree-item-self {
+        background-color: var(--color-cyan);
+    }
+    & > div > .nav-folder:nth-child(9n+7) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-cyan);
+    }
+
+    & > div > .nav-folder:nth-child(9n+8) > .tree-item-self {
+        background-color: var(--color-frost);
+    }
+    & > div > .nav-folder:nth-child(9n+8) .tree-item-children {
+        border-left: 3px solid var(--color-frost);
+    }
+
+    & > div > .nav-folder:nth-child(9n+9) > .tree-item-self {
+        background-color: var(--color-blue);
+    }
+    & > div > .nav-folder:nth-child(9n+9) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-blue);
+    }
+
+    & > div > .nav-folder:nth-child(9n+10) > .tree-item-self {
+        background-color: var(--color-purple);
+    }
+    & > div > .nav-folder:nth-child(9n+10) .tree-item-children {
+        --nav-indentation-guide-color: var(--color-purple);
+    }
 }
