@@ -1,6 +1,8 @@
 # PLN (Pipe Loves Nord)
 
-Check out my new [Unique tables]() and [Multi-row tabs]()
+Check out my new [Unique tables](#unique-tables) and [Multi-row tabs](#multi-row-tabs)
+
+Check out the snippets directory of this repository for some of the special parts of this theme, use them anywhere even without PLN.
 
 ## Overview
 This is a personal theme I started creating for 0.16.
