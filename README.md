@@ -1,7 +1,13 @@
 # PLN (Pipe Loves Nord)
 
+Check out my new [Unique tables](#unique-tables) and [Multi-row tabs](#multi-row-tabs)
+
+Check out the snippets directory of this repository for some of the special parts of this theme, use them anywhere even without PLN.
+
 ## Overview
 This is a personal theme I started creating for 0.16.
+
+**Please note this theme relies heavily on [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) for the enablement of select features and for opting in/out of various aspects of the UI that I alter.** You can install this community plugin in Obsidian directly. 
 
 ![Light Screenshot](PLN_Light.png)
 ![Dark Screenshot](PLN_Dark.png)
@@ -23,12 +29,13 @@ Below are our colours from Nord and what they are called. Yellow-light and Yello
 --color-salmon: #FC6E68;
 ```
 
-## Changes
-### Basics
+## Unique changes in this theme
+I make many changes that I consider QoL or that are just nifty. Explore the Style Settings options to toggle many of these on or off and discover more features of PLN. You can view the available style settings [here](StyleSettings.md).
+
+### Notable basics
 - Fonts are generally smaller
 - Stacked titles are flipped 180 degrees, and more compact
-- The active editor line and gutter lines are highlighted
-- Many icons are removed, I use the command pallete more than a mouse. All removals can be controlled via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
+- Many icons are removed, I use the command pallete more than a mouse. **All removals can be controlled via Style Settings.**
     - Sidebar icons are removed
     - Editor icons are removed
     - The statusbar is removed
@@ -36,21 +43,22 @@ Below are our colours from Nord and what they are called. Yellow-light and Yello
     - Tab file icons are removed
 - Scrollbars are hidden until hovered over
 - A frameless mac window no longer has sidebar icons under the window buttons
+- Coloured file explorer
+- The View icons can be inverted in Style Settings. It never made sense to me that you had the edit icon in reading mode and vice versa.
+- Links
+    - Internal links are not underlined
+    - Unresolved links are not transparent, and appear like any other internal link
+    - External link icons are removed
 
 ### Embeds
 - Embeds are stripped of all "indicators" and flow as written text
 - H1-3 of embeds are hidden with options to hide all headers or no headers via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 
-### Links
-- Internal links are not underlined
-- Unresolved links are not transparent, and appear like any other internal link
-- External link icons are removed
-
 ### Dataview
 - Styling is removed like embeds so they flow like written text. Edits can be toggled via [Style Settings](https://github.com/mgmeyers/obsidian-style-settings).
 - Hide the item count on task lists
 
-### Custom checkboxes
+### Custom checkboxes (Requires Style Settings community plugin)
 - Completed tasks are not crossed out
 - I added various checkboxes that can be seen in the images. 
     ```
@@ -72,11 +80,82 @@ Below are our colours from Nord and what they are called. Yellow-light and Yello
     GROUP by file.link
     ```
 
+### Unique tables
+Using callouts I have enabled new table types to be presented. 
+
+![tables](tables.png)
+
+To create these new types of tables insert a callout and start name with "table-" then you add the various modifiers below.
+
+- bold_row
+- plain_columns
+- vertical_row
+
+#### Examples from the image
+```
+> [!table-vertical_row]
+> 
+> ## table-vertical_row
+> |           | Column1 | Column2 |
+> | ------- | ------- | ------- |
+> | Row1    |         |         |
+> | Row2    |         |         |
+> 
+
+> [!table-bold_row]
+> 
+> ## table-bold_row
+> | Row0    | Column1 | Column2 |
+> | ------- | ------- | ------- |
+> | Row1    | content | content |
+> | Row2    | content | content |
+> 
+
+> [!table-plain_columns]
+> 
+> ## table-plain_columns
+> |  Row0   | Column1 | Column2 |
+> | ------- | ------- | ------- |
+> | Row1    | content | content |
+> | Row2    | content | content |
+> 
+
+> [!table-bold_row-plain_columns]
+> 
+> ## table-bold_row-plain_columns
+> |  Row0   | Column1 | Column2 |
+> | ------- | ------- | ------- |
+> | Row1    | content | content |
+> | Row2    | content | content |
+> 
+```
+
+### Tab related Style Settings
+#### Prettier pinned tabs
+Shrink down pinned tabs to only the note icon. I recommend making custom note icons as well if you do this.
+
+#### Protect the Pin icon
+Blocks the click event on the Pin icon so it cannot be removed accidently
+
+#### Stacked tabs 100% width
+Make stacked tabs take up 100% of the window width instead of an annoying amount of unknown space
+
+#### Multi-row tabs
+A unique feature in themes as far as I know, PLN now has the Multi-Row-Tabs feature that can be enabled in Style Settings.
+
+It pained me to have tabs reduced to sizes that make the titles impossible to read. I sometimes used sliding panes or multiple windows to solve this but I have now created what I consider to be the ultimate solution.
+
+Hovering over the tab area will cause the tabs to expand out and down, enabling you to actually read all the titles. If you are using the "Prettier pinned tabs" Style Setting as well your pinned tabs will be expanded from just their icon so you can read their titles as well.
+
+![Multi-Row-Tabs](Multi-Row-Tabs.gif)
+
 ### Callouts
 - Danger is a unique design now
 - Callouts are condensed
 - Idea has been added
-- Links and Meta have been added, I use them for holding a DV backlinks query and my meta-data as opposed to native frontmatter or the backlinks pane.
+- Links and Meta have been added
+    - **These are considered Legacy with the addition of the native Properties UI**
+    - I use them for holding a DV backlinks query and my meta-data as opposed to native frontmatter or the backlinks pane.
     - Both of these callouts can be toggled to appear in Reading and PDF exports.
 
 ![links_meta.png](links_meta.png)
@@ -90,9 +169,6 @@ WHERE file.path = this.file.path
 ### Calendar plugin
 - It has been condensed
 - More colour
-
-### Folders
-- Folder colours are applied automatically, iterating over `n`
 
 ### Highlights and text colours
 The original snippet came from soggymuse but it only worked in LP. I expanded it to work in Reading view and added many more forms to it.

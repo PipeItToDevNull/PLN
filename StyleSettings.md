@@ -1,0 +1,273 @@
+# Style Settings
+## Colours
+- title: Red
+    - default: '#bf616a'
+- title: Orange
+    - default: '#d08770'
+- title: Yellow-Light
+    - description: Used on the dark theme
+    - default: '#ebcb8b'
+- title: Yellow-Dark
+    - description: Used on the light theme
+    - default: '#e4b860'
+- title: Green
+    - default: '#a3be8c'
+- title: Purple
+    - default: '#b48ead'
+- title: Sea-Green
+    - default: '#8fbcbb'
+- title: Cyan
+    - default: '#88c0d0'
+- title: Frost
+    - default: '#81a1c1'
+- title: Blue
+    - default: '#5e81ac'
+- title: Salmon
+    - default: '#FC6E68'
+- title: Accent Light
+    - default: '#5E81AC'
+- title: Accent Dark
+    - default: '#81a1c1'
+- title: B0
+    - default: '#2E3440'
+- title: B1
+    - default: '#3B4252'
+- title: B2
+    - default: '#434C5E'
+- title: B3
+    - default: '#4C566A'
+- title: W0
+    - default: '#D8DEE9'
+- title: W1
+    - default: '#E5E9F0'
+- title: W2
+    - default: '#ECEFF4'
+- title: W3
+    - default: '#f5f7f9'
+- title: Text Highlight Background
+    - default: '180, 142, 173, 0.4'
+- title: Text Highlight Background - Active
+    - default: '180, 142, 173, 0.4'
+## Font modifications
+- title: Font-UI-Smaller
+    - description: Used for settings panel category headers and other things
+    - default: 10
+- title: Font-UI-Small
+    - description: Used for folder names and other things
+    - default: 10
+- title: Font-UI-Medium
+    - description: Used for settings panel body, calendar
+    - default: 12
+- title: Font-UI-Large
+    - description: Used for things
+    - default: 14
+- title: More italic italics
+    - description: Make italics more pronounced
+    - default: true
+## General modifications
+- title: Link modifications
+    - description: Underline only external links and remove the distinction from unresolved links
+    - default: true
+- title: Highlight (mark) modifications
+    - description: Change ==highlight== (mark) styling from the default. This may interfere with some plugins, disable this if you see issues.
+    - default: true
+- title: Highlight active line
+    - description: Highlight the active line
+    - default: false
+- title: Highlight cursor line
+    - description: Highlight the line your mouse cursor is on
+    - default: false
+- title: Highlight table rows when hovering
+    - description: Highlight the row in a table that your cursor is hovering over
+    - default: false
+- title: Enable hidden directories and files
+    - description: Hide any file/folder starting with _ (underscore)
+    - default: false
+- title: Use folder icons in the file tree
+    - description: Replace the chevrons in the file tree with open/closed folder icons
+    - default: false
+- title: Dataview modifications
+    - description: Globally toggle my various DV modifications
+    - default: true
+- title: Dataview list count
+    - description: Toggle the list count on a DV result
+    - default: true
+- title: Invert view icons
+    - description: Invert the Reading and Edit view icons in the top right of notes
+    - default: false
+- title: Box tags
+    - description: Make tags more boxy with a solid border
+    - default: true
+## Tab modifications
+- title: Multiple tab rows
+    - description: When hovering, the tabs area will be expanded into multiple rows to make viewing tab titles easier.
+    - default: false
+- title: Prettier pinned tabs
+    - description: Shrink down pinned tabs to only the note icon. I recommend making custom note icons as well if you do this.
+    - default: false
+- title: Protect the Pin icon
+    - description: Blocks the click event on the Pin icon so it cannot be removed accidently
+    - default: false
+- title: Stacked tabs 100% width
+    - description: Make stacked tabs take up 100% of the window width instead of an annoying amount of unknown space
+    - default: false
+- title: Attachment modifications
+- title: Hide attachments
+    - description: Hide all attachments in the file explorer
+    - default: false
+- title: Unhide canvas files
+    - default: false
+- title: Unhide pdf files
+    - default: false
+- title: Unhide docx files
+    - default: false
+- title: Unhide xlsx files
+    - default: false
+- title: Unhide image files
+    - default: false
+## Header colors
+- title: Header color toggle
+    - description: You must open each color and "save" it to render properly
+    - default: false
+- title: H1 color
+    - default: '#BF616A'
+- title: H2 color
+    - default: '#D08770'
+- title: H3 color
+    - default: '#EBCB8B'
+- title: H4 color
+    - default: '#A3BE8C'
+- title: H5 color
+    - default: '#8FBCBB'
+- title: H5 color
+    - default: '#88C0D0'
+## Properties modifications
+- title: Hide properties in reading mode
+    - description: Hide the metadata properties box when in reading mode. Add 'hide-properties' as a class to any file to selectively apply this.
+    - default: true
+- title: Hide properties heading
+    - description: We know it is a properties box, you don't need to label it.
+    - default: true
+- title: Hide placeholder text
+    - description: Hide the "Empty" text that is a placeholder for empty keys
+    - default: true
+- title: List 'list' properties
+    - description: Put every property on its own line instead of a long single line list.
+    - default: true
+## Embed modifications
+- title: Embed modifications
+    - description: Globally toggle my various embed modifications
+    - default: true
+- title: Embeded note link icon
+    - description: Hide the link icon for an embedded note
+    - default: true
+- title: Embeded note titles
+    - description: Hide the title of an embeded note
+    - default: true
+- title: Hide the first header in embeds
+    - description: Do not display the first header in an embed
+    - default: true
+- title: Hide H1 in embeds
+    - description: Do not display h1 in embeds
+    - default: false
+- title: Hide H2 in embeds
+    - description: Do not display h2 in embeds
+    - default: false
+- title: Hide H3 in embeds
+    - description: Do not display h3 in embeds
+    - default: false
+- title: Hide H4 in embeds
+    - description: Do not display h4 in embeds
+    - default: false
+- title: Hide H5 in embeds
+    - description: Do not display h5 in embeds
+    - default: false
+- title: Hide H6 in embeds
+    - description: Do not display h6 in embeds
+    - default: false
+## Removals
+- title: Removals toggle
+    - description: Globally toggle my various removals
+    - default: true
+- title: Remove folder nav
+    - description: Remove the folder navigation icons
+    - default: false
+- title: Remove settings pane
+    - description: Remove the settings pane at the bottom of the left sidebar added in 1.6
+    - default: false
+- title: Remove sidebar indicators
+    - description: Remove the sidebar indicators. They can still be opened with hotkeys
+    - default: true
+- title: Remove mod top left
+    - description: Remove the top tab container in the left sidebar in Windows in hidden frameless
+    - default: false
+- title: Remove statusbar
+    - description: Removes the bottom statusbar
+    - default: true
+- title: Remove tablist icon
+    - description: Removes the header tab list icon
+    - default: true
+- title: Remove new tab icon
+    - description: Removes the new tab header icon
+    - default: true
+- title: Remove close icon
+    - description: Remove the close X from tabs
+    - default: true
+- title: Remove nav icons
+    - description: Remove the back and forward icons
+    - default: true
+- title: Remove view actions
+    - description: Remove the view action icons from the top of notes
+    - default: true
+- title: Remove note icon
+    - description: Remove the note icon from stacked tabs (we all know is a note...)
+    - default: true
+- title: Remove scroll bars
+    - description: Hide scroll bars, hover to view them
+    - default: true
+- title: Hide top bar in MacOS
+    - description: Hide the top bar on MacOS when in stacked tabs. (Works best in Frameless/hidden title bars)
+    - default: true
+- title: Hide search help
+    - description: Hide the pop up that appears when clicking the search field
+    - default: true
+## Checkbox modifications
+- title: Custom Checkboxes
+    - description: Globally toggle custom checkbox types and changes made in PLN
+    - default: true
+## Callout modifications
+- title: Hide Meta callout in reading mode
+    - description: Remove the custom "meta" callout in reading mode
+    - default: false
+- title: Hide Meta callout in PDF exports
+    - description: Remove the custom "meta" callout in PDF exports only
+    - default: true
+- title: Hide Links callout in reading mode
+    - description: Remove the custom "links" callout in reading mode
+    - default: false
+- title: Hide Links callout in PDF exports
+    - description: Remove the custom "links" callout in PDF exports only
+    - default: true
+## Kepano Cards modificationss
+- title: Hide Remove sort icon
+    - description: Remove the sort icon from above a collection of cards
+    - default: true
+- title: Card border edits
+    - description: Change the border of cards to match callouts. You are required to have Kepano's snippet, this just changes it's style
+    - default: true
+- title: Card border color
+    - default-light: 'rgb(216, 222, 233)'
+    - default-dark: 'rgb(76, 86, 106)'
+- title: Add cards class to all files, and allow export.
+    - description: This will add the cards class to all files, a primary function for this will be cards rendering when you PDF export a file
+    - default: false
+## High contrast modifications
+- title: High contrast toggle
+descriptioon: Change main text to a vision impaired yellow. You should change your accent colour to something that compliments #cccc00. Don't use this with light mode...
+    - default: false
+- title: Primary color
+    - description: This is the primary color to be used in vision impaired mode
+    - default: '#cccc00'
+- title: Secondary color
+    - description: This is used for code blocks and buttons mostly
+    - default: '#4C4E52'
