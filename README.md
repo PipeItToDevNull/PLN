@@ -130,8 +130,24 @@ To create these new types of tables insert a callout and start name with "table-
 > 
 ```
 
-### Multi-row tabs
+### Tab related Style Settings
+#### Prettier pinned tabs
+Shrink down pinned tabs to only the note icon. I recommend making custom note icons as well if you do this.
 
+#### Protect the Pin icon
+Blocks the click event on the Pin icon so it cannot be removed accidently
+
+#### Stacked tabs 100% width
+Make stacked tabs take up 100% of the window width instead of an annoying amount of unknown space
+
+#### Multi-row tabs
+A unique feature in themes as far as I know, PLN now has the Multi-Row-Tabs feature that can be enabled in Style Settings.
+
+It pained me to have tabs reduced to sizes that make the titles impossible to read. I sometimes used sliding panes or multiple windows to solve this but I have now created what I consider to be the ultimate solution.
+
+Hovering over the tab area will cause the tabs to expand out and down, enabling you to actually read all the titles. If you are using the "Prettier pinned tabs" Style Setting as well your pinned tabs will be expanded from just their icon so you can read their titles as well.
+
+![Multi-Row-Tabs](Multi-Row-Tabs.gif)
 
 ### Callouts
 - Danger is a unique design now
