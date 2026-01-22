@@ -376,6 +376,12 @@ settings:
         type: class-toggle
         default: true
     -
+        id: pln-bubbles
+        title: Modern "bubble" UI
+        description: A more modern "Windows 11 or MacOS" style"
+        type: class-toggle
+        default: false
+    -
         id: pln-head-tabs
         title: Tab modifications
         type: heading
@@ -1479,7 +1485,53 @@ body.pln-link-mods {
     }
 }
 
-
+/*
+ * Modern bubbles
+*/
+body.pln-bubbles {
+    .workspace-tab-header-container {
+        border-bottom: none;
+        & .workspace-tab-header {
+            margin-bottom: 1em; /* Value does not actually matter as long as it is over ~3px */
+            border-radius: var(--callout-radius);
+                &::before,
+                &::after {
+                    display: none;
+            }
+        }
+        /* Hide the tab header in a sidebar container if there is only one item */
+        &:has(.tappable:only-of-type) {
+            display: none;
+        }
+    }
+    /* Note tab changes */
+    .mod-root .workspace-tab-header-container {
+        border-radius: 2em;
+        background-color: var(--background-primary);
+        &:after {
+            content: "";
+            background: var(--background-modifier-border);
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+        }
+    }
+    .workspace-tabs {
+        border-radius: 1em;
+    }
+    .workspace-split {
+        background-color: var(--background-primary);
+        padding: 1em;
+    }
+    /* The bottom sidebar group will have top margin */
+    .workspace-tabs + .workspace-tabs {
+        margin-top: 1em;;
+    }
+    hr.workspace-leaf-resize-handle {
+        border-color: var(--background-primary);
+    }
+}
 
 /*
  * Multi-row tabs
