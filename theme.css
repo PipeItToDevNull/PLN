@@ -966,6 +966,14 @@ settings:
     --color-salmon: var(--pln-vision-high);
 }
 
+/* Radiuses */
+:root {
+    --border-radius-l: 12px;
+    --border-radius-m: 8px;
+    --border-radius-s: 4px;
+    --border-radius-straight: 0px;
+}
+
 /* pdf fixes */
 @media print {
     .theme-dark {
@@ -1063,9 +1071,9 @@ body {
 body {
     & {
         --metadata-border-color: rgb(var(--pln-cards-color-rgb));
-        --metadata-border-radius: 5px;
+        --metadata-border-radius: var(--border-radius-m);
         --metadata-background: rgba(var(--pln-cards-color-rgb),0.4);
-        --metadata-property-radius: 5px;
+        --metadata-property-radius: var(--border-radius-m);
     }
     & .metadata-container {
         border-top: 4px solid rgb(var(--pln-cards-color-rgb));
@@ -1493,7 +1501,7 @@ body.pln-bubbles {
         border-bottom: none;
         & .workspace-tab-header {
             margin-bottom: 1em; /* Value does not actually matter as long as it is over ~3px */
-            border-radius: var(--callout-radius);
+            border-radius: var(--border-radius-m);
                 &::before,
                 &::after {
                     display: none;
@@ -1506,7 +1514,7 @@ body.pln-bubbles {
     }
     /* Note tab changes */
     .mod-root .workspace-tab-header-container {
-        border-radius: 2em;
+        border-radius: var(--border-radius-m);
         background-color: var(--background-primary);
         &:after {
             content: "";
@@ -1517,8 +1525,9 @@ body.pln-bubbles {
             width: 100%;
         }
     }
+    /* Sidebar containers */
     .workspace-tabs {
-        border-radius: 1em;
+        border-radius: var(--border-radius-l);
     }
     .workspace-split {
         background-color: var(--background-primary);
@@ -1554,7 +1563,7 @@ body.pln-bubbles {
             flex-grow: 1;
             flex-basis:auto;
             margin-bottom: 4px;
-            border-radius: 5px;
+            border-radius: var(--border-radius-m);
         }
 
         /* Remove the shoulders on tabs so the bubbles work */
@@ -1809,7 +1818,7 @@ body.pln-checkboxes {
 .markdown-preview-view code {
     color: inherit;
     padding: 3px 5px;
-    border-radius: 5px;
+    border-radius: var(--border-radius-s);
     font-family: monospace;
 }
 
@@ -1818,7 +1827,7 @@ body.pln-checkboxes {
 */
 .pln-boxed-tags {
     & {
-        --tag-radius: 5px;
+        --tag-radius: var(--border-radius-s);
         --tag-border-width: 2px;
     }
     & .cm-hashtag-begin {
@@ -1841,7 +1850,7 @@ body {
     --callout-padding: 0;
     --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
     --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
-    --callout-radius: 5px;
+    --callout-radius: var(--border-radius-m);
 }
 
 /* remove leading and trailing padding of callout content paragraphs */
@@ -2014,7 +2023,7 @@ div[data-callout*="plain_columns"] {
     & .cm-s-obsidian span.cm-highlight {
         color: inherit;
         background: rgba(var(--color-yellow-rgb),0.2);
-        border-radius: 5px;
+        border-radius: var(--border-radius-m);
         border: 2px solid;
         border-color: var(--color-yellow);
     }
@@ -2137,7 +2146,7 @@ div[data-callout*="plain_columns"] {
     /* borders */
     & mark.borders {
         border: 1px solid;
-        border-radius: 0px;
+        border-radius: var(--border-radius-straight);
         padding-left: 2px;
         padding-right: 2px;
         background: none;
@@ -2196,7 +2205,7 @@ div[data-callout*="plain_columns"] {
 
 .tree-item-children {
     --nav-indentation-guide-width: 3px;
-    border-bottom-left-radius: 5px;
+    border-bottom-left-radius: var(--border-radius-s)
 }
 
 .pln-folder-icons {
