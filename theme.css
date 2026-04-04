@@ -1758,7 +1758,7 @@ body.pln-checkboxes {
     color: inherit;
     padding: 3px 5px;
     border-radius: 5px;
-    font-family: monospace;
+    font-family: var(--font-monospace);
 }
 
 /* 
