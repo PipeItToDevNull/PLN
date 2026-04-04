@@ -1758,7 +1758,7 @@ body.pln-checkboxes {
     color: inherit;
     padding: 3px 5px;
     border-radius: 5px;
-    font-family: monospace;
+    font-family: var(--font-monospace);
 }
 
 /* 
@@ -1768,18 +1768,7 @@ body.pln-checkboxes {
     & {
         --tag-radius: 5px;
         --tag-border-width: 2px;
-    }
-    & .cm-hashtag-begin {
-        display: none;
-    }
-    & a.tag,
-    & .cm-hashtag.cm-hashtag-end {
-        border-right: var(--tag-border-width) solid var(--tag-border-color);
-        border-left: var(--tag-border-width) solid var(--tag-border-color);
-        border-radius: var(--tag-radius);
-        padding-left: var(--tag-padding-x);
-        padding-right: var(--tag-padding-x);
-    }
+    } 
 }
 
 /*
