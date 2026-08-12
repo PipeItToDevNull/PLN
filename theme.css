@@ -1056,19 +1056,19 @@ body {
 /* properties container*/
 body {
     & {
-        --metadata-border-color: rgb(var(--pln-cards-color-rgb));
+        --metadata-border-color: var(--pln-cards-color-rgb);
         --metadata-border-radius: 5px;
-        --metadata-background: rgba(var(--pln-cards-color-rgb),0.4);
+        --metadata-background: rgb(from var(--pln-cards-color-rgb) r g b / 0.4);
         --metadata-property-radius: 5px;
     }
     & .metadata-container {
-        border-top: 4px solid rgb(var(--pln-cards-color-rgb));
-        border-left: 2px solid rgb(var(--pln-cards-color-rgb));
+        border-top: 4px solid var(--pln-cards-color-rgb);
+        border-left: 2px solid var(--pln-cards-color-rgb);
         /* 1.3.7 adding --p-spacing but I remove it, this fixes the header being to oclose to the box*/
         margin-bottom: 10px;
     }
     & .metadata-property-key {
-        border-right: 2px solid rgb(var(--pln-cards-color-rgb));
+        border-right: 2px solid var(--pln-cards-color-rgb);
     }
     /* hide the placeholder values in metadata*/
     &.pln-props-emptyval .metadata-input-longtext:empty:before,
@@ -1364,9 +1364,9 @@ body {
 }
 .cards.pln-cards-borders table.dataview > tbody > tr,
 .pln-cards-borders .cards table.dataview > tbody > tr {
-    background-color: rgba(var(--pln-cards-color-rgb), 0.4) !important;
-    border-top: 4px solid rgb(var(--pln-cards-color-rgb)) !important;
-    border-left: 2px solid rgb(var(--pln-cards-color-rgb)) !important;
+    background-color: rgb(from var(--pln-cards-color-rgb) r g b / 0.4) !important;
+    border-top: 4px solid var(--pln-cards-color-rgb) !important;
+    border-left: 2px solid var(--pln-cards-color-rgb) !important;
     border-right: none !important;
     border-bottom: none !important;
 }
@@ -1950,7 +1950,7 @@ div[data-callout*="plain_columns"] {
     & .markdown-rendered mark,
     & .cm-s-obsidian span.cm-highlight {
         color: inherit;
-        background: rgba(var(--color-yellow-rgb),0.2);
+        background: rgb(from var(--color-yellow-rgb) r g b / 0.2);
         border-radius: 5px;
         border: 2px solid;
         border-color: var(--color-yellow);
